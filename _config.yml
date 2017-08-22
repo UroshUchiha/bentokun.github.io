@@ -18,9 +18,11 @@ email: fewdspuckrito@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   My blogg.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://bentokun.github.io"
+url: "http://bentokun.github.io"
 twitter_username: dotrongthu
 github_username:  bentokun
+fb_link: https://facebook.com/thu.pepper1908
+github_link: https://github.com/bentokun
 
 sass:
   sass_dir: _sass

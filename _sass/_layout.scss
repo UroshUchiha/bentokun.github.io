@@ -1,26 +1,25 @@
 body {
+    padding: 15px 0 15px 0;
 	margin: 0;
-	color: $font-color;
-	font-family: $font-style;
 	font-size: 1.1em;
 	line-height: 1.6;
+	font-family: $font-style;
 	-webkit-font-smoothing: antialiased;
+	margin: 0;
 }
 h1,
 h2,
 h3 {
-	font-weight: 600;
-	color: $heading-font-color;
-	font-family: $heading-font;
-	line-height: 1.5;
+	font-weight: 400;
+	line-height: 1;
 }
 h1 {
-	color: $main;
+	padding: 15px;
 	font-size: 2.5em;
+	font-family: $font-style;
 	a,
 	a:visited {
 		text-decoration: none;
-		color: $main;
 	}
 }
 h2 {
@@ -28,23 +27,27 @@ h2 {
 }
 a,
 a:visited {
-	color: $link-color;
 	text-decoration: underline;
 	font-weight: bold;
+	
+}
+li {
+	padding: 15px;
+	line-height: 0.5;
 }
 a:hover {
-	color: $link-hover-color;
 	text-decoration: underline;
 }
 header {
-	background: $header;
-	padding: 0px 15px;
+	padding: 15px 20px 20px 30px;
+	line-height: 0.5;
 	text-align: center;
-	margin: 50px 0 0;
-	height: 50vh;
+	background: $header;
+	height: 5cm;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin: 15px auto;
 }
 main {
 	padding: 0 15px;
@@ -52,7 +55,7 @@ main {
 	margin: 0 auto;
 }
 time {
-	color: #898989;
+	padding: 0 0 100px 0;
 }
 .container {
 	max-width: $content-width;
@@ -82,18 +85,16 @@ aside {
 				float: left;
 				position: relative;
 				a {
+					font-family: $font-style;
 					text-decoration: none;
 					display: block;
 					padding: 15px;
-					font-family: 'Muli', sans-serif;
 					line-height: 20px;
 					margin-bottom: -1px;
 					box-shadow: 0;
 					&:hover,
 					&:active {
-						background: $header;
 						text-decoration: none;
-						color: $main;
 					}
 				}
 			}
