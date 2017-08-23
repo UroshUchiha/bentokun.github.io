@@ -17,8 +17,7 @@ title: Bentokun
 email: fewdspuckrito@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   My blogg.
-baseurl: "" # the subpath of your site, e.g. /
-blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://bentokun.github.io"
 
 twitter_username: dotrongthu
