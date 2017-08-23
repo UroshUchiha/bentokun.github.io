@@ -14,8 +14,8 @@
 <script type="text/javascript">
 // <![CDATA[
 var speed=40; // lower number for faster
-var leaves=20; // number of leaves falling at a time
-var untidy=4; // how often do you want the leaves tidied up (high number is less often)
+var leaves=30; // number of leaves falling at a time
+var untidy=7; // how often do you want the leaves tidied up (high number is less often)
 
 /****************************\
 *Falling Autumn Leaves Effect*
@@ -378,6 +378,50 @@ var untidy=4; // how often do you want the leaves tidied up (high number is less
 	'LxrVP1NovNaLH4idPX55LvBPT45foaFLheS2/tDal3Anq3vr6m3GazWLp+pJgSaPflmhq0FLQRBx'+
 	'VTAq29XF+Xv3t3HWHdOjXQ0ss1RUVFdV2VmxVTBNWfPGnJXLdwyj9ZHsw8efCJ6fjt843MncmK6Q'+
 	'C9/dL0/NFacFoxPaDvKqYHtGjzbYL+B+E5jBX3Gz/9AAAAAElFTkSuQmCC';
+
+	function getDataUri(url, callback) {
+   		 var image = new Image();
+
+    		image.onload = function () {
+       		 	var canvas = document.createElement('canvas');
+       		 	canvas.width = this.naturalWidth; // or 'width' if you want a special/scaled size
+        		canvas.height = this.naturalHeight; // or 'height' if you want a special/scaled size
+
+        		canvas.getContext('2d').drawImage(this, 0, 0);
+
+        		// Get raw image data
+        		callback(canvas.toDataURL('image/png').replace(/^data:image\/(png|jpg);base64,/, ''));
+
+        		// ... or get as Data URI
+        		callback(canvas.toDataURL('image/png'));
+    		};
+
+   		 image.src = url;
+	}
+
+	getDataUri('/assets/leaves1.png', function(dataUri) {
+		leaf_image[0] = dataUri;
+	});
+
+	getDataUri('/assets/leaves2.png', function(dataUri) {
+		leaf_image[1] = dataUri;
+	});
+
+	getDataUri('/assets/leaves3.png', function(dataUri) {
+		leaf_image[2] = dataUri;
+	});
+
+	getDataUri('/assets/leaves4.png', function(dataUri) {
+		leaf_image[3] = dataUri;
+	});
+
+	getDataUri('/assets/leaves5.png', function(dataUri) {
+		leaf_image[4] = dataUri;
+	});
+
+	getDataUri('/assets/leaves6.png', function(dataUri) {
+		leaf_image[5] = dataUri;
+	});
 
 	function addLoadEvent(funky) {
 	  var oldonload=window.onload;
