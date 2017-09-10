@@ -35,13 +35,20 @@ Lots of model were pre-rendered or draw, then rendered as billboard like the tec
 works great. The core of the game is fun, actually =)) Here are some images that I think you would want to see
 
 ![Most stuff in the house are 3D. In a big environment, using billboarding is a great choice to hide weakness, but in a small environment like house, billboards make game looks ugly.](/assets/Scr000013.jpg)
+Most stuff in the house are 3D. In a big environment, using billboarding is a great choice to hide weakness, but in a small environment like house, billboards make game looks ugly.
 ![Trees are billboard](/assets/Scr000014.jpg)
+Trees are billboard 
 ![Trees are billboard 2](/assets/Scr000015.jpg)
+Trees are billboard 2
 ![Trees are billboard 3](/assets/Scr000016.jpg)
+Trees are billboard 3
 ![Trees are billboard 4](/assets/Scr000017.jpg)
+Trees are billboard 4
 ![Trees are billboard 5](/assets/Scr000025.jpg)
+Trees are billboard 5
 ![In the arena, the land are rendered as a plane, and then textured flat, in order to optimized as much as possible. Player and oponent are 3D, still](/assets/Scr000021.jpg)
+In the arena, the land are rendered as a plane, and then textured flat, in order to optimized as much as possible. Player and oponent are 3D, still
 ![](/assets/Scr000022.jpg)
-![Store items are displayed as icons, with size about 32x32](/assets/Scr000024)
-
-
+I'm gonna win =))
+![Store items are displayed as icons, with size about 32x32](/assets/Scr000024.jpg)
+Store items are displayed as icons, with size about 32x32
