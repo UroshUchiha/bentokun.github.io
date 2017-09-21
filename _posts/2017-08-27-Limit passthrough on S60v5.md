@@ -36,16 +36,22 @@ works great. The core of the game is fun, actually =)) Here are some images that
 
 ![Most stuff in the house are 3D. In a big environment, using billboarding is a great choice to hide weakness, but in a small environment like house, billboards make game looks ugly.](/assets/Scr000013.jpg)
 <p>Most stuff in the house are 3D. In a big environment, using billboarding is a great choice to hide weakness, but in a small environment like house, billboards make game looks ugly.</p>
+
 ![Trees are billboard](/assets/Scr000014.jpg)
 <p>Trees are billboard</p>
+
 ![Trees are billboard 2](/assets/Scr000015.jpg)
 <p>Trees are billboard 2</p>
+
 ![Trees are billboard 3](/assets/Scr000016.jpg)
 <p>Trees are billboard 3</p>
+
 ![Trees are billboard 4](/assets/Scr000017.jpg)
 <p>Trees are billboard 4</p>
+
 ![Trees are billboard 5](/assets/Scr000025.jpg)
 <p>Trees are billboard 5</p>
+
 ![In the arena, the land are rendered as a plane, and then textured flat, in order to optimized as much as possible. Player and oponent are 3D, still](/assets/Scr000021.jpg)
 <p>In the arena, the land are rendered as a plane, and then textured flat, in order to optimized as much as possible. Player and oponent are 3D, still</p>
 ![](/assets/Scr000022.jpg)
