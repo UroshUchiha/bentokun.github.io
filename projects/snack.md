@@ -11,7 +11,7 @@ bytecode with LLVM or its own asm generator.
 - Basiclly, Scripting language that uses LLVM as backend, compiled code, JITing or Intepretering. 
 Has the ability to generate fully dynamic reflection by a post-precessor
 
-![Design](https://github.com/bentokun/snack/raw/master/design.png Design)
+![Design](https://github.com/bentokun/snack/raw/master/design.png)
 
 ## Why is created Snack?
 - I need a language to scripting, and I want to challenge myself.
