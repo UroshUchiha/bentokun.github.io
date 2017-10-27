@@ -1,0 +1,6 @@
+$incl 'script2.sn'
+
+$def a(ppp) std::cout << ppp \
+ lol
+
+a("Hi, I'm a scirpt!");

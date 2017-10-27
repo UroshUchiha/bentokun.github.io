@@ -31,8 +31,10 @@ email: fewdspuckrito@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   My blogg.
 
+  #http://bentokun.github.io
+  
 url: ""
-baseurl: "http://bentokun.github.io"
+baseurl: ""
 
 twitter_username: dotrongthu
 github_username:  bentokun
