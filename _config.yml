@@ -33,7 +33,7 @@ description: > # this means to ignore newlines until "baseurl:"
 
   #http://bentokun.github.io
   
-url: ""
+url: "bentokun.github.io"
 baseurl: ""
 
 paginate: 5
