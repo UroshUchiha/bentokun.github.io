@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 ---
 
 Between 2008 and 2010, Symbian 60 phones were very popular (because there hasn't been any Android phone around yet). Symbian development had been popular until middle of 2010. And although Nokia had put their effort so much on
