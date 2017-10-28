@@ -6,3 +6,15 @@ p {padding: 0 0 0 20px; }
 h1, h2, h3, h4 {padding: 0 0 0 10px; }
 time {padding: 5px}
 li {padding: 10px; line-height: 0px}
+
+.column {
+    float: left;
+    width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
