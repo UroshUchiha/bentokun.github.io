@@ -21,21 +21,6 @@ comments: true
 * <a href="#p00010">P00010</a>
 * <a href="#p00011">P00011</a>
 * <a href="#p00012">P00012</a>
-</div>
-<div class="column">
-* <a href="#p00108">P00108</a>
-* <a href="#p00203">P00203</a>
-* <a href="#p00222">P00222</a>
-* <a href="#p00223">P00223</a>
-* <a href="#p00224">P00224</a>
-* <a href="#p00240">P00240</a>
-* <a href="#p00402">P00402</a>
-* <a href="#p00405">P00405</a>
-* <a href="#p00027">P00027</a>
-* <a href="#p00028">P00028</a>
-* <a href="#p00031">P00031</a>
-</div>
-<div class="column">
 * <a href="#p00013">P00013</a>
 * <a href="#p00014">P00014</a>
 * <a href="#p00015">P00015</a>
@@ -48,6 +33,17 @@ comments: true
 * <a href="#p00025">P00025</a>
 * <a href="#p00026">P00026</a>
 * <a href="#p00032">P00032</a>
+* <a href="#p00108">P00108</a>
+* <a href="#p00203">P00203</a>
+* <a href="#p00222">P00222</a>
+* <a href="#p00223">P00223</a>
+* <a href="#p00224">P00224</a>
+* <a href="#p00240">P00240</a>
+* <a href="#p00402">P00402</a>
+* <a href="#p00405">P00405</a>
+* <a href="#p00027">P00027</a>
+* <a href="#p00028">P00028</a>
+* <a href="#p00031">P00031</a>
 </div>
 </div>  
 
