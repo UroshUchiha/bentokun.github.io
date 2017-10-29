@@ -5,11 +5,12 @@ comments: true
 
 # CODEFUN CHEATSHEET
 #### - Qs: <https://goo.gl/o4KxyV>
+#### - Word version
 #### - Contents:
 
 <div class="row">
 <div class="column">
-* <a href="#p00001">P00001</a>
+<a href="#p00001">P00001</a>
 * <a href="#p00002">P00002</a>
 * <a href="#p00003">P00003</a>
 * <a href="#p00004">P00004</a>
@@ -29,7 +30,10 @@ comments: true
 * <a href="#p00018">P00018</a>
 * <a href="#p00019">P00019</a>
 * <a href="#p00020">P00020</a>
-* <a href="#p00021">P00021</a>
+
+</div>
+<div class ="column">
+<a href="#p00021">P00021</a>
 * <a href="#p00025">P00025</a>
 * <a href="#p00026">P00026</a>
 * <a href="#p00032">P00032</a>
