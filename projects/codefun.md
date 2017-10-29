@@ -4,8 +4,8 @@ comments: true
 ---
 
 # CODEFUN CHEATSHEET
-#### - Qs: <https://goo.gl/o4KxyV>
-#### - Word version
+#### - [Qs](https://goo.gl/o4KxyV): Questions
+#### - [Word version](https://github.com/bentokun/bentokun.github.io/raw/master/files/codefun_cheatsheet.docx): The Word Version
 #### - Contents:
 
 <div class="row">
