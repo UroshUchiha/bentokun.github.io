@@ -3,23 +3,9 @@ layout: page
 comments: true
 ---
 
---------------
 # CODEFUN CHEATSHEET
 #### - [Qs](https://goo.gl/o4KxyV): Questions
-#### - [Word version](https://github.com/bentokun/bentokun.github.io/raw/master/files/codefun/codefun_cheatsheet.docx): The Word Version
-#### - [Source codes: pas, cpp](https://github.com/bentokun/bentokun.github.io/raw/master/files/codefun/answergen.rar): Answers to given exams stored in programming language files
-
----------------
-# GENERATE SOURCE CODE (.PAS, .CPP, .C) FROM CHEATSHEET
-- To generate source code from cheatsheet, we use the generator.
-	* I wrote a generator in traditional Pascal, which allows you to generate source files depends on the markdown
-	* [Source code of the generator](https://github.com/bentokun/bentokun.github.io/raw/master/files/codefun/codefunanswergen.pas): Modify it, no depency
-	* [Compied](https://github.com/bentokun/bentokun.github.io/raw/master/files/codefun/codefunanswergen.exe): First parameter is the cheatsheet dir
-	* [Raw cheatsheet](https://github.com/bentokun/bentokun.github.io/raw/master/projects/codefun.md): In markdown
-- For eg: codefunanswergen.exe codefun.md (in the same dir) 
-
--------------
-
+#### - [Word version](https://github.com/bentokun/bentokun.github.io/raw/master/files/codefun_cheatsheet.docx): The Word Version
 #### - Contents:
 
 <div class="row">
@@ -64,8 +50,6 @@ comments: true
 * <a href="#p00031">P00031</a>
 </div>
 </div>  
-
-------------
 
 ## P00001
 ```pascal

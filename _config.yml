@@ -33,6 +33,8 @@ description: > # this means to ignore newlines until "baseurl:"
 
   #http://bentokun.github.io
   
+exclude: ["files/"]
+  
 url: "https://bentokun.github.io"
 baseurl: ""
 
