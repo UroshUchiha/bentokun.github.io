@@ -44,7 +44,11 @@ comments: true
 * <a href="#p00020">P00020</a>
 * <a href="#p00021">P00021</a>
 * <a href="#p00022">P00022</a>
-
+* <a href="#p00011">P00011</a>
+* <a href="#p00028">P00028</a>
+* <a href="#p00232">P00232</a>
+* <a href="#p00804">P00804</a> 
+* <a href="#java">java</a>
 </div>
 <div class ="column">
 <a href="#p00025">P00025</a>
@@ -202,6 +206,23 @@ begin
 end.
 
 ```
+## P00011 (C++)
+```c
+#include <iostream>
+#include <cmath>
+
+int main () {
+    float a, b, c;
+    
+    std::cin >> a >> b >> c;
+    
+    float p = (a + b + c) / 2;
+    
+    if ((a + b > c) && (b + c > a) && (a + c > b))
+        std::cout << sqrt(p * (p-a) * (p-b) * (p - c)) << std::endl;
+}
+```
+
 ## P00012
 ```pascal
 var n, m, i, j: integer;
@@ -416,6 +437,31 @@ begin
     writeln('YES');
     
     l:
+end.
+```
+## P00028
+```pascal
+var i, t, n, k: integer;
+
+begin
+    readln(n, k);
+    
+    {
+    for i:=1 to n do
+    begin
+        t:= t + i * i;
+    end;
+    
+    t:= t + ((1 + n) * n) div 2  * k;
+    
+    writeln(t);}
+    
+    for i:=1 to n do
+    begin
+        t:= t + i*(i+k);
+    end;
+    
+    writeln(t);
 end.
 ```
 ## P00029 (C++)
@@ -715,6 +761,15 @@ begin
     end;
 end.
 ```
+## P00232
+```pascal
+var s: string;
+
+begin
+    readln(s);
+    writeln(length(s) - 1);
+end.
+```
 ## P00234
 ```pascal
 var i, n, m: longint;
@@ -931,4 +986,29 @@ begin
 end.
 
 ```
+## P00804
+```pascal
+var x, n, i: longint;
+    t: Int64;
 
+begin
+    readln(x, n);
+    t:=1;
+    
+    for i:=1 to n do
+    begin
+        t:=t*x;
+    end;
+    
+    writeln(t);
+end.
+```
+## java
+```pascal
+var a, b: longint;
+
+begin
+    readln(a,b);
+    writeln(a+b);
+end.
+```
