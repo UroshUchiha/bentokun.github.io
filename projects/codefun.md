@@ -29,6 +29,9 @@ comments: true
 		+ Options:
 			@ -s: Specify save location, with next parameter as the save dir
 	* [Raw cheatsheet](https://github.com/bentokun/bentokun.github.io/raw/master/projects/codefun.md): In markdown
+	* To jump to specific exam, use document map in View menu
+	* ![document_map](https://github.com/bentokun/bentokun.github.io/raw/master/assets/codefungen.png)
+	
 
 -------------
 
