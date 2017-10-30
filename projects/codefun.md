@@ -123,7 +123,7 @@ begin
     writeln(n - (n-1) div 2 - 1);
 end.
 ```
-## P00005 (C++)
+## P00005
 ```c
 #include <iostream>
 
@@ -206,7 +206,7 @@ begin
 end.
 
 ```
-## P00011 (C++)
+## P00011
 ```c
 #include <iostream>
 #include <cmath>
@@ -464,7 +464,7 @@ begin
     writeln(t);
 end.
 ```
-## P00029 (C++)
+## P00029
 ```c++
 #include <stdio.h>
 #include <iostream>

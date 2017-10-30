@@ -1,5 +1,5 @@
 var r, w: text;
-    t, fn: unicodestring;
+    t, fn, lt: unicodestring;
     ppos: Int64;
 
 begin
@@ -15,17 +15,20 @@ begin
                 begin
                         readln(r,  t);
 
-                        ppos:=pos('P00', t);
-
-                        if (ppos <> 0) then
+                        if (t = '') then
+                                t:=lt
+                        else
                         begin
-                                //Copy exam name
-                                fn:=copy(t, ppos, 6);
 
-                                readln(r, t);
+                          if (pos('```', t) <> 0)and (length(t) > 3) then
+                          begin
+                                        fn:=lt;
 
-                                if (pos('```', t) <> 0)and (length(t) > 3) then
-                                begin
+                                        while ((fn[1] = '#') or (fn[1]=' ')) and (length(fn) >0) do
+                                        begin
+                                                delete(fn,1,1);
+                                        end;
+
                                         //Define type
                                         if (t='```pascal') then
                                                 assign(w, fn + '.pas')
@@ -43,7 +46,9 @@ begin
                                         end;
 
                                         close(w);
-                                end;
+                          end;
+
+                          lt:=t;
                         end;
                 end;
         end;
