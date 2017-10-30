@@ -10,12 +10,13 @@ layout: default
 
 	<hr>
 	<div class="pagination">
+		<p>
 		{%if paginator.previous_page %}
 			<a href = "{{ paginator.previous_page_path | prepend: site.url }}">&laquo;</a>
 		{%else%}
 			<span>&laquo;</span>
 		{%endif%}
-		
+	
 		{% for page in (1..paginator.total_pages) %}
 			{%if page == 1%}
 			<a href ="{{site.paginate_path| prepend: site.url | replace: 'page:num/', ''}}">{{page}}</a>
@@ -29,6 +30,7 @@ layout: default
 		{%else%}
 			<span>&raquo;</span>
 		{%endif%}
+		</p>
 	</div>
 	
 	
