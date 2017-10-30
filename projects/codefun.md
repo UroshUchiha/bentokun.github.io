@@ -20,6 +20,18 @@ comments: true
 
 -------------
 
+# GENERATE WORD VERSION FROM CHEATSHEET
+- If you have a copy of Word installed, you can generate a word version of the cheatsheet for your self
+- A generator written in C# is used to do this
+	* [Source code of the generator](https://github.com/bentokun/bentokun.github.io/raw/master/files/codefun/codefunwordgen.cs): Modify it, no depency
+	* [Compied](https://github.com/bentokun/bentokun.github.io/raw/master/files/codefun/codefunwordgen.exe):
+		+ Last parameter is the cheatsheet dir
+		+ Options:
+			@ -s: Specify save location, with next parameter as the save dir
+	* [Raw cheatsheet](https://github.com/bentokun/bentokun.github.io/raw/master/projects/codefun.md): In markdown
+
+-------------
+
 #### - Contents:
 
 <div class="row">
