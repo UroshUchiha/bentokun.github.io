@@ -2,8 +2,33 @@
 layout: default
 ---
 
-{% for post in site.posts %}
+{% for post in paginator.posts %}
 		<h3>{{ post.date | date: "%b %-d, %Y" }}</h3>
 		<h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
 		{{post.excerpt}}
 {%endfor%}
+
+	<hr>
+	<div class="pagination">
+		{%if paginator.previous_page %}
+			<a href = "{{ paginator.previous_page_path | prepend: site.url }}">&laquo;</a>
+		{%else%}
+			<span>&laquo;</span>
+		{%endif%}
+		
+		{% for page in (1..paginator.total_pages) %}
+			{%if page == 1%}
+			<a href ="{{site.paginate_path| prepend: site.url | replace: 'page:num/', ''}}">{{page}}</a>
+			{%else%}
+			<a href ="{{site.paginate_path| prepend: site.url | replace: ':num', page}}">{{page}}</a>
+			{%endif%}
+		{% endfor %}
+		
+		{%if paginator.next_page %}
+			<a href = "{{ paginator.next_page_path | prepend: site.url }}">&raquo;</a>
+		{%else%}
+			<span>&raquo;</span>
+		{%endif%}
+	</div>
+	
+	

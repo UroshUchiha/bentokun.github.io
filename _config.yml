@@ -39,6 +39,7 @@ url: "https://bentokun.github.io"
 baseurl: ""
 
 paginate: 5
+paginate_path: "/blog/page:num/"
 
 twitter_username: dotrongthu
 github_username:  bentokun
