@@ -67,7 +67,7 @@ comments: true
 </div>
 <div class ="column">
 <a href="#p00025">P00025</a>
-* <a href="#p00026">P00026</a>
+*<a href="#p00026">P00026</a>
 * <a href="#p00032">P00032</a>
 * <a href="#p00033">P00033</a>
 * <a href="#p00105">P00105</a>
@@ -94,6 +94,24 @@ comments: true
 * <a href="#p00027">P00027</a>
 * <a href="#p00028">P00029</a>
 * <a href="#p00031">P00031</a>
+</div>
+<div class ="column">
+<a href="#p00934">P00934</a>
+* <a href="#p00621">P00621</a>
+* <a href="#p00622">P00622</a>
+* <a href="#p00623">P00623</a>
+* <a href="#p00624">P00624</a>
+* <a href="#p00625">P00625</a>
+* <a href="#p00626">P00626</a>
+* <a href="#p00627">P00627</a>
+* <a href="#p00628">P00628</a>
+* <a href="#p00805">P00805</a>
+* <a href="#p00808">P00808</a>
+* <a href="#p00809">P00809</a>
+* <a href="#p00812">P00812</a>
+* <a href="#p00813">P00813</a>
+* <a href="#p00807">P00807</a>
+* <a href="#p20011">P20011</a>
 </div>
 </div>  
 
@@ -1001,6 +1019,127 @@ begin
 end.
 
 ```
+## P00621
+```pascal
+var n, i: longint;
+    temp: int64;
+    
+begin
+    readln(n);
+    
+    for i:=1 to n do
+    begin
+        read(temp);
+    end;
+    
+    writeln(temp);
+end.
+
+```
+## P00622
+```pascal
+var n, i: longint;
+    temp: int64;
+    
+begin
+    readln(n);
+    
+    for i:=1 to n div 2 do
+    begin
+        read(temp);
+    end;
+    
+    writeln(temp);
+end.
+```
+## P00623
+```pascal
+var a: array[1..100000] of int64;
+    i, n, j: longint;
+    temp: int64;
+
+begin
+    readln(n);
+    for i:=1 to n do
+        read(a[i]);
+        
+    for i:=1 to n do
+        for j:=1 to n do
+            if (a[i] < a[j]) then
+            begin
+                temp:=a[i];
+                a[i]:=a[j];
+                a[j]:= temp;
+            end;
+            
+    writeln(a[1],' ',a[2],' ',a[3]);
+end.
+```
+## P00625
+```pascal
+var a: array[1..100000] of int64;
+    i, n, j: longint;
+    temp: int64;
+
+begin
+    readln(n);
+    
+    for i:=1 to n do
+        read(a[i]);
+        
+    for i:=1 to n do
+        for j:=1 to n do
+            if (a[i] < a[j]) then
+            begin
+                temp:=a[i];
+                a[i]:=a[j];
+                a[j]:= temp;
+            end;
+            
+    for i:=1 to n do
+        write(a[i], ' ');
+end.
+```
+
+## P00626
+```pascal
+var a: array[1..100000] of int64;
+    i, n, j: longint;
+    s: int64;
+
+begin
+    readln(n);
+    
+    for i:=1 to n do
+    begin
+        read(a[i]);
+        s:=s+a[i];
+    end;
+    
+    writeln(s);
+end.
+```
+## P00627
+```pascal
+var a: array[1..100000] of int64;
+    i, n, j: longint;
+    s: int64;
+
+begin
+    readln(n);
+    
+    s:=1;
+    
+    for i:=1 to n do
+    begin
+        read(a[i]);
+        s:=s*a[i];
+    end;
+    
+    writeln(s);
+end.
+```
+
 ## P00804
 ```pascal
 var x, n, i: longint;
@@ -1018,6 +1157,151 @@ begin
     writeln(t);
 end.
 ```
+## P00805
+```pascal
+var a,b,r:int64;
+
+begin
+    readln(a,b);
+    
+    r:=1;
+    
+    while (r<>0) do
+    begin
+        r:=a mod b;
+        a:=b;
+        b:=r;
+    end;
+    
+    writeln(a);
+end.
+```
+
+## P00807
+```pascal
+var n: longint;
+
+function giaithua(n: longint): int64;
+begin
+    if (n = 1) then exit(1);
+    
+    exit(n* giaithua(n-1));
+end;
+
+begin
+    readln(n);
+    writeln(giaithua(n));
+end.
+```
+
+## P00808
+```pascal
+var k, n: longint;
+
+
+
+function tohop(n, k: longint): int64;
+
+begin
+ 
+   tohop:=0;
+
+   
+   if (k = 0) or (k=n) then
+
+        exit(1);
+        
+   
+  
+   exit(tohop(n-1,k-1) + tohop(n-1, k));
+
+end;
+
+
+
+begin
+
+    readln(k,n);
+
+    writeln(tohop(n,k));
+
+end.
+```
+
+## P00809
+```pascal
+var 
+    n, i, dem: longint;
+    k, temp: int64;
+    
+begin
+    readln(n, k);
+    
+    for i:=1 to n do
+    begin
+        read(temp);
+        
+        if (temp = k) then inc(dem);
+    end;
+    
+    writeln(dem);
+end.
+```
+## P00812
+```pascal
+var a: array [1..100000] of int64;
+    i, n: longint;
+
+label l;
+
+begin
+    readln(n);
+    
+    for i:=1 to n do
+        read(a[i]);
+        
+    for i:=1 to n-1 do
+        if (a[i] > a[i+1]) then 
+        begin
+            writeln('NO');
+            goto l;
+        end;
+      
+    writeln('YES');
+        
+    l:
+end.
+```
+## P00813
+```pascal
+var i, n: longint;
+    s: int64;
+    a: array[1..100000] of int64;
+    
+begin
+    readln(n);
+    
+    for i:=1 to n do
+    begin
+        read(a[i]);
+        
+    end;
+        
+    readln;
+    
+    for i:=1 to n do
+    begin
+    
+        if ((a[i] mod 5 = 1) and (a[i] mod 2 = 0)) then
+            s:=s+a[i];
+    end;
+        
+    writeln(s);    
+    
+end.
+```
+
+
 ## java
 ```pascal
 var a, b: longint;
@@ -1025,5 +1309,40 @@ var a, b: longint;
 begin
     readln(a,b);
     writeln(a+b);
+end.
+```
+
+## P00934
+```pascal
+var n: int64;
+
+begin
+    readln(n);
+    writeln(n*2*PI:0:2);
+end.
+```
+## P20011
+```pascal
+var n, s: longint;
+    t: int64;
+
+function giaithua(n: longint): int64;
+begin
+    if (n = 1) then exit(1);
+    
+    exit(n* giaithua(n-1));
+end;
+
+begin
+    readln(n);
+    t:=giaithua(n);
+    
+    while (t<>0) do
+    begin
+        s:=s+t mod 10;
+        t:=t div 10;
+    end;
+    
+    writeln(s);
 end.
 ```
