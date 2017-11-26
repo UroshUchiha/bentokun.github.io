@@ -29,7 +29,7 @@ comments: true
           }
       });
       }
-      setInterval(update, 4000);
+      setInterval(update, 2000);
       update();
   }
   init();
