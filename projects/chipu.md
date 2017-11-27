@@ -12,12 +12,45 @@ comments: true
   <script>
   function init() {
       //var channel = $.url().param('video');
-      
+      var key = {
+			'ch': 'c',
+			'đ': 'd',
+			'gh': 'g',
+			'ph': 'f',
+			'c': 'k',
+			'q': 'k',
+			'ng': 'q',
+			'ngh?': 'q',
+			'kh': 'x',
+			'th': 'w',
+			'd': 'z',
+			'gi': 'z',
+			'r': 'z',
+			'nh': 'n\''
+	  }
+	  
+	  function uppercase_first(str) {
+		   return `${str.charAt(0).toUpperCase()}${str.slice(1)}`
+	  }
+	  
+	  function convert(str) {
+		
+		  for (var k in key) {
+			 str = str.replace(new RegExp(k, 'g'), key[k]).
+							replace(new RegExp(uppercase_first(k), 'g'), uppercase_first(key[k]));
+		  }
+		  
+		  return str;
+	  }
+	  
+	  console.log(convert('Quý mến'));
+	  
       function update() { 
       $.ajax({
           url: 'https://www.googleapis.com/youtube/v3/videos?part=statistics&id=rzUpGAmhgPc&key=AIzaSyAOgTK-Zv9xybEIlRr7R4P6cOdrJ2KbUHo',
           dataType: 'json',
           type: 'GET',
+		  
           success: function (data) {
 			  var sub2 = data.items[0].statistics.likeCount + " SUNNIES LIKED! ";
               var subscribers = data.items[0].statistics.dislikeCount + " DISLIKES";
