@@ -1,0 +1,103 @@
+<html>
+<head>
+	<meta charset=utf-8>
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name = "viewport" content="width=device-width, intial-scale=1">
+	<meta property="og:title" content="LOL"/>
+	<title> TIEQ VIET </title>
+
+</head>
+<body>
+<h1 id="title"> TIẾNG VIỆT -> TIẾQ VIỆT </h1>
+<form>
+<p id = "typeTextToConvert">Nhập Tiếng Việt</p>
+<textarea name="textToConvert" id="textToConvert" cols="50" rows="10">Bùi Hiền</textarea>
+<p id = "typeTextResult">Kết quả Tiếq Việt</p>
+<textarea name="textResult" id="textResult" cols="50" rows="10"></textarea>
+</form>
+<button name = "Chuyển loại dịch" onclick ="on_switch_click()">Chuyển loại dịch</button>
+<button name = "Dich" onclick="convert_text()">Dịch</button>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-url-parser/2.3.1/purl.js"></script>
+<script>
+var loaidich = true;
+
+function on_switch_click() {
+	loaidich = !loaidich;
+	document.getElementById("title").innerHTML = (loaidich ? "TIẾNG VIỆT -> TIẾQ VIỆT": "TIẾQ VIỆT -> TIẾNG VIỆT");
+	document.getElementById("typeTextToConvert").innerHTML = (loaidich ? "Nhập Tiếng Việt" : "Nhập Tiếq Việt");
+	document.getElementById("typeTextResult").innerHTML = (loaidich ? "Kết quả Tiếq Việt" : "Kết quả Tiếng Việt");
+}
+
+function convert_text() {
+	  var t = document.getElementById("textToConvert");
+	  
+	  console.log(t.value);
+	  
+      var key = {
+			'c(?!(h|H))|q': 'k',
+			'C(?!(h|H))|Q': 'K',
+			'c(h|H)|t(r|R)': 'c',
+			'C(h|H)|T(r|R)': 'C',
+			'd|g(i|I)|r': 'z',
+			'D|G(i|I)|R': 'Z',
+			'Đ': 'D',
+			'đ': 'd',
+			'G(h|H)': 'G',
+			'g(h|H)': 'g',
+			'p(h|H)': 'f',
+			'P(h|H)': 'F',
+			'n((g|G)(h|H)?)': 'q',
+			'N((g|G)(h|H)?)': 'Q',
+			'k(h|H)': 'x',
+			'K(h|H)': 'X',
+			't(h|H)': 'w',
+			'T(h|H)': 'W',
+			'n(h|H)': 'n\'',
+			'N(h|H)': 'N\''
+	  }
+	  
+	  var key_reverse = {
+			'c': 'ch',
+			'C': 'Ch',
+		    'k': 'c',
+			'K': 'C',
+			'd': 'đ',
+			'D': 'Đ',
+			'z': 'd',
+			'Z': 'D',
+			'f': 'ph',
+			'F': 'Ph',
+			'q': 'ng',
+			'Q': 'Ng',
+			'x': 'kh',
+			'X': 'Kh',
+			'W': 'Th',
+			'w': 'th',
+			'n\'': 'nh',
+			'N\'': 'Nh'
+	  }
+
+	  function convert(str) {
+		  if (loaidich) 
+		  for (var k in key) {
+			 str = str.replace(new RegExp(k, 'g'), key[k]);
+		  }
+		  else
+		  for (var k in key_reverse) {
+			 str = str.replace(new RegExp(k, 'g'), key_reverse[k]);
+		  }
+		  
+		  return str;
+	  }
+	  
+	  {
+		 document.getElementById("textResult").value = convert(t.value);
+	  }
+	  
+	  
+}
+convert_text();
+</script>
+</body>
+</html>
