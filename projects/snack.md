@@ -31,41 +31,11 @@ using
 
 $def a(x) std::cout << x
 
-#Basic
+fn max(a, b: int) => int:
+	ret a>b?a:b
 
-#Type specifed with the formula: *var* as *type* = *intialize_val*; 
-
-str_ha = 'string'           #When there is no colon expected, the parser intended it's one line only. Any statement expect comment will be marked as error
-is_true = 2 <> 5.4;   #When there is colon, many statements can be inserted. Statements after a comment will be considered as comments
-
-func max with a as int, b as int: int; 
-bg
-	if a > b 
-	bg
-		ret a;
-	end
-	elif b > a
-	bg
-		ret b;
-	end
-
-	ret 0;
-end
-
-type integer as u32;
-
-class p6 with
-bg
-	public a as integer;
-	public b as integer 
-	bg
-		get bg ret a; end;
-		set bg a = value; end;
-	end
-end
-
-a("Hi, I'm a scirpt!");
-
+fn main:
+	console.writeln(max(5,6))	
 ```
 ## Using the complier:
 - Compile the code using MSVC15

@@ -2,7 +2,6 @@
 layout: post
 comments: true
 ---
-
 I have a big interest in Symbian, for real. Since my childhood was playing Symbian games, especially Infinite Dreams games ^^, now I'm trying to reverse their games =))
 That sounds weird, but i have a question about how they store their game data. Viewing the pak file when i was a child, i don't understand, and know i can't still :)), but
 their storing method is fucking safe, really.
@@ -16,7 +15,7 @@ makes me want to extract them ell lol =))))
 
 ![LOL0](/assets/dis0.png)
 
-Surfing the disassemble chunk, i found that file names are stored in the files =)) That's sad, cause there is no offset to be found :)) However, i had found an interesting 
+Surfing the disassemble chunk, i found that file names are stored in the files =) That's sad, cause there is no offset to be found :)) However, i had found an interesting 
 functions, which looks similiar to everyone who knows CCCCC ......................
 
 ![LOL](/assets/dis2.png)
@@ -32,7 +31,7 @@ Now let's get to its definition
 
 ![LOL3](/assets/dis4.png)
 
-OOHHH, a argument vector =)) If you do not knows the vector arguments, i suggest you to learn it by searching the **I N T E R N E T**, but i would try to explain it as
+OOHHH, a vardaric argument =)) If you do not knows the vardaric arguments, i suggest you to learn it by searching the **I N T E R N E T**, but i would try to explain it as
 easy as possible if you haven't known it yett ^^ Basiclly, when you define the arguments with three dots **...**, you have defined a list of arguments, which size and type is unknown, until
 we parse the functions. Therefore, to provide higher interface for userspace, easier to understand, for people to pass things they want on the function whichout arguments size
 chains, complier provides vectors of argument. LOL let's get back to what i am doingg, shall we .-. You see, there is another function being called, with the same size of arguments, but
@@ -63,5 +62,19 @@ Scroll down a little bit and ...
 ![LOL5](/assets/dis6.png)
 
 I have commented the code for you, but in case you don't understand (look at the code doesn't make you understand, for real), let's do some hexing lol =)))
+
+![LOL6](/assets/dis7.png)
+
+First, convert to hexadecimal value, then convert it to the text!!
+
+![LOL7](/assets/dis8.png)
+
+Now you get the character *%*. Do the same work for other character => get results like above :)
+
+After you disassembling a while, you will find out how the function works. Of course it's not easy, but when we know just a little about its mystery, we
+have fun, for real :). Since the time I wrote this, I have abadoned the disassemble file to switch to Snack and Creebies disassemble, I will let
+you find about this yourself, and introducing you to Struct and Enum guessing in IDA, next part <3. For now, let's do some easy function like User Invariant
+and some some things else :) Symbian C++ is a big and funny hybrid, although it's hard, but when you learn, your mind will be eveloped =))
+
 
 
