@@ -35,7 +35,7 @@ description: > # this means to ignore newlines until "baseurl:"
   
 exclude: ["files/"]
   
-url: "https://bentokun.github.io"
+url: "https://localhost:4000"
 baseurl: ""
 
 paginate: 5

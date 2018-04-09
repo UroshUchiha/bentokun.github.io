@@ -47,7 +47,7 @@ comments: true
 	  
       function update() { 
       $.ajax({
-          url: 'https://www.googleapis.com/youtube/v3/videos?part=statistics&id=rzUpGAmhgPc&key=AIzaSyAOgTK-Zv9xybEIlRr7R4P6cOdrJ2KbUHo',
+          url: 'https://www.googleapis.com/youtube/v3/videos?part=statistics&id=-acFLEmMwOQ&key=AIzaSyAOgTK-Zv9xybEIlRr7R4P6cOdrJ2KbUHo',
           dataType: 'json',
           type: 'GET',
 		  
