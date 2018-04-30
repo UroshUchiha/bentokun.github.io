@@ -57,7 +57,7 @@ work that I haven't ever done before, or experience before. Here's all of them
  
      ![lol](https://media.discordapp.net/attachments/431430141319708692/440343687575109632/unknown.png?width=860&height=484)
      
-47 commits I made in April is [here](https://github.com/bentokun/EKA2L1/graphs/contributors?from=2018-04-01&to=2018-04-30&type=c)
+47 commits I made in April are [here](https://github.com/bentokun/EKA2L1/graphs/contributors?from=2018-04-01&to=2018-04-30&type=c)
 
 ## Vita3K [Github](https://github.com/Vita3K/Vita3K/)
 
