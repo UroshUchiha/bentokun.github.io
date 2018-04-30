@@ -22,7 +22,7 @@ work that I haven't ever done before, or experience before. Here's all of them
    
     * And in case, I hope you like my edgy humor from this video demonstrate the extracting progress 
     
-    <iframe width="420" height="315" src="https://www.youtube.com/embed/6lrB2-X_F40">
+    <iframe width="800" height="600" src="https://www.youtube.com/embed/6lrB2-X_F40">
     </iframe>
     
 - Byte Pair Compression and Inflate Compression
