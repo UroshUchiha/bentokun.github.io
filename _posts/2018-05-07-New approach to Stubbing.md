@@ -9,11 +9,10 @@ or the kernel library, you will have to go through all of these problems. Even i
 easily, but wrapping N3D (A Nokia 3D Renderer), is nothing but pain (you can try looking for the DLL, it is installed along with Bounce Boing
 Vogage, also see the engine by Rovio page [here](https://web.archive.org/web/20080131225709/http://www.kajala.com:80/ka3d/) (I dig for the HGR format a while so I know this website).
 
-While seeing other emulators did a quick hack on this, I think I can improve accuracy to the stubbing system. There are reasons why
-It's suitable and improvable
-    1. **We have the signatures**: Extract it from the SDK legally, we can have a list of signatures for each Symbain platform.
+While seeing other emulators did a quick hack on this, I think I can improve accuracy to the stubbing system. There are reasons why it's suitable and improvable:
+  1. **We have the signatures**: Extract it from the SDK legally, we can have a list of signatures for each Symbain platform.
   Currently, there is signatures for epoc9 (since I'm lazy to unpack)
-    2. **We have the declaration**: Interface class and headers are public available via SDK. This can helps us create typeinfos and vtables
+  2. **We have the declaration**: Interface class and headers are public available via SDK. This can helps us create typeinfos and vtables
     
 Therefore, I decided to take a unique approach. Documented here (**state: UNFINISHED**) :
 
