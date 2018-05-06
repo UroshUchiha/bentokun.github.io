@@ -15,7 +15,7 @@ It's suitable and improvable
   Currently, there is signatures for epoc9 (since I'm lazy to unpack)
     2. **We have the declaration**: Interface class and headers are public available via SDK. This can helps us create typeinfos and vtables
     
-Therefore, I decided to take a unique approach. Here's mine:
+Therefore, I decided to take a unique approach. Documented here (**state: UNFINISHED**) :
 
 ## I. Building the database
 - To build the signatures, I make a tools to parse IDT file and convert in to YAML. IDT files can be found in IDA, or generate through
@@ -49,5 +49,9 @@ typeinfo
 - Assembly for stubbing is handled. Stubbing for HLE calls is made by writing a svc (swi) interrupt call and mov call that includes the function id.
 - As for non-virtual thunk, I do it by writing a sub call that subtract the class size, then jump to actual method. 
 
-The writeup here is unfinished and maybe incorrect. If you have any questions, you can contact through my Discord (Disquis comments won't work in
-Vietnam I think)
+## IV. EABI emulation
+- EABI emulation is not done yet. I don't even think properly about it. However, I have already created a class-type_info-like for EKA2L1, which can be seen [here](https://github.com/bentokun/EKA2L1/blob/master/src/emu/core/include/core/abi/eabi.h#L10)
+
+The writeup here is unfinished and maybe incorrect. If you have any questions, you can contact through my Discord (Disquis comments won't work in Vietnam I think). 
+
+You can also follow my work on Stubbing [here](https://github.com/bentokun/EKA2L1/blob/master/src/emu/core/src/loader/stub.cpp). Thanks for reading !
