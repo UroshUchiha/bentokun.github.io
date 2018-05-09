@@ -3,6 +3,13 @@ layout: post
 comments: true
 ---
 
+- First update: 7/5/2018
+- Latest update: 9/5/2018
+   * Add description of vtable
+   * Add targets to do for EABI emulation
+    
+----------------------------------------
+
 Stubbing was a pain in the ass for EKA2L1. Because everything, even system call, is pure C++. No C at all. Therefore, you have to
 deal with vtables, typeinfos and other OOP things: pure virtual, non-virtual thunk, ABI, ... Either you choose to emulate system call
 or the kernel library, you will have to go through all of these problems. Even in EKA2L1, I can't denined it. OpenGL ES can be wrapped
@@ -13,6 +20,10 @@ While seeing other emulators did a quick hack on this, I think I can improve acc
   1. **We have the signatures**: Extract it from the SDK legally, we can have a list of signatures for each Symbain platform.
   Currently, there is signatures for epoc9 (since I'm lazy to unpack)
   2. **We have the declaration**: Interface class and headers are public available via SDK. This can helps us create typeinfos and vtables
+  
+Unfortunately
+    1. There's no tools to dump vtables of a MSVC LIB file.
+    2. Kernel emulation is not EKA2L1 (no system calls emulated), EKA2L1 emulates user interface library and graphic library.
     
 Therefore, I decided to take a unique approach. Documented here (**state: UNFINISHED**) :
 
@@ -44,6 +55,24 @@ Therefore, I decided to take a unique approach. Documented here (**state: UNFINI
 - Typeinfo should be built easily. When we had written the helper pointer and name, we only have to write the pointer of the parent 
 typeinfo
 
+- EKA2L1 implementation:
+
+  ##### II.0: Attribute priority
+      - Pure Virtual = Virtual = 0,
+      - None = 1
+      - Override = 2
+
+  ###### II.1: Single inhertance
+  - The simplest case
+      * First, create the vtable of the mother. (recursively doing this)
+      * Child VTable: (Ordinial Stub (0 - top offset), Typeinfo Stub, and entries)
+      * Loop though all the entries of mother's vtable:    
+          + Find a function that has the same name in child
+          + If child entry attribute has higher or same priority than/as mother entry, then add the child entry
+      to the vtable, else add the mother
+          + Add the rest functions of the child to the vtabe
+
+
 ## III. Assembly and thunks
 - Assembly for stubbing is handled. Stubbing for HLE calls is made by writing a svc (swi) interrupt call and mov call that includes the function id.
 - As for non-virtual thunk, I do it by writing a sub call that subtract the class size, then jump to actual method. 
@@ -51,6 +80,14 @@ typeinfo
 ## IV. EABI emulation
 - EABI emulation is not done yet. I don't even think properly about it. However, I have already created a class-type_info-like for EKA2L1, which can be seen [here](https://github.com/bentokun/EKA2L1/blob/master/src/emu/core/include/core/abi/eabi.h#L10)
 
+- Progress
+    + Mangle and demangle name (Itanium C++ ABI)
+    + Leave and trap
+    + RTTI (register destroy functions), Typeinfo (casting)
+    + CXX Pure Virtual Thrower
+
 The writeup here is unfinished and maybe incorrect. If you have any questions, you can contact through my Discord (Disquis comments won't work in Vietnam I think). 
 
 You can also follow my work on Stubbing [here](https://github.com/bentokun/EKA2L1/blob/master/src/emu/core/src/loader/stub.cpp). Thanks for reading !
+
+Reference: https://itanium-cxx-abi.github.io/cxx-abi/
