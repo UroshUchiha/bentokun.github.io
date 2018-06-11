@@ -1,0 +1,27 @@
+body {font-family: "Comic Sans MS"; background-color:black; }
+cimg {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align:center;
+}
+badge {
+    display: inline-block;
+    padding-left: 30px;
+}
+h1 {
+    color: white;
+    text-align: center;
+}
+h2 {
+    color: black;
+}
+h4 {
+    color: black;
+}
+p {
+    color: white;
+}
+#images{
+    text-align:center;
+}
