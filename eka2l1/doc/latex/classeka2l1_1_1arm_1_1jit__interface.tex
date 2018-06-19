@@ -1,0 +1,246 @@
+\hypertarget{classeka2l1_1_1arm_1_1jit__interface}{}\section{eka2l1\+:\+:arm\+:\+:jit\+\_\+interface Class Reference}
+\label{classeka2l1_1_1arm_1_1jit__interface}\index{eka2l1\+::arm\+::jit\+\_\+interface@{eka2l1\+::arm\+::jit\+\_\+interface}}
+
+
+An interface to all J\+IT implementation.  
+
+
+
+
+{\ttfamily \#include $<$jit\+\_\+interface.\+h$>$}
+
+Inheritance diagram for eka2l1\+:\+:arm\+:\+:jit\+\_\+interface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classeka2l1_1_1arm_1_1jit__interface}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structeka2l1_1_1arm_1_1jit__interface_1_1thread__context}{thread\+\_\+context}}
+\begin{DoxyCompactList}\small\item\em The thread context Stores register value and some pointer of the C\+PU. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classeka2l1_1_1arm_1_1jit__interface_a30ede595d2381735d13642768dda3be8}{run}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classeka2l1_1_1arm_1_1jit__interface_a8454089a0370df8830884c07bc972755}{stop}} ()=0
+\item 
+virtual bool \mbox{\hyperlink{classeka2l1_1_1arm_1_1jit__interface_a6dbaf8bc64fd987c3b1d96f2644c3811}{execute\+\_\+instructions}} (int num\+\_\+instructions)=0
+\item 
+virtual void \mbox{\hyperlink{classeka2l1_1_1arm_1_1jit__interface_a424b0596eba2527407be4669d432f9b5}{step}} ()=0
+\item 
+virtual uint32\+\_\+t \mbox{\hyperlink{classeka2l1_1_1arm_1_1jit__interface_ae68ac4dc5fdb598d36aef40689694f6b}{get\+\_\+reg}} (size\+\_\+t idx)=0
+\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{classeka2l1_1_1arm_1_1jit__interface_a68ea503b77c6f3014293c41eda739476}{get\+\_\+sp}} ()=0
+\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{classeka2l1_1_1arm_1_1jit__interface_a89fd7fc20ee959606a71eecb959c610d}{get\+\_\+pc}} ()=0
+\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{classeka2l1_1_1arm_1_1jit__interface_a30925206698ca8a6fc7d86ec73886d06}{get\+\_\+vfp}} (size\+\_\+t idx)=0
+\item 
+virtual void \mbox{\hyperlink{classeka2l1_1_1arm_1_1jit__interface_a49acadec0be00056abe923ed36a61bbd}{set\+\_\+reg}} (size\+\_\+t idx, uint32\+\_\+t val)=0
+\item 
+virtual void \mbox{\hyperlink{classeka2l1_1_1arm_1_1jit__interface_abda1155e6ce73a15e9ccf55a7c2465bb}{set\+\_\+pc}} (uint64\+\_\+t val)=0
+\item 
+virtual void \mbox{\hyperlink{classeka2l1_1_1arm_1_1jit__interface_a4e4da2ac6f5b627c0c7d9d3951edd053}{set\+\_\+lr}} (uint64\+\_\+t val)=0
+\item 
+virtual void \mbox{\hyperlink{classeka2l1_1_1arm_1_1jit__interface_a8df41ca8e7ce3c72b3edaadf7bc1369b}{set\+\_\+sp}} (uint32\+\_\+t val)=0
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1arm_1_1jit__interface_a747ecacda40bab475241aeb722e5fd0d}\label{classeka2l1_1_1arm_1_1jit__interface_a747ecacda40bab475241aeb722e5fd0d}} 
+virtual void {\bfseries set\+\_\+vfp} (size\+\_\+t idx, uint64\+\_\+t val)=0
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1arm_1_1jit__interface_a00c1ee6d3f4f6bea3eb1c0b356fbb9ea}\label{classeka2l1_1_1arm_1_1jit__interface_a00c1ee6d3f4f6bea3eb1c0b356fbb9ea}} 
+virtual void {\bfseries set\+\_\+entry\+\_\+point} (address ep)=0
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1arm_1_1jit__interface_acc32698c51c0e32e406962fe2afcf908}\label{classeka2l1_1_1arm_1_1jit__interface_acc32698c51c0e32e406962fe2afcf908}} 
+virtual address {\bfseries get\+\_\+entry\+\_\+point} ()=0
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1arm_1_1jit__interface_a1ea6a649bd5efd03c4e7824e8c2c44df}\label{classeka2l1_1_1arm_1_1jit__interface_a1ea6a649bd5efd03c4e7824e8c2c44df}} 
+virtual uint32\+\_\+t {\bfseries get\+\_\+cpsr} ()=0
+\item 
+virtual void \mbox{\hyperlink{classeka2l1_1_1arm_1_1jit__interface_ad45558cfaff99f21a89734676b13cb9a}{save\+\_\+context}} (\mbox{\hyperlink{structeka2l1_1_1arm_1_1jit__interface_1_1thread__context}{thread\+\_\+context}} \&ctx)=0
+\item 
+virtual void \mbox{\hyperlink{classeka2l1_1_1arm_1_1jit__interface_acdb436ffc407767efaec732b619caf04}{load\+\_\+context}} (const \mbox{\hyperlink{structeka2l1_1_1arm_1_1jit__interface_1_1thread__context}{thread\+\_\+context}} \&ctx)=0
+\item 
+virtual void \mbox{\hyperlink{classeka2l1_1_1arm_1_1jit__interface_af0c5e6bd4d2df8069fbef45c92b72154}{set\+\_\+stack\+\_\+top}} (address addr)=0
+\item 
+virtual address \mbox{\hyperlink{classeka2l1_1_1arm_1_1jit__interface_a9b4bf4ff0fbee63c224a8a94b83508da}{get\+\_\+stack\+\_\+top}} ()=0
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1arm_1_1jit__interface_a6b8b6825cb9ddc3350248d1a58015a00}\label{classeka2l1_1_1arm_1_1jit__interface_a6b8b6825cb9ddc3350248d1a58015a00}} 
+virtual void {\bfseries prepare\+\_\+rescheduling} ()=0
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1arm_1_1jit__interface_a090468c6ac0aa22cfb5595cc9c7ed9cf}\label{classeka2l1_1_1arm_1_1jit__interface_a090468c6ac0aa22cfb5595cc9c7ed9cf}} 
+virtual bool {\bfseries is\+\_\+thumb\+\_\+mode} ()=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An interface to all J\+IT implementation. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classeka2l1_1_1arm_1_1jit__interface_a6dbaf8bc64fd987c3b1d96f2644c3811}\label{classeka2l1_1_1arm_1_1jit__interface_a6dbaf8bc64fd987c3b1d96f2644c3811}} 
+\index{eka2l1\+::arm\+::jit\+\_\+interface@{eka2l1\+::arm\+::jit\+\_\+interface}!execute\+\_\+instructions@{execute\+\_\+instructions}}
+\index{execute\+\_\+instructions@{execute\+\_\+instructions}!eka2l1\+::arm\+::jit\+\_\+interface@{eka2l1\+::arm\+::jit\+\_\+interface}}
+\subsubsection{\texorpdfstring{execute\+\_\+instructions()}{execute\_instructions()}}
+{\footnotesize\ttfamily virtual bool eka2l1\+::arm\+::jit\+\_\+interface\+::execute\+\_\+instructions (\begin{DoxyParamCaption}\item[{int}]{num\+\_\+instructions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Execute some amount of instructions 
+
+Implemented in \mbox{\hyperlink{classeka2l1_1_1arm_1_1jit__unicorn_a3a03be2a0e9c1ea1f83b74fdcdc3c7ce}{eka2l1\+::arm\+::jit\+\_\+unicorn}}.
+
+\mbox{\Hypertarget{classeka2l1_1_1arm_1_1jit__interface_a89fd7fc20ee959606a71eecb959c610d}\label{classeka2l1_1_1arm_1_1jit__interface_a89fd7fc20ee959606a71eecb959c610d}} 
+\index{eka2l1\+::arm\+::jit\+\_\+interface@{eka2l1\+::arm\+::jit\+\_\+interface}!get\+\_\+pc@{get\+\_\+pc}}
+\index{get\+\_\+pc@{get\+\_\+pc}!eka2l1\+::arm\+::jit\+\_\+interface@{eka2l1\+::arm\+::jit\+\_\+interface}}
+\subsubsection{\texorpdfstring{get\+\_\+pc()}{get\_pc()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t eka2l1\+::arm\+::jit\+\_\+interface\+::get\+\_\+pc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get the program counter 
+
+Implemented in \mbox{\hyperlink{classeka2l1_1_1arm_1_1jit__unicorn_a8429f8e0e5aafa264929336aaafc2e24}{eka2l1\+::arm\+::jit\+\_\+unicorn}}.
+
+\mbox{\Hypertarget{classeka2l1_1_1arm_1_1jit__interface_ae68ac4dc5fdb598d36aef40689694f6b}\label{classeka2l1_1_1arm_1_1jit__interface_ae68ac4dc5fdb598d36aef40689694f6b}} 
+\index{eka2l1\+::arm\+::jit\+\_\+interface@{eka2l1\+::arm\+::jit\+\_\+interface}!get\+\_\+reg@{get\+\_\+reg}}
+\index{get\+\_\+reg@{get\+\_\+reg}!eka2l1\+::arm\+::jit\+\_\+interface@{eka2l1\+::arm\+::jit\+\_\+interface}}
+\subsubsection{\texorpdfstring{get\+\_\+reg()}{get\_reg()}}
+{\footnotesize\ttfamily virtual uint32\+\_\+t eka2l1\+::arm\+::jit\+\_\+interface\+::get\+\_\+reg (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get a specific A\+RM Rx register. Range from r0 to r15 
+
+Implemented in \mbox{\hyperlink{classeka2l1_1_1arm_1_1jit__unicorn_a94a0495c63ad80defc3afd71b7a89d04}{eka2l1\+::arm\+::jit\+\_\+unicorn}}.
+
+\mbox{\Hypertarget{classeka2l1_1_1arm_1_1jit__interface_a68ea503b77c6f3014293c41eda739476}\label{classeka2l1_1_1arm_1_1jit__interface_a68ea503b77c6f3014293c41eda739476}} 
+\index{eka2l1\+::arm\+::jit\+\_\+interface@{eka2l1\+::arm\+::jit\+\_\+interface}!get\+\_\+sp@{get\+\_\+sp}}
+\index{get\+\_\+sp@{get\+\_\+sp}!eka2l1\+::arm\+::jit\+\_\+interface@{eka2l1\+::arm\+::jit\+\_\+interface}}
+\subsubsection{\texorpdfstring{get\+\_\+sp()}{get\_sp()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t eka2l1\+::arm\+::jit\+\_\+interface\+::get\+\_\+sp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get the stack pointer 
+
+Implemented in \mbox{\hyperlink{classeka2l1_1_1arm_1_1jit__unicorn_a2ce8f21025bc1d4a6cf0e404cef6f3ab}{eka2l1\+::arm\+::jit\+\_\+unicorn}}.
+
+\mbox{\Hypertarget{classeka2l1_1_1arm_1_1jit__interface_a9b4bf4ff0fbee63c224a8a94b83508da}\label{classeka2l1_1_1arm_1_1jit__interface_a9b4bf4ff0fbee63c224a8a94b83508da}} 
+\index{eka2l1\+::arm\+::jit\+\_\+interface@{eka2l1\+::arm\+::jit\+\_\+interface}!get\+\_\+stack\+\_\+top@{get\+\_\+stack\+\_\+top}}
+\index{get\+\_\+stack\+\_\+top@{get\+\_\+stack\+\_\+top}!eka2l1\+::arm\+::jit\+\_\+interface@{eka2l1\+::arm\+::jit\+\_\+interface}}
+\subsubsection{\texorpdfstring{get\+\_\+stack\+\_\+top()}{get\_stack\_top()}}
+{\footnotesize\ttfamily virtual address eka2l1\+::arm\+::jit\+\_\+interface\+::get\+\_\+stack\+\_\+top (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Same as get SP 
+
+Implemented in \mbox{\hyperlink{classeka2l1_1_1arm_1_1jit__unicorn_a373f8707fc8bd946e841758c637d3104}{eka2l1\+::arm\+::jit\+\_\+unicorn}}.
+
+\mbox{\Hypertarget{classeka2l1_1_1arm_1_1jit__interface_a30925206698ca8a6fc7d86ec73886d06}\label{classeka2l1_1_1arm_1_1jit__interface_a30925206698ca8a6fc7d86ec73886d06}} 
+\index{eka2l1\+::arm\+::jit\+\_\+interface@{eka2l1\+::arm\+::jit\+\_\+interface}!get\+\_\+vfp@{get\+\_\+vfp}}
+\index{get\+\_\+vfp@{get\+\_\+vfp}!eka2l1\+::arm\+::jit\+\_\+interface@{eka2l1\+::arm\+::jit\+\_\+interface}}
+\subsubsection{\texorpdfstring{get\+\_\+vfp()}{get\_vfp()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t eka2l1\+::arm\+::jit\+\_\+interface\+::get\+\_\+vfp (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get the V\+FP 
+
+Implemented in \mbox{\hyperlink{classeka2l1_1_1arm_1_1jit__unicorn_ad286a92b696c835962dc8f40b292e4fb}{eka2l1\+::arm\+::jit\+\_\+unicorn}}.
+
+\mbox{\Hypertarget{classeka2l1_1_1arm_1_1jit__interface_acdb436ffc407767efaec732b619caf04}\label{classeka2l1_1_1arm_1_1jit__interface_acdb436ffc407767efaec732b619caf04}} 
+\index{eka2l1\+::arm\+::jit\+\_\+interface@{eka2l1\+::arm\+::jit\+\_\+interface}!load\+\_\+context@{load\+\_\+context}}
+\index{load\+\_\+context@{load\+\_\+context}!eka2l1\+::arm\+::jit\+\_\+interface@{eka2l1\+::arm\+::jit\+\_\+interface}}
+\subsubsection{\texorpdfstring{load\+\_\+context()}{load\_context()}}
+{\footnotesize\ttfamily virtual void eka2l1\+::arm\+::jit\+\_\+interface\+::load\+\_\+context (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structeka2l1_1_1arm_1_1jit__interface_1_1thread__context}{thread\+\_\+context}} \&}]{ctx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Load thread context to J\+IT. 
+
+Implemented in \mbox{\hyperlink{classeka2l1_1_1arm_1_1jit__unicorn_a54d69d4246e4c22e06b3d4b2b43d9872}{eka2l1\+::arm\+::jit\+\_\+unicorn}}.
+
+\mbox{\Hypertarget{classeka2l1_1_1arm_1_1jit__interface_a30ede595d2381735d13642768dda3be8}\label{classeka2l1_1_1arm_1_1jit__interface_a30ede595d2381735d13642768dda3be8}} 
+\index{eka2l1\+::arm\+::jit\+\_\+interface@{eka2l1\+::arm\+::jit\+\_\+interface}!run@{run}}
+\index{run@{run}!eka2l1\+::arm\+::jit\+\_\+interface@{eka2l1\+::arm\+::jit\+\_\+interface}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily virtual void eka2l1\+::arm\+::jit\+\_\+interface\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Run the C\+PU 
+
+Implemented in \mbox{\hyperlink{classeka2l1_1_1arm_1_1jit__unicorn_a98e8406378258c67449780280d839ac3}{eka2l1\+::arm\+::jit\+\_\+unicorn}}.
+
+\mbox{\Hypertarget{classeka2l1_1_1arm_1_1jit__interface_ad45558cfaff99f21a89734676b13cb9a}\label{classeka2l1_1_1arm_1_1jit__interface_ad45558cfaff99f21a89734676b13cb9a}} 
+\index{eka2l1\+::arm\+::jit\+\_\+interface@{eka2l1\+::arm\+::jit\+\_\+interface}!save\+\_\+context@{save\+\_\+context}}
+\index{save\+\_\+context@{save\+\_\+context}!eka2l1\+::arm\+::jit\+\_\+interface@{eka2l1\+::arm\+::jit\+\_\+interface}}
+\subsubsection{\texorpdfstring{save\+\_\+context()}{save\_context()}}
+{\footnotesize\ttfamily virtual void eka2l1\+::arm\+::jit\+\_\+interface\+::save\+\_\+context (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structeka2l1_1_1arm_1_1jit__interface_1_1thread__context}{thread\+\_\+context}} \&}]{ctx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Save thread context from J\+IT. 
+
+Implemented in \mbox{\hyperlink{classeka2l1_1_1arm_1_1jit__unicorn_a315e75d56daf439ca9914fcf44de5dcf}{eka2l1\+::arm\+::jit\+\_\+unicorn}}.
+
+\mbox{\Hypertarget{classeka2l1_1_1arm_1_1jit__interface_a4e4da2ac6f5b627c0c7d9d3951edd053}\label{classeka2l1_1_1arm_1_1jit__interface_a4e4da2ac6f5b627c0c7d9d3951edd053}} 
+\index{eka2l1\+::arm\+::jit\+\_\+interface@{eka2l1\+::arm\+::jit\+\_\+interface}!set\+\_\+lr@{set\+\_\+lr}}
+\index{set\+\_\+lr@{set\+\_\+lr}!eka2l1\+::arm\+::jit\+\_\+interface@{eka2l1\+::arm\+::jit\+\_\+interface}}
+\subsubsection{\texorpdfstring{set\+\_\+lr()}{set\_lr()}}
+{\footnotesize\ttfamily virtual void eka2l1\+::arm\+::jit\+\_\+interface\+::set\+\_\+lr (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Set LR 
+
+Implemented in \mbox{\hyperlink{classeka2l1_1_1arm_1_1jit__unicorn_a73a5362b1004f6c7bcaa4f2580fefb2c}{eka2l1\+::arm\+::jit\+\_\+unicorn}}.
+
+\mbox{\Hypertarget{classeka2l1_1_1arm_1_1jit__interface_abda1155e6ce73a15e9ccf55a7c2465bb}\label{classeka2l1_1_1arm_1_1jit__interface_abda1155e6ce73a15e9ccf55a7c2465bb}} 
+\index{eka2l1\+::arm\+::jit\+\_\+interface@{eka2l1\+::arm\+::jit\+\_\+interface}!set\+\_\+pc@{set\+\_\+pc}}
+\index{set\+\_\+pc@{set\+\_\+pc}!eka2l1\+::arm\+::jit\+\_\+interface@{eka2l1\+::arm\+::jit\+\_\+interface}}
+\subsubsection{\texorpdfstring{set\+\_\+pc()}{set\_pc()}}
+{\footnotesize\ttfamily virtual void eka2l1\+::arm\+::jit\+\_\+interface\+::set\+\_\+pc (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Set program counter 
+
+Implemented in \mbox{\hyperlink{classeka2l1_1_1arm_1_1jit__unicorn_ae5ea9a9c15af2aa73384e845679e1b7a}{eka2l1\+::arm\+::jit\+\_\+unicorn}}.
+
+\mbox{\Hypertarget{classeka2l1_1_1arm_1_1jit__interface_a49acadec0be00056abe923ed36a61bbd}\label{classeka2l1_1_1arm_1_1jit__interface_a49acadec0be00056abe923ed36a61bbd}} 
+\index{eka2l1\+::arm\+::jit\+\_\+interface@{eka2l1\+::arm\+::jit\+\_\+interface}!set\+\_\+reg@{set\+\_\+reg}}
+\index{set\+\_\+reg@{set\+\_\+reg}!eka2l1\+::arm\+::jit\+\_\+interface@{eka2l1\+::arm\+::jit\+\_\+interface}}
+\subsubsection{\texorpdfstring{set\+\_\+reg()}{set\_reg()}}
+{\footnotesize\ttfamily virtual void eka2l1\+::arm\+::jit\+\_\+interface\+::set\+\_\+reg (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{idx,  }\item[{uint32\+\_\+t}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Set a Rx register 
+
+Implemented in \mbox{\hyperlink{classeka2l1_1_1arm_1_1jit__unicorn_ab56d9aa1489ec8d7a0c383f7d4048f03}{eka2l1\+::arm\+::jit\+\_\+unicorn}}.
+
+\mbox{\Hypertarget{classeka2l1_1_1arm_1_1jit__interface_a8df41ca8e7ce3c72b3edaadf7bc1369b}\label{classeka2l1_1_1arm_1_1jit__interface_a8df41ca8e7ce3c72b3edaadf7bc1369b}} 
+\index{eka2l1\+::arm\+::jit\+\_\+interface@{eka2l1\+::arm\+::jit\+\_\+interface}!set\+\_\+sp@{set\+\_\+sp}}
+\index{set\+\_\+sp@{set\+\_\+sp}!eka2l1\+::arm\+::jit\+\_\+interface@{eka2l1\+::arm\+::jit\+\_\+interface}}
+\subsubsection{\texorpdfstring{set\+\_\+sp()}{set\_sp()}}
+{\footnotesize\ttfamily virtual void eka2l1\+::arm\+::jit\+\_\+interface\+::set\+\_\+sp (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Set stack pointer 
+
+Implemented in \mbox{\hyperlink{classeka2l1_1_1arm_1_1jit__unicorn_a57b9a59b3deb69a66b85394280f15947}{eka2l1\+::arm\+::jit\+\_\+unicorn}}.
+
+\mbox{\Hypertarget{classeka2l1_1_1arm_1_1jit__interface_af0c5e6bd4d2df8069fbef45c92b72154}\label{classeka2l1_1_1arm_1_1jit__interface_af0c5e6bd4d2df8069fbef45c92b72154}} 
+\index{eka2l1\+::arm\+::jit\+\_\+interface@{eka2l1\+::arm\+::jit\+\_\+interface}!set\+\_\+stack\+\_\+top@{set\+\_\+stack\+\_\+top}}
+\index{set\+\_\+stack\+\_\+top@{set\+\_\+stack\+\_\+top}!eka2l1\+::arm\+::jit\+\_\+interface@{eka2l1\+::arm\+::jit\+\_\+interface}}
+\subsubsection{\texorpdfstring{set\+\_\+stack\+\_\+top()}{set\_stack\_top()}}
+{\footnotesize\ttfamily virtual void eka2l1\+::arm\+::jit\+\_\+interface\+::set\+\_\+stack\+\_\+top (\begin{DoxyParamCaption}\item[{address}]{addr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Same as set SP 
+
+Implemented in \mbox{\hyperlink{classeka2l1_1_1arm_1_1jit__unicorn_a472a7da1849c941894cf684163fd0006}{eka2l1\+::arm\+::jit\+\_\+unicorn}}.
+
+\mbox{\Hypertarget{classeka2l1_1_1arm_1_1jit__interface_a424b0596eba2527407be4669d432f9b5}\label{classeka2l1_1_1arm_1_1jit__interface_a424b0596eba2527407be4669d432f9b5}} 
+\index{eka2l1\+::arm\+::jit\+\_\+interface@{eka2l1\+::arm\+::jit\+\_\+interface}!step@{step}}
+\index{step@{step}!eka2l1\+::arm\+::jit\+\_\+interface@{eka2l1\+::arm\+::jit\+\_\+interface}}
+\subsubsection{\texorpdfstring{step()}{step()}}
+{\footnotesize\ttfamily virtual void eka2l1\+::arm\+::jit\+\_\+interface\+::step (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Step the C\+PU. Each step execute one instruction. 
+
+Implemented in \mbox{\hyperlink{classeka2l1_1_1arm_1_1jit__unicorn_a48ef5b1901b82dae466c340785997c92}{eka2l1\+::arm\+::jit\+\_\+unicorn}}.
+
+\mbox{\Hypertarget{classeka2l1_1_1arm_1_1jit__interface_a8454089a0370df8830884c07bc972755}\label{classeka2l1_1_1arm_1_1jit__interface_a8454089a0370df8830884c07bc972755}} 
+\index{eka2l1\+::arm\+::jit\+\_\+interface@{eka2l1\+::arm\+::jit\+\_\+interface}!stop@{stop}}
+\index{stop@{stop}!eka2l1\+::arm\+::jit\+\_\+interface@{eka2l1\+::arm\+::jit\+\_\+interface}}
+\subsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily virtual void eka2l1\+::arm\+::jit\+\_\+interface\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Stop the C\+PU 
+
+Implemented in \mbox{\hyperlink{classeka2l1_1_1arm_1_1jit__unicorn_ab3ca860b367d833950226b0d7f95edc5}{eka2l1\+::arm\+::jit\+\_\+unicorn}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+emu/core/include/core/arm/jit\+\_\+interface.\+h\end{DoxyCompactItemize}

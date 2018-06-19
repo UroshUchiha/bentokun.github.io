@@ -1,0 +1,70 @@
+\hypertarget{structeka2l1_1_1rom__file}{}\section{eka2l1\+:\+:rom\+\_\+file Struct Reference}
+\label{structeka2l1_1_1rom__file}\index{eka2l1\+::rom\+\_\+file@{eka2l1\+::rom\+\_\+file}}
+Inheritance diagram for eka2l1\+:\+:rom\+\_\+file\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structeka2l1_1_1rom__file}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structeka2l1_1_1rom__file_a4f06d6484d3c445ca10c350e7befede4}\label{structeka2l1_1_1rom__file_a4f06d6484d3c445ca10c350e7befede4}} 
+{\bfseries rom\+\_\+file} (\mbox{\hyperlink{classeka2l1_1_1memory__system}{memory\+\_\+system}} $\ast$mem, \mbox{\hyperlink{structeka2l1_1_1loader_1_1rom}{loader\+::rom}} $\ast$supereme\+\_\+mother, \mbox{\hyperlink{structeka2l1_1_1loader_1_1rom__entry}{loader\+::rom\+\_\+entry}} entry)
+\item 
+\mbox{\Hypertarget{structeka2l1_1_1rom__file_a4c8c65b4b6e5436557b16991ba56521e}\label{structeka2l1_1_1rom__file_a4c8c65b4b6e5436557b16991ba56521e}} 
+void {\bfseries init} ()
+\item 
+\mbox{\Hypertarget{structeka2l1_1_1rom__file_a8e7bbf3e56afb3c834a546141c56d24a}\label{structeka2l1_1_1rom__file_a8e7bbf3e56afb3c834a546141c56d24a}} 
+uint64\+\_\+t {\bfseries size} () const override
+\item 
+\mbox{\Hypertarget{structeka2l1_1_1rom__file_a8690b379bb6696f88bfbf565c624d7dc}\label{structeka2l1_1_1rom__file_a8690b379bb6696f88bfbf565c624d7dc}} 
+int {\bfseries read\+\_\+file} (void $\ast$data, uint32\+\_\+t size, uint32\+\_\+t count) override
+\item 
+\mbox{\Hypertarget{structeka2l1_1_1rom__file_a65fe99c4d49197b5b3f2ae682b470143}\label{structeka2l1_1_1rom__file_a65fe99c4d49197b5b3f2ae682b470143}} 
+int {\bfseries file\+\_\+mode} () const override
+\item 
+\mbox{\Hypertarget{structeka2l1_1_1rom__file_ab6262cedc47df527c8bd08a9a3cfe8d4}\label{structeka2l1_1_1rom__file_ab6262cedc47df527c8bd08a9a3cfe8d4}} 
+int {\bfseries write\+\_\+file} (void $\ast$data, uint32\+\_\+t size, uint32\+\_\+t count) override
+\item 
+\mbox{\Hypertarget{structeka2l1_1_1rom__file_a5cd7431043a6bea516fd2286693f0d73}\label{structeka2l1_1_1rom__file_a5cd7431043a6bea516fd2286693f0d73}} 
+void {\bfseries seek} (uint32\+\_\+t seek\+\_\+off, file\+\_\+seek\+\_\+mode where) override
+\item 
+\mbox{\Hypertarget{structeka2l1_1_1rom__file_a342f4f5cf40ecffb723399727c1df611}\label{structeka2l1_1_1rom__file_a342f4f5cf40ecffb723399727c1df611}} 
+std\+::string {\bfseries get\+\_\+error\+\_\+descriptor} () override
+\item 
+\mbox{\Hypertarget{structeka2l1_1_1rom__file_a86732283aef1d5a4af116213c77b3a92}\label{structeka2l1_1_1rom__file_a86732283aef1d5a4af116213c77b3a92}} 
+uint64\+\_\+t {\bfseries tell} () override
+\item 
+\mbox{\Hypertarget{structeka2l1_1_1rom__file_a17cd48ccbc1c63264741aa0fd0539ac3}\label{structeka2l1_1_1rom__file_a17cd48ccbc1c63264741aa0fd0539ac3}} 
+std\+::u16string {\bfseries file\+\_\+name} () const override
+\item 
+\mbox{\Hypertarget{structeka2l1_1_1rom__file_ad46487a354f8379e80ec443570637e88}\label{structeka2l1_1_1rom__file_ad46487a354f8379e80ec443570637e88}} 
+bool {\bfseries close} () override
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structeka2l1_1_1rom__file_afdeb8e5fc418a89ee81d6414614922e7}\label{structeka2l1_1_1rom__file_afdeb8e5fc418a89ee81d6414614922e7}} 
+\mbox{\hyperlink{structeka2l1_1_1loader_1_1rom__entry}{loader\+::rom\+\_\+entry}} {\bfseries file}
+\item 
+\mbox{\Hypertarget{structeka2l1_1_1rom__file_a28c63eab8ca3c5c887cfe621f0e0f972}\label{structeka2l1_1_1rom__file_a28c63eab8ca3c5c887cfe621f0e0f972}} 
+\mbox{\hyperlink{structeka2l1_1_1loader_1_1rom}{loader\+::rom}} $\ast$ {\bfseries parent}
+\item 
+\mbox{\Hypertarget{structeka2l1_1_1rom__file_a5cab38150fa4a5ae9266d50c4ee3ed43}\label{structeka2l1_1_1rom__file_a5cab38150fa4a5ae9266d50c4ee3ed43}} 
+uint64\+\_\+t {\bfseries crr\+\_\+pos}
+\item 
+\mbox{\Hypertarget{structeka2l1_1_1rom__file_af4db53052ca2a5a4ea608769d4b9be94}\label{structeka2l1_1_1rom__file_af4db53052ca2a5a4ea608769d4b9be94}} 
+std\+::mutex {\bfseries mut}
+\item 
+\mbox{\Hypertarget{structeka2l1_1_1rom__file_ae728dfa83cb92573cb260d79946b9850}\label{structeka2l1_1_1rom__file_ae728dfa83cb92573cb260d79946b9850}} 
+\mbox{\hyperlink{classeka2l1_1_1memory__system}{memory\+\_\+system}} $\ast$ {\bfseries mem}
+\item 
+\mbox{\Hypertarget{structeka2l1_1_1rom__file_af3a128836203ac45b55972bfd6ab496d}\label{structeka2l1_1_1rom__file_af3a128836203ac45b55972bfd6ab496d}} 
+\mbox{\hyperlink{classeka2l1_1_1ptr}{ptr}}$<$ char $>$ {\bfseries file\+\_\+ptr}
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+emu/core/src/vfs.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,87 @@
+\hypertarget{classeka2l1_1_1service_1_1server}{}\section{eka2l1\+:\+:service\+:\+:server Class Reference}
+\label{classeka2l1_1_1service_1_1server}\index{eka2l1\+::service\+::server@{eka2l1\+::service\+::server}}
+
+
+An I\+PC H\+LE server.  
+
+
+
+
+{\ttfamily \#include $<$server.\+h$>$}
+
+Inheritance diagram for eka2l1\+:\+:service\+:\+:server\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classeka2l1_1_1service_1_1server}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1service_1_1server_a3cf17f9caaef7dff5f3adc7382efa1e3}\label{classeka2l1_1_1service_1_1server_a3cf17f9caaef7dff5f3adc7382efa1e3}} 
+{\bfseries server} (\mbox{\hyperlink{classeka2l1_1_1system}{system}} $\ast$sys, const std\+::string name)
+\item 
+int \mbox{\hyperlink{classeka2l1_1_1service_1_1server_aa28629eb0ef30c5ebc645d1f1e0a0730}{receive}} (ipc\+\_\+msg\+\_\+ptr \&msg)
+\item 
+int \mbox{\hyperlink{classeka2l1_1_1service_1_1server_a91c56400274a88fc0e3334cc5b03fdff}{accept}} (\mbox{\hyperlink{structeka2l1_1_1service_1_1server__msg}{server\+\_\+msg}} msg)
+\item 
+int \mbox{\hyperlink{classeka2l1_1_1service_1_1server_afe6a3a01607dc045a9767ff57d57c266}{deliver}} (\mbox{\hyperlink{structeka2l1_1_1service_1_1server__msg}{server\+\_\+msg}} msg)
+\item 
+int \mbox{\hyperlink{classeka2l1_1_1service_1_1server_a14b31a4fdb52c29872317145254a1b4a}{cancel}} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1service_1_1server_adfd4b5c97a122549ba7c37ed0b1b264b}\label{classeka2l1_1_1service_1_1server_adfd4b5c97a122549ba7c37ed0b1b264b}} 
+void {\bfseries register\+\_\+ipc\+\_\+func} (uint32\+\_\+t ordinal, \mbox{\hyperlink{structeka2l1_1_1service_1_1ipc__func}{ipc\+\_\+func}} func)
+\item 
+void \mbox{\hyperlink{classeka2l1_1_1service_1_1server_a6b80c69c4d159733c02a62c631c9f960}{process\+\_\+accepted\+\_\+msg}} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1service_1_1server_a530fa6bf8c6d45a3b06e8162cb031e4c}\label{classeka2l1_1_1service_1_1server_a530fa6bf8c6d45a3b06e8162cb031e4c}} 
+bool {\bfseries is\+\_\+msg\+\_\+delivered} (ipc\+\_\+msg\+\_\+ptr \&msg)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+An I\+PC H\+LE server. 
+
+The server can receive an message or receive them whenever they want. After messages were received, they will be processed by the fake H\+LE server and signal request semaphore of the client thread. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classeka2l1_1_1service_1_1server_a91c56400274a88fc0e3334cc5b03fdff}\label{classeka2l1_1_1service_1_1server_a91c56400274a88fc0e3334cc5b03fdff}} 
+\index{eka2l1\+::service\+::server@{eka2l1\+::service\+::server}!accept@{accept}}
+\index{accept@{accept}!eka2l1\+::service\+::server@{eka2l1\+::service\+::server}}
+\subsubsection{\texorpdfstring{accept()}{accept()}}
+{\footnotesize\ttfamily int eka2l1\+::service\+::server\+::accept (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structeka2l1_1_1service_1_1server__msg}{server\+\_\+msg}}}]{msg }\end{DoxyParamCaption})}
+
+Accept a message that was waiting in the delivered queue \mbox{\Hypertarget{classeka2l1_1_1service_1_1server_a14b31a4fdb52c29872317145254a1b4a}\label{classeka2l1_1_1service_1_1server_a14b31a4fdb52c29872317145254a1b4a}} 
+\index{eka2l1\+::service\+::server@{eka2l1\+::service\+::server}!cancel@{cancel}}
+\index{cancel@{cancel}!eka2l1\+::service\+::server@{eka2l1\+::service\+::server}}
+\subsubsection{\texorpdfstring{cancel()}{cancel()}}
+{\footnotesize\ttfamily int eka2l1\+::service\+::server\+::cancel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Cancel a message in the delivered queue \mbox{\Hypertarget{classeka2l1_1_1service_1_1server_afe6a3a01607dc045a9767ff57d57c266}\label{classeka2l1_1_1service_1_1server_afe6a3a01607dc045a9767ff57d57c266}} 
+\index{eka2l1\+::service\+::server@{eka2l1\+::service\+::server}!deliver@{deliver}}
+\index{deliver@{deliver}!eka2l1\+::service\+::server@{eka2l1\+::service\+::server}}
+\subsubsection{\texorpdfstring{deliver()}{deliver()}}
+{\footnotesize\ttfamily int eka2l1\+::service\+::server\+::deliver (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structeka2l1_1_1service_1_1server__msg}{server\+\_\+msg}}}]{msg }\end{DoxyParamCaption})}
+
+Deliver the message to the server. Message will be put in queue if it\textquotesingle{}s not ready. \mbox{\Hypertarget{classeka2l1_1_1service_1_1server_a6b80c69c4d159733c02a62c631c9f960}\label{classeka2l1_1_1service_1_1server_a6b80c69c4d159733c02a62c631c9f960}} 
+\index{eka2l1\+::service\+::server@{eka2l1\+::service\+::server}!process\+\_\+accepted\+\_\+msg@{process\+\_\+accepted\+\_\+msg}}
+\index{process\+\_\+accepted\+\_\+msg@{process\+\_\+accepted\+\_\+msg}!eka2l1\+::service\+::server@{eka2l1\+::service\+::server}}
+\subsubsection{\texorpdfstring{process\+\_\+accepted\+\_\+msg()}{process\_accepted\_msg()}}
+{\footnotesize\ttfamily void eka2l1\+::service\+::server\+::process\+\_\+accepted\+\_\+msg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Process an message asynchrounously \mbox{\Hypertarget{classeka2l1_1_1service_1_1server_aa28629eb0ef30c5ebc645d1f1e0a0730}\label{classeka2l1_1_1service_1_1server_aa28629eb0ef30c5ebc645d1f1e0a0730}} 
+\index{eka2l1\+::service\+::server@{eka2l1\+::service\+::server}!receive@{receive}}
+\index{receive@{receive}!eka2l1\+::service\+::server@{eka2l1\+::service\+::server}}
+\subsubsection{\texorpdfstring{receive()}{receive()}}
+{\footnotesize\ttfamily int eka2l1\+::service\+::server\+::receive (\begin{DoxyParamCaption}\item[{ipc\+\_\+msg\+\_\+ptr \&}]{msg }\end{DoxyParamCaption})}
+
+Receive the message 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+emu/core/include/core/services/server.\+h\item 
+emu/core/src/services/server.\+cpp\end{DoxyCompactItemize}

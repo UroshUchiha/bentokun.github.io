@@ -1,0 +1,47 @@
+\hypertarget{classeka2l1_1_1kernel_1_1thread__scheduler}{}\section{eka2l1\+:\+:kernel\+:\+:thread\+\_\+scheduler Class Reference}
+\label{classeka2l1_1_1kernel_1_1thread__scheduler}\index{eka2l1\+::kernel\+::thread\+\_\+scheduler@{eka2l1\+::kernel\+::thread\+\_\+scheduler}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1thread__scheduler_a6b3167678e8a32f7c40f8627b3f408c2}\label{classeka2l1_1_1kernel_1_1thread__scheduler_a6b3167678e8a32f7c40f8627b3f408c2}} 
+{\bfseries thread\+\_\+scheduler} (\mbox{\hyperlink{classeka2l1_1_1timing__system}{timing\+\_\+system}} $\ast$sys, \mbox{\hyperlink{classeka2l1_1_1arm_1_1jit__interface}{arm\+::jit\+\_\+interface}} \&jitter)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1thread__scheduler_aac85213d583c6c686ffac2d8f46d3d9c}\label{classeka2l1_1_1kernel_1_1thread__scheduler_aac85213d583c6c686ffac2d8f46d3d9c}} 
+void {\bfseries reschedule} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1thread__scheduler_a62b6de212cffef0a9bba649cb318c66a}\label{classeka2l1_1_1kernel_1_1thread__scheduler_a62b6de212cffef0a9bba649cb318c66a}} 
+void {\bfseries unschedule\+\_\+wakeup} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1thread__scheduler_ab791504be56864dc1a93627002e69152}\label{classeka2l1_1_1kernel_1_1thread__scheduler_ab791504be56864dc1a93627002e69152}} 
+bool {\bfseries schedule} (thread\+\_\+ptr \mbox{\hyperlink{classeka2l1_1_1kernel_1_1thread}{thread}})
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1thread__scheduler_abd44f855336a5e904282f425a8bedaf5}\label{classeka2l1_1_1kernel_1_1thread__scheduler_abd44f855336a5e904282f425a8bedaf5}} 
+bool {\bfseries sleep} (kernel\+::uid \mbox{\hyperlink{classeka2l1_1_1kernel_1_1thread}{thread}}, uint32\+\_\+t sl\+\_\+time)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1thread__scheduler_ad02ba4bd512aa44dba126ad7c98719cb}\label{classeka2l1_1_1kernel_1_1thread__scheduler_ad02ba4bd512aa44dba126ad7c98719cb}} 
+bool {\bfseries resume} (kernel\+::uid id)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1thread__scheduler_aa714f229102f97cfa3d5e42912b4539c}\label{classeka2l1_1_1kernel_1_1thread__scheduler_aa714f229102f97cfa3d5e42912b4539c}} 
+void {\bfseries unschedule} (kernel\+::uid id)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1thread__scheduler_a3d25743fb9b0e708b82780639fe1d188}\label{classeka2l1_1_1kernel_1_1thread__scheduler_a3d25743fb9b0e708b82780639fe1d188}} 
+void {\bfseries refresh} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1thread__scheduler_a417b77ac108f78198a79423ce2a77253}\label{classeka2l1_1_1kernel_1_1thread__scheduler_a417b77ac108f78198a79423ce2a77253}} 
+thread\+\_\+ptr {\bfseries current\+\_\+thread} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1thread__scheduler_a9e240846d34e567d58757968f2a03cd3}\label{classeka2l1_1_1kernel_1_1thread__scheduler_a9e240846d34e567d58757968f2a03cd3}} 
+thread\+\_\+ptr {\bfseries next\+\_\+ready\+\_\+thread} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1thread__scheduler_aee1a6637279f85e5aa1ac94cb4560537}\label{classeka2l1_1_1kernel_1_1thread__scheduler_aee1a6637279f85e5aa1ac94cb4560537}} 
+void {\bfseries switch\+\_\+context} (thread\+\_\+ptr oldt, thread\+\_\+ptr newt)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+emu/core/include/core/kernel/scheduler.\+h\item 
+emu/core/src/kernel/scheduler.\+cpp\end{DoxyCompactItemize}

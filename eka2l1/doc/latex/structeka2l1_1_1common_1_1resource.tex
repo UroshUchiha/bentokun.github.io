@@ -1,0 +1,64 @@
+\hypertarget{structeka2l1_1_1common_1_1resource}{}\section{eka2l1\+:\+:common\+:\+:resource$<$ T $>$ Struct Template Reference}
+\label{structeka2l1_1_1common_1_1resource}\index{eka2l1\+::common\+::resource$<$ T $>$@{eka2l1\+::common\+::resource$<$ T $>$}}
+
+
+Represents a resource.  
+
+
+
+
+{\ttfamily \#include $<$resource.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structeka2l1_1_1common_1_1resource_a08f2d97cf16d8b9302f33ef08bb74bb7}\label{structeka2l1_1_1common_1_1resource_a08f2d97cf16d8b9302f33ef08bb74bb7}} 
+using {\bfseries deleter} = std\+::function$<$ void(T)$>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structeka2l1_1_1common_1_1resource_ad2724dcffece6a4b45ab7d88e0556798}\label{structeka2l1_1_1common_1_1resource_ad2724dcffece6a4b45ab7d88e0556798}} 
+{\bfseries resource} (T res, deleter del)
+\item 
+T \mbox{\hyperlink{structeka2l1_1_1common_1_1resource_a7ab875292c58fc8de45498e7bad0ea68}{get}} () const
+\begin{DoxyCompactList}\small\item\em Get the actual object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structeka2l1_1_1common_1_1resource_a7ac33e52074e060cf64f26b432001eeb}\label{structeka2l1_1_1common_1_1resource_a7ac33e52074e060cf64f26b432001eeb}} 
+T {\bfseries res}
+\item 
+\mbox{\Hypertarget{structeka2l1_1_1common_1_1resource_afee3a44710c57702ce6b276eb40d4fc6}\label{structeka2l1_1_1common_1_1resource_afee3a44710c57702ce6b276eb40d4fc6}} 
+deleter {\bfseries del}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+struct eka2l1\+::common\+::resource$<$ T $>$}
+
+Represents a resource. 
+
+A resource can have custom destructor. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structeka2l1_1_1common_1_1resource_a7ab875292c58fc8de45498e7bad0ea68}\label{structeka2l1_1_1common_1_1resource_a7ab875292c58fc8de45498e7bad0ea68}} 
+\index{eka2l1\+::common\+::resource@{eka2l1\+::common\+::resource}!get@{get}}
+\index{get@{get}!eka2l1\+::common\+::resource@{eka2l1\+::common\+::resource}}
+\subsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{structeka2l1_1_1common_1_1resource}{eka2l1\+::common\+::resource}}$<$ T $>$\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the actual object. 
+
+\begin{DoxyReturn}{Returns}
+A copy of the actual object 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+emu/common/include/common/resource.\+h\end{DoxyCompactItemize}

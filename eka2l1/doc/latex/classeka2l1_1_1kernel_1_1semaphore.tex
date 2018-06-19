@@ -1,0 +1,30 @@
+\hypertarget{classeka2l1_1_1kernel_1_1semaphore}{}\section{eka2l1\+:\+:kernel\+:\+:semaphore Class Reference}
+\label{classeka2l1_1_1kernel_1_1semaphore}\index{eka2l1\+::kernel\+::semaphore@{eka2l1\+::kernel\+::semaphore}}
+Inheritance diagram for eka2l1\+:\+:kernel\+:\+:semaphore\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classeka2l1_1_1kernel_1_1semaphore}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1semaphore_abcb6ca62e62a867f26708a493a8cdfc0}\label{classeka2l1_1_1kernel_1_1semaphore_abcb6ca62e62a867f26708a493a8cdfc0}} 
+{\bfseries semaphore} (\mbox{\hyperlink{classeka2l1_1_1kernel__system}{kernel\+\_\+system}} $\ast$sys, std\+::string sema\+\_\+name, int32\+\_\+t init\+\_\+count, int32\+\_\+t max\+\_\+count, kernel\+::owner\+\_\+type own\+\_\+type, kernel\+::uid own\+\_\+id, kernel\+::access\+\_\+type access=access\+\_\+type\+::local\+\_\+access)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1semaphore_a75422ed172d983744c1e9d77d6be7ede}\label{classeka2l1_1_1kernel_1_1semaphore_a75422ed172d983744c1e9d77d6be7ede}} 
+int32\+\_\+t {\bfseries release} (int32\+\_\+t release\+\_\+count)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1semaphore_ab955c755004cfc3d4918bd8d18e7db66}\label{classeka2l1_1_1kernel_1_1semaphore_ab955c755004cfc3d4918bd8d18e7db66}} 
+bool {\bfseries should\+\_\+wait} (kernel\+::uid thr\+\_\+id) override
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1semaphore_a4f661acfc54b4105c09ced98d8e79fb6}\label{classeka2l1_1_1kernel_1_1semaphore_a4f661acfc54b4105c09ced98d8e79fb6}} 
+void {\bfseries acquire} (kernel\+::uid thr\+\_\+id) override
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+emu/core/include/core/kernel/sema.\+h\item 
+emu/core/src/kernel/sema.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,161 @@
+\hypertarget{classeka2l1_1_1hle_1_1lib__manager}{}\section{eka2l1\+:\+:hle\+:\+:lib\+\_\+manager Class Reference}
+\label{classeka2l1_1_1hle_1_1lib__manager}\index{eka2l1\+::hle\+::lib\+\_\+manager@{eka2l1\+::hle\+::lib\+\_\+manager}}
+
+
+Manage libraries and H\+LE functions.  
+
+
+
+
+{\ttfamily \#include $<$libmanager.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classeka2l1_1_1hle_1_1lib__manager_a0def103095f212354c88c41f6746f90c}{init}} (\mbox{\hyperlink{classeka2l1_1_1system}{system}} $\ast$sys, \mbox{\hyperlink{classeka2l1_1_1kernel__system}{kernel\+\_\+system}} $\ast$kern, \mbox{\hyperlink{classeka2l1_1_1io__system}{io\+\_\+system}} $\ast$ios, \mbox{\hyperlink{classeka2l1_1_1memory__system}{memory\+\_\+system}} $\ast$mems, epocver ver)
+\begin{DoxyCompactList}\small\item\em Intialize the library manager. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeka2l1_1_1hle_1_1lib__manager_ac781d05b6f5a379288cf4b498c7bf265}\label{classeka2l1_1_1hle_1_1lib__manager_ac781d05b6f5a379288cf4b498c7bf265}} 
+void \mbox{\hyperlink{classeka2l1_1_1hle_1_1lib__manager_ac781d05b6f5a379288cf4b498c7bf265}{shutdown}} ()
+\begin{DoxyCompactList}\small\item\em Shutdown the library manager. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeka2l1_1_1hle_1_1lib__manager_addb8bb832cb3b89be71ebdedc3419cef}\label{classeka2l1_1_1hle_1_1lib__manager_addb8bb832cb3b89be71ebdedc3419cef}} 
+void \mbox{\hyperlink{classeka2l1_1_1hle_1_1lib__manager_addb8bb832cb3b89be71ebdedc3419cef}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Reset the library manager. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeka2l1_1_1hle_1_1lib__manager_ae1ea4a98a8fe3ca5480644166ed11dd7}\label{classeka2l1_1_1hle_1_1lib__manager_ae1ea4a98a8fe3ca5480644166ed11dd7}} 
+std\+::optional$<$ sids $>$ \mbox{\hyperlink{classeka2l1_1_1hle_1_1lib__manager_ae1ea4a98a8fe3ca5480644166ed11dd7}{get\+\_\+sids}} (const std\+::u16string \&lib\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Get the S\+I\+DS of a library. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeka2l1_1_1hle_1_1lib__manager_a85527f2a656da201098c50a9c2007aa3}\label{classeka2l1_1_1hle_1_1lib__manager_a85527f2a656da201098c50a9c2007aa3}} 
+std\+::optional$<$ exportaddrs $>$ \mbox{\hyperlink{classeka2l1_1_1hle_1_1lib__manager_a85527f2a656da201098c50a9c2007aa3}{get\+\_\+export\+\_\+addrs}} (const std\+::u16string \&lib\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Get the export addresses of a library. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeka2l1_1_1hle_1_1lib__manager_a72153f2e0e0c2ca2eda175d430236bbf}\label{classeka2l1_1_1hle_1_1lib__manager_a72153f2e0e0c2ca2eda175d430236bbf}} 
+void {\bfseries register\+\_\+hle} (sid id, epoc\+\_\+import\+\_\+func func)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1hle_1_1lib__manager_a8e8c17aad04df862c42ef9c02346cf6a}\label{classeka2l1_1_1hle_1_1lib__manager_a8e8c17aad04df862c42ef9c02346cf6a}} 
+std\+::optional$<$ epoc\+\_\+import\+\_\+func $>$ \mbox{\hyperlink{classeka2l1_1_1hle_1_1lib__manager_a8e8c17aad04df862c42ef9c02346cf6a}{get\+\_\+hle}} (sid id)
+\begin{DoxyCompactList}\small\item\em Get the H\+LE function from an S\+ID. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeka2l1_1_1hle_1_1lib__manager_a0962316ebc13ec419adbfdd66a4f6db9}\label{classeka2l1_1_1hle_1_1lib__manager_a0962316ebc13ec419adbfdd66a4f6db9}} 
+bool \mbox{\hyperlink{classeka2l1_1_1hle_1_1lib__manager_a0962316ebc13ec419adbfdd66a4f6db9}{call\+\_\+hle}} (sid id)
+\begin{DoxyCompactList}\small\item\em Call H\+LE function with an ID. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeka2l1_1_1hle_1_1lib__manager_a07b0828c1e42e7ca1dccf675aefb758f}\label{classeka2l1_1_1hle_1_1lib__manager_a07b0828c1e42e7ca1dccf675aefb758f}} 
+bool \mbox{\hyperlink{classeka2l1_1_1hle_1_1lib__manager_a07b0828c1e42e7ca1dccf675aefb758f}{call\+\_\+custom\+\_\+hle}} (address addr)
+\begin{DoxyCompactList}\small\item\em Call a H\+LE function registered at a specific address. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classeka2l1_1_1hle_1_1lib__manager_a8567be4292de6f27126064dd61b823fa}{call\+\_\+svc}} (sid svcnum)
+\begin{DoxyCompactList}\small\item\em Call a H\+LE system call. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeka2l1_1_1hle_1_1lib__manager_a2a0e9db90f0d6bca0abb2e106d5d9369}\label{classeka2l1_1_1hle_1_1lib__manager_a2a0e9db90f0d6bca0abb2e106d5d9369}} 
+loader\+::e32img\+\_\+ptr \mbox{\hyperlink{classeka2l1_1_1hle_1_1lib__manager_a2a0e9db90f0d6bca0abb2e106d5d9369}{load\+\_\+e32img}} (const std\+::u16string \&img\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Load an E32\+Image. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeka2l1_1_1hle_1_1lib__manager_a68d19094e17efd07b3f97e37443ca0fb}\label{classeka2l1_1_1hle_1_1lib__manager_a68d19094e17efd07b3f97e37443ca0fb}} 
+loader\+::romimg\+\_\+ptr \mbox{\hyperlink{classeka2l1_1_1hle_1_1lib__manager_a68d19094e17efd07b3f97e37443ca0fb}{load\+\_\+romimg}} (const std\+::u16string \&rom\+\_\+name, bool log\+\_\+export=false)
+\begin{DoxyCompactList}\small\item\em Load an R\+OM image. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeka2l1_1_1hle_1_1lib__manager_a9c6a29b18515946fca9af8b9dc0a344d}\label{classeka2l1_1_1hle_1_1lib__manager_a9c6a29b18515946fca9af8b9dc0a344d}} 
+void \mbox{\hyperlink{classeka2l1_1_1hle_1_1lib__manager_a9c6a29b18515946fca9af8b9dc0a344d}{open\+\_\+e32img}} (loader\+::e32img\+\_\+ptr \&img)
+\begin{DoxyCompactList}\small\item\em Open the image code segment. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeka2l1_1_1hle_1_1lib__manager_ac5fe1d63f0854b9169f9f008b4ca9cab}\label{classeka2l1_1_1hle_1_1lib__manager_ac5fe1d63f0854b9169f9f008b4ca9cab}} 
+void \mbox{\hyperlink{classeka2l1_1_1hle_1_1lib__manager_ac5fe1d63f0854b9169f9f008b4ca9cab}{close\+\_\+e32img}} (loader\+::e32img\+\_\+ptr \&img)
+\begin{DoxyCompactList}\small\item\em Close the image code segment. Means that the image will be unloaded, X\+IP turns to false. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeka2l1_1_1hle_1_1lib__manager_a282d25052cb2732967de591c4dc80850}\label{classeka2l1_1_1hle_1_1lib__manager_a282d25052cb2732967de591c4dc80850}} 
+void {\bfseries open\+\_\+romimg} (loader\+::romimg\+\_\+ptr \&img)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1hle_1_1lib__manager_afee2d8bf4ea626a8ed164605c55e31dd}\label{classeka2l1_1_1hle_1_1lib__manager_afee2d8bf4ea626a8ed164605c55e31dd}} 
+void {\bfseries close\+\_\+romimg} (loader\+::romimg\+\_\+ptr \&img)
+\item 
+bool \mbox{\hyperlink{classeka2l1_1_1hle_1_1lib__manager_a79eea8bce230c84310e191a03c3534a9}{register\+\_\+exports}} (const std\+::u16string \&lib\+\_\+name, exportaddrs \&addrs, bool log\+\_\+export=false)
+\begin{DoxyCompactList}\small\item\em Register export addresses for desired H\+LE library. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeka2l1_1_1hle_1_1lib__manager_af6860ae6fd7aecd6d8513697072e00db}\label{classeka2l1_1_1hle_1_1lib__manager_af6860ae6fd7aecd6d8513697072e00db}} 
+std\+::optional$<$ sid $>$ {\bfseries get\+\_\+sid} (exportaddr addr)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1hle_1_1lib__manager_a1faf5b10532e27f121a3bf4ccf78d2af}\label{classeka2l1_1_1hle_1_1lib__manager_a1faf5b10532e27f121a3bf4ccf78d2af}} 
+std\+::optional$<$ std\+::string $>$ \mbox{\hyperlink{classeka2l1_1_1hle_1_1lib__manager_a1faf5b10532e27f121a3bf4ccf78d2af}{get\+\_\+func\+\_\+name}} (const sid id)
+\begin{DoxyCompactList}\small\item\em Given an S\+ID, get the function name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeka2l1_1_1hle_1_1lib__manager_ae93df9f2a1974fd080a3154853727625}\label{classeka2l1_1_1hle_1_1lib__manager_ae93df9f2a1974fd080a3154853727625}} 
+std\+::map$<$ uint32\+\_\+t, e32img\+\_\+inf $>$ \& {\bfseries get\+\_\+e32imgs\+\_\+cache} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1hle_1_1lib__manager_ad39455b019ad7526b6020a93a4a060a7}\label{classeka2l1_1_1hle_1_1lib__manager_ad39455b019ad7526b6020a93a4a060a7}} 
+std\+::map$<$ uint32\+\_\+t, romimg\+\_\+inf $>$ \& {\bfseries get\+\_\+romimgs\+\_\+cache} ()
+\item 
+address \mbox{\hyperlink{classeka2l1_1_1hle_1_1lib__manager_a2960c07d66c61b5db35647a49663fb51}{get\+\_\+vtable\+\_\+address}} (const std\+::string class\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Given a class name, return the vtable address. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeka2l1_1_1hle_1_1lib__manager_aad25104f0d16ee1278ce1f7d65604845}\label{classeka2l1_1_1hle_1_1lib__manager_aad25104f0d16ee1278ce1f7d65604845}} 
+address {\bfseries get\+\_\+vtable\+\_\+entry\+\_\+addr} (const std\+::string class\+\_\+name, uint32\+\_\+t idx)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1hle_1_1lib__manager_a22d22efec438539c523ca032dced8008}\label{classeka2l1_1_1hle_1_1lib__manager_a22d22efec438539c523ca032dced8008}} 
+address {\bfseries get\+\_\+export\+\_\+addr} (sid id)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1hle_1_1lib__manager_ab5831c7e70f80f302d698a082bb7e836}\label{classeka2l1_1_1hle_1_1lib__manager_ab5831c7e70f80f302d698a082bb7e836}} 
+std\+::map$<$ sid, epoc\+\_\+import\+\_\+func $>$ {\bfseries import\+\_\+funcs}
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1hle_1_1lib__manager_a51f7e262a47e0098f0d630b5db669b15}\label{classeka2l1_1_1hle_1_1lib__manager_a51f7e262a47e0098f0d630b5db669b15}} 
+std\+::map$<$ sid, epoc\+\_\+import\+\_\+func $>$ {\bfseries svc\+\_\+funcs}
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1hle_1_1lib__manager_a47944b6f6fb1e19d822d918b48ca5e79}\label{classeka2l1_1_1hle_1_1lib__manager_a47944b6f6fb1e19d822d918b48ca5e79}} 
+std\+::map$<$ address, epoc\+\_\+import\+\_\+func $>$ {\bfseries custom\+\_\+funcs}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Manage libraries and H\+LE functions. 
+
+H\+LE functions are stored here. Libraries and images are also cached and load when needed. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classeka2l1_1_1hle_1_1lib__manager_a8567be4292de6f27126064dd61b823fa}\label{classeka2l1_1_1hle_1_1lib__manager_a8567be4292de6f27126064dd61b823fa}} 
+\index{eka2l1\+::hle\+::lib\+\_\+manager@{eka2l1\+::hle\+::lib\+\_\+manager}!call\+\_\+svc@{call\+\_\+svc}}
+\index{call\+\_\+svc@{call\+\_\+svc}!eka2l1\+::hle\+::lib\+\_\+manager@{eka2l1\+::hle\+::lib\+\_\+manager}}
+\subsubsection{\texorpdfstring{call\+\_\+svc()}{call\_svc()}}
+{\footnotesize\ttfamily bool eka2l1\+::hle\+::lib\+\_\+manager\+::call\+\_\+svc (\begin{DoxyParamCaption}\item[{sid}]{svcnum }\end{DoxyParamCaption})}
+
+
+
+Call a H\+LE system call. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em svcnum} & The system call ordinal. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classeka2l1_1_1hle_1_1lib__manager_a2960c07d66c61b5db35647a49663fb51}\label{classeka2l1_1_1hle_1_1lib__manager_a2960c07d66c61b5db35647a49663fb51}} 
+\index{eka2l1\+::hle\+::lib\+\_\+manager@{eka2l1\+::hle\+::lib\+\_\+manager}!get\+\_\+vtable\+\_\+address@{get\+\_\+vtable\+\_\+address}}
+\index{get\+\_\+vtable\+\_\+address@{get\+\_\+vtable\+\_\+address}!eka2l1\+::hle\+::lib\+\_\+manager@{eka2l1\+::hle\+::lib\+\_\+manager}}
+\subsubsection{\texorpdfstring{get\+\_\+vtable\+\_\+address()}{get\_vtable\_address()}}
+{\footnotesize\ttfamily address eka2l1\+::hle\+::lib\+\_\+manager\+::get\+\_\+vtable\+\_\+address (\begin{DoxyParamCaption}\item[{const std\+::string}]{class\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Given a class name, return the vtable address. 
+
+\begin{DoxyReturn}{Returns}
+0 if the class doesn\textquotesingle{}t exists in the cache, else returns the vtable address of that class. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classeka2l1_1_1hle_1_1lib__manager_a0def103095f212354c88c41f6746f90c}\label{classeka2l1_1_1hle_1_1lib__manager_a0def103095f212354c88c41f6746f90c}} 
+\index{eka2l1\+::hle\+::lib\+\_\+manager@{eka2l1\+::hle\+::lib\+\_\+manager}!init@{init}}
+\index{init@{init}!eka2l1\+::hle\+::lib\+\_\+manager@{eka2l1\+::hle\+::lib\+\_\+manager}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void eka2l1\+::hle\+::lib\+\_\+manager\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classeka2l1_1_1system}{system}} $\ast$}]{sys,  }\item[{\mbox{\hyperlink{classeka2l1_1_1kernel__system}{kernel\+\_\+system}} $\ast$}]{kern,  }\item[{\mbox{\hyperlink{classeka2l1_1_1io__system}{io\+\_\+system}} $\ast$}]{ios,  }\item[{\mbox{\hyperlink{classeka2l1_1_1memory__system}{memory\+\_\+system}} $\ast$}]{mems,  }\item[{epocver}]{ver }\end{DoxyParamCaption})}
+
+
+
+Intialize the library manager. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ver} & The E\+P\+OC version to import H\+LE functions. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classeka2l1_1_1hle_1_1lib__manager_a79eea8bce230c84310e191a03c3534a9}\label{classeka2l1_1_1hle_1_1lib__manager_a79eea8bce230c84310e191a03c3534a9}} 
+\index{eka2l1\+::hle\+::lib\+\_\+manager@{eka2l1\+::hle\+::lib\+\_\+manager}!register\+\_\+exports@{register\+\_\+exports}}
+\index{register\+\_\+exports@{register\+\_\+exports}!eka2l1\+::hle\+::lib\+\_\+manager@{eka2l1\+::hle\+::lib\+\_\+manager}}
+\subsubsection{\texorpdfstring{register\+\_\+exports()}{register\_exports()}}
+{\footnotesize\ttfamily bool eka2l1\+::hle\+::lib\+\_\+manager\+::register\+\_\+exports (\begin{DoxyParamCaption}\item[{const std\+::u16string \&}]{lib\+\_\+name,  }\item[{exportaddrs \&}]{addrs,  }\item[{bool}]{log\+\_\+export = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Register export addresses for desired H\+LE library. 
+
+This will also map the export address with the correspond S\+ID. Note that these export addresses are unique, since they are the address in the memory. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+emu/core/include/core/hle/libmanager.\+h\item 
+emu/core/src/hle/libmanager.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,68 @@
+\hypertarget{classeka2l1_1_1flate_1_1inflater}{}\section{eka2l1\+:\+:flate\+:\+:inflater Class Reference}
+\label{classeka2l1_1_1flate_1_1inflater}\index{eka2l1\+::flate\+::inflater@{eka2l1\+::flate\+::inflater}}
+
+
+Inflate a deflated stream (non-\/standard gzip).  
+
+
+
+
+{\ttfamily \#include $<$flate.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1flate_1_1inflater_a913e333473545fb9dfd981144f29ee4f}\label{classeka2l1_1_1flate_1_1inflater_a913e333473545fb9dfd981144f29ee4f}} 
+\mbox{\hyperlink{classeka2l1_1_1flate_1_1inflater_a913e333473545fb9dfd981144f29ee4f}{inflater}} (\mbox{\hyperlink{classeka2l1_1_1flate_1_1bit__input}{bit\+\_\+input}} \&input)
+\begin{DoxyCompactList}\small\item\em Construct an inflate stream from a bit input. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeka2l1_1_1flate_1_1inflater_a9c0046659dd21c4d5cd1db2cf5d11550}\label{classeka2l1_1_1flate_1_1inflater_a9c0046659dd21c4d5cd1db2cf5d11550}} 
+void {\bfseries init} ()
+\item 
+int \mbox{\hyperlink{classeka2l1_1_1flate_1_1inflater_a206a1c2025a66e1602f821e9ea45c80f}{read}} (uint8\+\_\+t $\ast$buf, size\+\_\+t rlen)
+\begin{DoxyCompactList}\small\item\em Inflate bytes of data. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classeka2l1_1_1flate_1_1inflater_a552a005904f6bf0c5ca325a28f4fc473}{skip}} (int len)
+\begin{DoxyCompactList}\small\item\em Skip a number of bytes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Inflate a deflated stream (non-\/standard gzip). 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classeka2l1_1_1flate_1_1inflater_a206a1c2025a66e1602f821e9ea45c80f}\label{classeka2l1_1_1flate_1_1inflater_a206a1c2025a66e1602f821e9ea45c80f}} 
+\index{eka2l1\+::flate\+::inflater@{eka2l1\+::flate\+::inflater}!read@{read}}
+\index{read@{read}!eka2l1\+::flate\+::inflater@{eka2l1\+::flate\+::inflater}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily int eka2l1\+::flate\+::inflater\+::read (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{buf,  }\item[{size\+\_\+t}]{rlen }\end{DoxyParamCaption})}
+
+
+
+Inflate bytes of data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & The destination to write inflated data to. \\
+\hline
+{\em rlen} & The number of byte to inflate \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classeka2l1_1_1flate_1_1inflater_a552a005904f6bf0c5ca325a28f4fc473}\label{classeka2l1_1_1flate_1_1inflater_a552a005904f6bf0c5ca325a28f4fc473}} 
+\index{eka2l1\+::flate\+::inflater@{eka2l1\+::flate\+::inflater}!skip@{skip}}
+\index{skip@{skip}!eka2l1\+::flate\+::inflater@{eka2l1\+::flate\+::inflater}}
+\subsubsection{\texorpdfstring{skip()}{skip()}}
+{\footnotesize\ttfamily int eka2l1\+::flate\+::inflater\+::skip (\begin{DoxyParamCaption}\item[{int}]{len }\end{DoxyParamCaption})}
+
+
+
+Skip a number of bytes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em len} & Number of bytes to skip. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+emu/common/include/common/flate.\+h\item 
+emu/common/src/flate.\+cpp\end{DoxyCompactItemize}

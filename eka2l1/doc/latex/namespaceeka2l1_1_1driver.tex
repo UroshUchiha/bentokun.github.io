@@ -1,0 +1,166 @@
+\hypertarget{namespaceeka2l1_1_1driver}{}\section{eka2l1\+:\+:driver Namespace Reference}
+\label{namespaceeka2l1_1_1driver}\index{eka2l1\+::driver@{eka2l1\+::driver}}
+
+
+Contains implementation for driver.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classeka2l1_1_1driver_1_1emu__window}{emu\+\_\+window}}
+\begin{DoxyCompactList}\small\item\em An abstract class to implement the emulator window. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classeka2l1_1_1driver_1_1emu__window__glfw3}{emu\+\_\+window\+\_\+glfw3}}
+\item 
+class \mbox{\hyperlink{classeka2l1_1_1driver_1_1screen__driver}{screen\+\_\+driver}}
+\begin{DoxyCompactList}\small\item\em Screen driver abstract implementation. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classeka2l1_1_1driver_1_1screen__driver__ogl}{screen\+\_\+driver\+\_\+ogl}}
+\item 
+struct \mbox{\hyperlink{structeka2l1_1_1driver_1_1ttf__char}{ttf\+\_\+char}}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1driver_a4c06594db8678b06882b4c2152673a2a}\label{namespaceeka2l1_1_1driver_a4c06594db8678b06882b4c2152673a2a}} 
+using {\bfseries emu\+\_\+window\+\_\+ptr} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classeka2l1_1_1driver_1_1emu__window}{emu\+\_\+window}} $>$
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1driver_a12f6cced4921ca24ba98feb9f19cdf6c}\label{namespaceeka2l1_1_1driver_a12f6cced4921ca24ba98feb9f19cdf6c}} 
+using {\bfseries render\+\_\+func} = std\+::function$<$ void()$>$
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1driver_afda572e38db56d17f0eab99160f8974e}\label{namespaceeka2l1_1_1driver_afda572e38db56d17f0eab99160f8974e}} 
+using {\bfseries screen\+\_\+driver\+\_\+ptr} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classeka2l1_1_1driver_1_1screen__driver}{screen\+\_\+driver}} $>$
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1driver_af3756550e64917ebed22921119f13bf0}\label{namespaceeka2l1_1_1driver_af3756550e64917ebed22921119f13bf0}} 
+enum {\bfseries window\+\_\+type} \{ {\bfseries glfw}
+ \}
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1driver_af55f6b6be5c647935e5766ab5eed2cfd}\label{namespaceeka2l1_1_1driver_af55f6b6be5c647935e5766ab5eed2cfd}} 
+enum {\bfseries driver\+\_\+type} \{ {\bfseries opengl}, 
+{\bfseries vulkan}, 
+{\bfseries directx}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1driver_a5dbbe81fe88c944c8de18db81635a4a0}\label{namespaceeka2l1_1_1driver_a5dbbe81fe88c944c8de18db81635a4a0}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classeka2l1_1_1driver_1_1emu__window}{emu\+\_\+window}} $>$ \mbox{\hyperlink{namespaceeka2l1_1_1driver_a5dbbe81fe88c944c8de18db81635a4a0}{new\+\_\+emu\+\_\+window}} (window\+\_\+type win\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Create a new window emulator. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1driver_aaf4ba5ca07b2f2607c58b84f0964ebe9}\label{namespaceeka2l1_1_1driver_aaf4ba5ca07b2f2607c58b84f0964ebe9}} 
+screen\+\_\+driver\+\_\+ptr \mbox{\hyperlink{namespaceeka2l1_1_1driver_aaf4ba5ca07b2f2607c58b84f0964ebe9}{new\+\_\+screen\+\_\+driver}} (driver\+\_\+type dr\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Create a new screen driver. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1driver_a48ecfd2cad1c309096c44fffbd0b970c}\label{namespaceeka2l1_1_1driver_a48ecfd2cad1c309096c44fffbd0b970c}} 
+const uint32\+\_\+t {\bfseries default\+\_\+width\+\_\+potrait} = 360
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1driver_ac124f34d3c09c8768685a09708b84641}\label{namespaceeka2l1_1_1driver_ac124f34d3c09c8768685a09708b84641}} 
+const uint32\+\_\+t {\bfseries default\+\_\+height\+\_\+potrait} = 640
+\item 
+const char $\ast$ {\bfseries fb\+\_\+render\+\_\+vertex}
+\item 
+const char $\ast$ {\bfseries fb\+\_\+render\+\_\+frag}
+\item 
+const char $\ast$ {\bfseries console\+\_\+shader\+\_\+vert}
+\item 
+const char $\ast$ {\bfseries console\+\_\+shader\+\_\+frag}
+\item 
+float {\bfseries quad\+\_\+verts} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains implementation for driver. 
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespaceeka2l1_1_1driver_a1c721bd0548124043b6a9e668207641b}\label{namespaceeka2l1_1_1driver_a1c721bd0548124043b6a9e668207641b}} 
+\index{eka2l1\+::driver@{eka2l1\+::driver}!console\+\_\+shader\+\_\+frag@{console\+\_\+shader\+\_\+frag}}
+\index{console\+\_\+shader\+\_\+frag@{console\+\_\+shader\+\_\+frag}!eka2l1\+::driver@{eka2l1\+::driver}}
+\subsubsection{\texorpdfstring{console\+\_\+shader\+\_\+frag}{console\_shader\_frag}}
+{\footnotesize\ttfamily const char$\ast$ eka2l1\+::driver\+::console\+\_\+shader\+\_\+frag}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \textcolor{stringliteral}{"#version 330 core\(\backslash\)n"}
+            \textcolor{stringliteral}{"in vec2 texCoords;\(\backslash\)n"}
+            \textcolor{stringliteral}{"out vec4 color;\(\backslash\)n"}
+            \textcolor{stringliteral}{"uniform sampler2D text;\(\backslash\)n"}
+            \textcolor{stringliteral}{"uniform vec3 textColor;\(\backslash\)n"}
+            \textcolor{stringliteral}{"void main() \{\(\backslash\)n"}
+            \textcolor{stringliteral}{"vec4 sampled = vec4(1.0, 1.0, 1.0, texture(text, texCoords).r);\(\backslash\)n"}
+            \textcolor{stringliteral}{"color = vec4(textColor, 1.0) * sampled;\(\backslash\)n"}
+            \textcolor{stringliteral}{"\}"}
+\end{DoxyCode}
+\mbox{\Hypertarget{namespaceeka2l1_1_1driver_a3dd1af4e214c2662e3b27317b7a984b8}\label{namespaceeka2l1_1_1driver_a3dd1af4e214c2662e3b27317b7a984b8}} 
+\index{eka2l1\+::driver@{eka2l1\+::driver}!console\+\_\+shader\+\_\+vert@{console\+\_\+shader\+\_\+vert}}
+\index{console\+\_\+shader\+\_\+vert@{console\+\_\+shader\+\_\+vert}!eka2l1\+::driver@{eka2l1\+::driver}}
+\subsubsection{\texorpdfstring{console\+\_\+shader\+\_\+vert}{console\_shader\_vert}}
+{\footnotesize\ttfamily const char$\ast$ eka2l1\+::driver\+::console\+\_\+shader\+\_\+vert}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \textcolor{stringliteral}{"#version 330 core\(\backslash\)n"}
+            \textcolor{stringliteral}{"layout (location = 0) in vec4 vertex;\(\backslash\)n"}
+            \textcolor{stringliteral}{"out vec2 texCoords;\(\backslash\)n"}
+            \textcolor{stringliteral}{"uniform mat4 proj;\(\backslash\)n"}
+            \textcolor{stringliteral}{"void main() \{\(\backslash\)n"}
+            \textcolor{stringliteral}{"gl\_Position = proj * vec4(vertex.xy, 0.0, 1.0);\(\backslash\)n"}
+            \textcolor{stringliteral}{"texCoords = vertex.zw;\(\backslash\)n"}
+            \textcolor{stringliteral}{"\}"}
+\end{DoxyCode}
+\mbox{\Hypertarget{namespaceeka2l1_1_1driver_acbb3ed05193e132a83c55cdc822a1dfb}\label{namespaceeka2l1_1_1driver_acbb3ed05193e132a83c55cdc822a1dfb}} 
+\index{eka2l1\+::driver@{eka2l1\+::driver}!fb\+\_\+render\+\_\+frag@{fb\+\_\+render\+\_\+frag}}
+\index{fb\+\_\+render\+\_\+frag@{fb\+\_\+render\+\_\+frag}!eka2l1\+::driver@{eka2l1\+::driver}}
+\subsubsection{\texorpdfstring{fb\+\_\+render\+\_\+frag}{fb\_render\_frag}}
+{\footnotesize\ttfamily const char$\ast$ eka2l1\+::driver\+::fb\+\_\+render\+\_\+frag}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \textcolor{stringliteral}{"#version 330 core\(\backslash\)n"}
+            \textcolor{stringliteral}{"out vec4 FragColor;\(\backslash\)n"}
+            \textcolor{stringliteral}{"in vec2 TexCoords;\(\backslash\)n"}
+            \textcolor{stringliteral}{"uniform sampler2D fb;\(\backslash\)n"}
+            \textcolor{stringliteral}{"void main() \{\(\backslash\)n"}
+            \textcolor{stringliteral}{"vec3 col = texture(fb, TexCoords).rgb;\(\backslash\)n"}
+            \textcolor{stringliteral}{"FragColor = vec4(col, 1.0);"}
+            \textcolor{stringliteral}{"\}\(\backslash\)0"}
+\end{DoxyCode}
+\mbox{\Hypertarget{namespaceeka2l1_1_1driver_aacfb48df3ed95509badd868bde06df85}\label{namespaceeka2l1_1_1driver_aacfb48df3ed95509badd868bde06df85}} 
+\index{eka2l1\+::driver@{eka2l1\+::driver}!fb\+\_\+render\+\_\+vertex@{fb\+\_\+render\+\_\+vertex}}
+\index{fb\+\_\+render\+\_\+vertex@{fb\+\_\+render\+\_\+vertex}!eka2l1\+::driver@{eka2l1\+::driver}}
+\subsubsection{\texorpdfstring{fb\+\_\+render\+\_\+vertex}{fb\_render\_vertex}}
+{\footnotesize\ttfamily const char$\ast$ eka2l1\+::driver\+::fb\+\_\+render\+\_\+vertex}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \textcolor{stringliteral}{"#version 330 core\(\backslash\)n"}
+            \textcolor{stringliteral}{"layout (location = 0) in vec2 aPos;\(\backslash\)n"}
+            \textcolor{stringliteral}{"layout (location = 1) in vec2 aTexCoords;\(\backslash\)n"}
+            \textcolor{stringliteral}{"out vec2 TexCoords;\(\backslash\)n"}
+            \textcolor{stringliteral}{"void main() \{\(\backslash\)n"}
+            \textcolor{stringliteral}{"gl\_Position = vec4(aPos.x, aPos.y, 0.0, 1.0);\(\backslash\)n"}
+            \textcolor{stringliteral}{"TexCoords = aTexCoords;\(\backslash\)n"}
+            \textcolor{stringliteral}{"\}\(\backslash\)0"}
+\end{DoxyCode}
+\mbox{\Hypertarget{namespaceeka2l1_1_1driver_a9849bf26d5cf593621b50a0edb1b9d16}\label{namespaceeka2l1_1_1driver_a9849bf26d5cf593621b50a0edb1b9d16}} 
+\index{eka2l1\+::driver@{eka2l1\+::driver}!quad\+\_\+verts@{quad\+\_\+verts}}
+\index{quad\+\_\+verts@{quad\+\_\+verts}!eka2l1\+::driver@{eka2l1\+::driver}}
+\subsubsection{\texorpdfstring{quad\+\_\+verts}{quad\_verts}}
+{\footnotesize\ttfamily float eka2l1\+::driver\+::quad\+\_\+verts\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{ 
+            -1.0f,  1.0f,  0.0f, 1.0f,
+            -1.0f, -1.0f,  0.0f, 0.0f,
+            1.0f, -1.0f,  1.0f, 0.0f,
+
+            -1.0f,  1.0f,  0.0f, 1.0f,
+            1.0f, -1.0f,  1.0f, 0.0f,
+            1.0f,  1.0f,  1.0f, 1.0f
+        \}
+\end{DoxyCode}

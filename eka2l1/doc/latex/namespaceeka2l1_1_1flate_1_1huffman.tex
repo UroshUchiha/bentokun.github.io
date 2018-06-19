@@ -1,0 +1,116 @@
+\hypertarget{namespaceeka2l1_1_1flate_1_1huffman}{}\section{eka2l1\+:\+:flate\+:\+:huffman Namespace Reference}
+\label{namespaceeka2l1_1_1flate_1_1huffman}\index{eka2l1\+::flate\+::huffman@{eka2l1\+::flate\+::huffman}}
+
+
+Contains Huffman decoding/encoding functions.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structeka2l1_1_1flate_1_1huffman_1_1node}{node}}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1flate_1_1huffman_ab8d70c9e082fb2c34d230e87ef671ca3}\label{namespaceeka2l1_1_1flate_1_1huffman_ab8d70c9e082fb2c34d230e87ef671ca3}} 
+using {\bfseries huff} = uint16\+\_\+t
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1flate_1_1huffman_aee825c81f89056b12d08fbfb4fda840f}\label{namespaceeka2l1_1_1flate_1_1huffman_aee825c81f89056b12d08fbfb4fda840f}} 
+using {\bfseries v2u32p} = std\+::pair$<$ uint32\+\_\+t, uint32\+\_\+t $>$
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1flate_1_1huffman_a2d4ed9217393dc1659f40b15c182416d}\label{namespaceeka2l1_1_1flate_1_1huffman_a2d4ed9217393dc1659f40b15c182416d}} 
+bool {\bfseries huffman} (const int $\ast$freq, uint32\+\_\+t num\+\_\+codes, int $\ast$huffman)
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1flate_1_1huffman_aacceab23195315870b65a973097501a7}\label{namespaceeka2l1_1_1flate_1_1huffman_aacceab23195315870b65a973097501a7}} 
+void {\bfseries encoding} (const int $\ast$huffman, uint32\+\_\+t num\+\_\+codes, int $\ast$encode\+\_\+tab)
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1flate_1_1huffman_aae795c80b9c8d8edf0736eff55285b68}\label{namespaceeka2l1_1_1flate_1_1huffman_aae795c80b9c8d8edf0736eff55285b68}} 
+void {\bfseries decoding} (const int $\ast$huffman, uint32\+\_\+t num\+\_\+codes, uint32\+\_\+t $\ast$decode\+\_\+tree, int sym\+\_\+base=0)
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1flate_1_1huffman_a7e23804f1f892ee7a9510cfcc4bb2cec}\label{namespaceeka2l1_1_1flate_1_1huffman_a7e23804f1f892ee7a9510cfcc4bb2cec}} 
+bool {\bfseries valid} (const uint32\+\_\+t $\ast$huffman, int num\+\_\+codes)
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1flate_1_1huffman_ad466e620009dc721b71c8cb4efa2368c}\label{namespaceeka2l1_1_1flate_1_1huffman_ad466e620009dc721b71c8cb4efa2368c}} 
+void {\bfseries externalize} (\mbox{\hyperlink{classeka2l1_1_1flate_1_1bit__output}{bit\+\_\+output}} \&output, const int $\ast$huff\+\_\+man, uint32\+\_\+t num\+\_\+codes)
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1flate_1_1huffman_a4bc23fdc6a00f373ffba4a0986fc5a8f}\label{namespaceeka2l1_1_1flate_1_1huffman_a4bc23fdc6a00f373ffba4a0986fc5a8f}} 
+void {\bfseries internalize} (\mbox{\hyperlink{classeka2l1_1_1flate_1_1bit__input}{bit\+\_\+input}} \&input, uint32\+\_\+t $\ast$huffman, int num\+\_\+codes)
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1flate_1_1huffman_ade814f2975035f7fe68001220fa5da44}\label{namespaceeka2l1_1_1flate_1_1huffman_ade814f2975035f7fe68001220fa5da44}} 
+void {\bfseries huffman\+\_\+len} (uint32\+\_\+t $\ast$lengths, const \mbox{\hyperlink{structeka2l1_1_1flate_1_1huffman_1_1node}{node}} $\ast$nodes, int cnode, int len)
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1flate_1_1huffman_a54d4d13e22baa8339f6d9392f9d87f9b}\label{namespaceeka2l1_1_1flate_1_1huffman_a54d4d13e22baa8339f6d9392f9d87f9b}} 
+void {\bfseries insert\+\_\+in\+\_\+order} (\mbox{\hyperlink{structeka2l1_1_1flate_1_1huffman_1_1node}{node}} $\ast$nodes, uint32\+\_\+t size, v2u32p val)
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1flate_1_1huffman_a9b2edccff002a12e51eec443d4639b6d}\label{namespaceeka2l1_1_1flate_1_1huffman_a9b2edccff002a12e51eec443d4639b6d}} 
+void {\bfseries encode\+\_\+runlen} (\mbox{\hyperlink{classeka2l1_1_1flate_1_1bit__output}{bit\+\_\+output}} \&output, int len)
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1flate_1_1huffman_a5e142c5275741a3891cb43805ce1e64f}\label{namespaceeka2l1_1_1flate_1_1huffman_a5e142c5275741a3891cb43805ce1e64f}} 
+uint32\+\_\+t $\ast$ {\bfseries huffman\+\_\+subtree} (uint32\+\_\+t $\ast$\mbox{\hyperlink{classeka2l1_1_1ptr}{ptr}}, const uint32\+\_\+t $\ast$val, uint32\+\_\+t $\ast$$\ast$lvl)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1flate_1_1huffman_a3f06e547f120f2105a37cf47632b83d0}\label{namespaceeka2l1_1_1flate_1_1huffman_a3f06e547f120f2105a37cf47632b83d0}} 
+const huff {\bfseries leaf} = 0x8000
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1flate_1_1huffman_a229dddd048bc3823f4dfa2da52f03aff}\label{namespaceeka2l1_1_1flate_1_1huffman_a229dddd048bc3823f4dfa2da52f03aff}} 
+const uint32\+\_\+t {\bfseries huffman\+\_\+enc} \mbox{[}$\,$\mbox{]}
+\item 
+const uint32\+\_\+t {\bfseries huffman\+\_\+dec} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1flate_1_1huffman_a99e3dfff1e48b822823a1bc55e9defc6}\label{namespaceeka2l1_1_1flate_1_1huffman_a99e3dfff1e48b822823a1bc55e9defc6}} 
+const int {\bfseries huff\+\_\+term} = 0x0001
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1flate_1_1huffman_aedf367badbc32a0647144a9cb5c799a8}\label{namespaceeka2l1_1_1flate_1_1huffman_aedf367badbc32a0647144a9cb5c799a8}} 
+const uint32\+\_\+t {\bfseries branch1} = sizeof(uint32\+\_\+t) $<$$<$ 16
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains Huffman decoding/encoding functions. 
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespaceeka2l1_1_1flate_1_1huffman_a58d7e346ec58dc85ca33f82010b80b44}\label{namespaceeka2l1_1_1flate_1_1huffman_a58d7e346ec58dc85ca33f82010b80b44}} 
+\index{eka2l1\+::flate\+::huffman@{eka2l1\+::flate\+::huffman}!huffman\+\_\+dec@{huffman\+\_\+dec}}
+\index{huffman\+\_\+dec@{huffman\+\_\+dec}!eka2l1\+::flate\+::huffman@{eka2l1\+::flate\+::huffman}}
+\subsubsection{\texorpdfstring{huffman\+\_\+dec}{huffman\_dec}}
+{\footnotesize\ttfamily const uint32\+\_\+t eka2l1\+::flate\+::huffman\+::huffman\+\_\+dec\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+                0x0004006c,
+                0x00040064,
+                0x0004005c,
+                0x00040050,
+                0x00040044,
+                0x0004003c,
+                0x00040034,
+                0x00040021,
+                0x00040023,
+                0x00040025,
+                0x00040027,
+                0x00040029,
+                0x00040014,
+                0x0004000c,
+                0x00040035,
+                0x00390037,
+                0x00330031,
+                0x0004002b,
+                0x002f002d,
+                0x001f001d,
+                0x001b0019,
+                0x00040013,
+                0x00170015,
+                0x0004000d,
+                0x0011000f,
+                0x000b0009,
+                0x00070003,
+                0x00050001
+            \}
+\end{DoxyCode}

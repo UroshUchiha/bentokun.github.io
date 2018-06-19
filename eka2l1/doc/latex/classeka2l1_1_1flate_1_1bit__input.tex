@@ -1,0 +1,38 @@
+\hypertarget{classeka2l1_1_1flate_1_1bit__input}{}\section{eka2l1\+:\+:flate\+:\+:bit\+\_\+input Class Reference}
+\label{classeka2l1_1_1flate_1_1bit__input}\index{eka2l1\+::flate\+::bit\+\_\+input@{eka2l1\+::flate\+::bit\+\_\+input}}
+
+
+Represents a deflate bit input.  
+
+
+
+
+{\ttfamily \#include $<$flate.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1flate_1_1bit__input_aa9dbb50c1b40a6fbc1e88f52caae155a}\label{classeka2l1_1_1flate_1_1bit__input_aa9dbb50c1b40a6fbc1e88f52caae155a}} 
+{\bfseries bit\+\_\+input} (const uint8\+\_\+t $\ast$\mbox{\hyperlink{classeka2l1_1_1ptr}{ptr}}, int len, int off=0)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1flate_1_1bit__input_af5c61079fac7cafd0ec27c28bd3f78f9}\label{classeka2l1_1_1flate_1_1bit__input_af5c61079fac7cafd0ec27c28bd3f78f9}} 
+void \mbox{\hyperlink{classeka2l1_1_1flate_1_1bit__input_af5c61079fac7cafd0ec27c28bd3f78f9}{set}} (const uint8\+\_\+t $\ast$\mbox{\hyperlink{classeka2l1_1_1ptr}{ptr}}, int len, int off=0)
+\begin{DoxyCompactList}\small\item\em Set the buffer to read from. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeka2l1_1_1flate_1_1bit__input_aa2baced757eb2df2a6f043ea8e747bc9}\label{classeka2l1_1_1flate_1_1bit__input_aa2baced757eb2df2a6f043ea8e747bc9}} 
+uint32\+\_\+t \mbox{\hyperlink{classeka2l1_1_1flate_1_1bit__input_aa2baced757eb2df2a6f043ea8e747bc9}{read}} ()
+\begin{DoxyCompactList}\small\item\em Read a huffman byte. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeka2l1_1_1flate_1_1bit__input_a19b2d11568be994276947fe28334210b}\label{classeka2l1_1_1flate_1_1bit__input_a19b2d11568be994276947fe28334210b}} 
+uint32\+\_\+t {\bfseries read} (size\+\_\+t size)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1flate_1_1bit__input_a1c6cc03c59f0929aa0be7cbbb964392c}\label{classeka2l1_1_1flate_1_1bit__input_a1c6cc03c59f0929aa0be7cbbb964392c}} 
+uint32\+\_\+t {\bfseries huffman} (const uint32\+\_\+t $\ast$tree)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents a deflate bit input. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+emu/common/include/common/flate.\+h\item 
+emu/common/src/flate.\+cpp\end{DoxyCompactItemize}

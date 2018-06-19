@@ -1,0 +1,48 @@
+\hypertarget{classeka2l1_1_1kernel_1_1wait__obj}{}\section{eka2l1\+:\+:kernel\+:\+:wait\+\_\+obj Class Reference}
+\label{classeka2l1_1_1kernel_1_1wait__obj}\index{eka2l1\+::kernel\+::wait\+\_\+obj@{eka2l1\+::kernel\+::wait\+\_\+obj}}
+Inheritance diagram for eka2l1\+:\+:kernel\+:\+:wait\+\_\+obj\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.530120cm]{classeka2l1_1_1kernel_1_1wait__obj}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1wait__obj_a831297b2914dfde818fdfb18d77eca49}\label{classeka2l1_1_1kernel_1_1wait__obj_a831297b2914dfde818fdfb18d77eca49}} 
+{\bfseries wait\+\_\+obj} (\mbox{\hyperlink{classeka2l1_1_1kernel__system}{kernel\+\_\+system}} $\ast$sys, std\+::string name, kernel\+::owner\+\_\+type owner\+\_\+type, kernel\+::uid owner\+\_\+id, kernel\+::access\+\_\+type access=access\+\_\+type\+::local\+\_\+access)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1wait__obj_a741ae0a91a9e989e2a0abfcf4e0ab89a}\label{classeka2l1_1_1kernel_1_1wait__obj_a741ae0a91a9e989e2a0abfcf4e0ab89a}} 
+virtual bool {\bfseries should\+\_\+wait} (const kernel\+::uid thr)=0
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1wait__obj_abe5c0a43297626d6b7fce6e798c22f77}\label{classeka2l1_1_1kernel_1_1wait__obj_abe5c0a43297626d6b7fce6e798c22f77}} 
+virtual void {\bfseries acquire} (const kernel\+::uid thr)=0
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1wait__obj_aaf2ff995bde8d32bc8366d7e8e9b4b3f}\label{classeka2l1_1_1kernel_1_1wait__obj_aaf2ff995bde8d32bc8366d7e8e9b4b3f}} 
+virtual void {\bfseries add\+\_\+waiting\+\_\+thread} (thread\+\_\+ptr thr)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1wait__obj_a4ec8fdf3bec6548f8add79f552afb1c2}\label{classeka2l1_1_1kernel_1_1wait__obj_a4ec8fdf3bec6548f8add79f552afb1c2}} 
+virtual void {\bfseries erase\+\_\+waiting\+\_\+thread} (kernel\+::uid thr)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1wait__obj_a30c96fbecba4653f9d755392f2d88023}\label{classeka2l1_1_1kernel_1_1wait__obj_a30c96fbecba4653f9d755392f2d88023}} 
+virtual void {\bfseries wake\+\_\+up\+\_\+waiting\+\_\+threads} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1wait__obj_aaa7e70278a662ca7d7311f2a1cd23884}\label{classeka2l1_1_1kernel_1_1wait__obj_aaa7e70278a662ca7d7311f2a1cd23884}} 
+thread\+\_\+ptr {\bfseries next\+\_\+ready\+\_\+thread} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1wait__obj_a491869c68d57cf65bdcc5589d5bf6074}\label{classeka2l1_1_1kernel_1_1wait__obj_a491869c68d57cf65bdcc5589d5bf6074}} 
+const std\+::vector$<$ thread\+\_\+ptr $>$ \& {\bfseries waiting\+\_\+threads} () const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1wait__obj_ad9b04bb6662e5b46e58d7b926fc15e12}\label{classeka2l1_1_1kernel_1_1wait__obj_ad9b04bb6662e5b46e58d7b926fc15e12}} 
+std\+::vector$<$ thread\+\_\+ptr $>$ {\bfseries waits}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+emu/core/include/core/kernel/wait\+\_\+obj.\+h\item 
+emu/core/src/kernel/wait\+\_\+obj.\+cpp\end{DoxyCompactItemize}

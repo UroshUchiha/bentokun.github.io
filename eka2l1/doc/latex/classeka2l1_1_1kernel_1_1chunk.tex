@@ -1,0 +1,123 @@
+\hypertarget{classeka2l1_1_1kernel_1_1chunk}{}\section{eka2l1\+:\+:kernel\+:\+:chunk Class Reference}
+\label{classeka2l1_1_1kernel_1_1chunk}\index{eka2l1\+::kernel\+::chunk@{eka2l1\+::kernel\+::chunk}}
+
+
+A chunk.  
+
+
+
+
+{\ttfamily \#include $<$chunk.\+h$>$}
+
+Inheritance diagram for eka2l1\+:\+:kernel\+:\+:chunk\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classeka2l1_1_1kernel_1_1chunk}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1chunk_a19c43080136dfcfe6cc5c7c4e60070da}\label{classeka2l1_1_1kernel_1_1chunk_a19c43080136dfcfe6cc5c7c4e60070da}} 
+{\bfseries chunk} (\mbox{\hyperlink{classeka2l1_1_1kernel__system}{kernel\+\_\+system}} $\ast$kern, \mbox{\hyperlink{classeka2l1_1_1memory__system}{memory\+\_\+system}} $\ast$mem, std\+::string name, address bottom, const address top, const size\+\_\+t max\+\_\+grow\+\_\+size, prot protection, \mbox{\hyperlink{namespaceeka2l1_1_1kernel_aee9c57d72d8825de61cb11d4396438ed}{chunk\+\_\+type}} type, chunk\+\_\+access access, chunk\+\_\+attrib attrib, kernel\+::owner\+\_\+type owner\+\_\+type, kernel\+::uid owner)
+\item 
+bool \mbox{\hyperlink{classeka2l1_1_1kernel_1_1chunk_ae9476aa5bdec25de98e9d097fc0b9440}{commit}} (uint32\+\_\+t offset, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Commit to a disconnected chunk. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classeka2l1_1_1kernel_1_1chunk_a4d3ca523dd234163473a5041de63ab78}{decommit}} (uint32\+\_\+t offset, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Decommit to a disconnected chunk. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1chunk_a37df47965e05073136fb8bf324949337}\label{classeka2l1_1_1kernel_1_1chunk_a37df47965e05073136fb8bf324949337}} 
+void \mbox{\hyperlink{classeka2l1_1_1kernel_1_1chunk_a37df47965e05073136fb8bf324949337}{destroy}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the chunk. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1chunk_aabfcea105429c1b58bb28d134d4be6cc}\label{classeka2l1_1_1kernel_1_1chunk_aabfcea105429c1b58bb28d134d4be6cc}} 
+\mbox{\hyperlink{namespaceeka2l1_1_1kernel_aee9c57d72d8825de61cb11d4396438ed}{chunk\+\_\+type}} {\bfseries get\+\_\+chunk\+\_\+type} () const
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1chunk_a938774ddb1be82d723085b433ef5662c}\label{classeka2l1_1_1kernel_1_1chunk_a938774ddb1be82d723085b433ef5662c}} 
+\mbox{\hyperlink{classeka2l1_1_1ptr}{ptr}}$<$ uint8\+\_\+t $>$ \mbox{\hyperlink{classeka2l1_1_1kernel_1_1chunk_a938774ddb1be82d723085b433ef5662c}{base}} ()
+\begin{DoxyCompactList}\small\item\em Get the base of the chunk. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1chunk_afea6e018dd01fee157ef126c3395229a}\label{classeka2l1_1_1kernel_1_1chunk_afea6e018dd01fee157ef126c3395229a}} 
+address {\bfseries get\+\_\+bottom} () const
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1chunk_a6dc9166d346a05a2633674b866b9a9bc}\label{classeka2l1_1_1kernel_1_1chunk_a6dc9166d346a05a2633674b866b9a9bc}} 
+address {\bfseries get\+\_\+top} () const
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1chunk_a8c497d1be5dbcd02832b3eaa18ed5471}\label{classeka2l1_1_1kernel_1_1chunk_a8c497d1be5dbcd02832b3eaa18ed5471}} 
+size\+\_\+t {\bfseries get\+\_\+max\+\_\+size} () const
+\item 
+bool \mbox{\hyperlink{classeka2l1_1_1kernel_1_1chunk_a394122db5255ca7c97457eba9f74aa63}{adjust}} (size\+\_\+t adj\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Adjust the chunk size. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1chunk_a8ee4032e489414ebbaa27b278dd2cea7}\label{classeka2l1_1_1kernel_1_1chunk_a8ee4032e489414ebbaa27b278dd2cea7}} 
+size\+\_\+t {\bfseries get\+\_\+size} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A chunk. 
+
+Chunk is a big space of reserved memory. In that reserved memory, you can commit and decommit thing. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1chunk_a394122db5255ca7c97457eba9f74aa63}\label{classeka2l1_1_1kernel_1_1chunk_a394122db5255ca7c97457eba9f74aa63}} 
+\index{eka2l1\+::kernel\+::chunk@{eka2l1\+::kernel\+::chunk}!adjust@{adjust}}
+\index{adjust@{adjust}!eka2l1\+::kernel\+::chunk@{eka2l1\+::kernel\+::chunk}}
+\subsubsection{\texorpdfstring{adjust()}{adjust()}}
+{\footnotesize\ttfamily bool eka2l1\+::kernel\+::chunk\+::adjust (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{adj\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Adjust the chunk size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em adj\+\_\+size} & The size of the new adjusted chunk. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if adjust failed. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1chunk_ae9476aa5bdec25de98e9d097fc0b9440}\label{classeka2l1_1_1kernel_1_1chunk_ae9476aa5bdec25de98e9d097fc0b9440}} 
+\index{eka2l1\+::kernel\+::chunk@{eka2l1\+::kernel\+::chunk}!commit@{commit}}
+\index{commit@{commit}!eka2l1\+::kernel\+::chunk@{eka2l1\+::kernel\+::chunk}}
+\subsubsection{\texorpdfstring{commit()}{commit()}}
+{\footnotesize\ttfamily bool eka2l1\+::kernel\+::chunk\+::commit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{offset,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Commit to a disconnected chunk. 
+
+Offset and size S\+H\+O\+U\+LD be aligned with the page size, else this will results unwanted behavior. E.\+g commit(page\+\_\+size -\/ 1, 2), should commit both the first and second page, since the offset is at the first page, and the commit contains both last and first byte of two page. This will results two W\+H\+O\+LE pages being allocated. 
+\begin{DoxyParams}{Parameters}
+{\em offset} & The offset to commit to. \\
+\hline
+{\em size} & The size to commit. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if failed to commit. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1chunk_a4d3ca523dd234163473a5041de63ab78}\label{classeka2l1_1_1kernel_1_1chunk_a4d3ca523dd234163473a5041de63ab78}} 
+\index{eka2l1\+::kernel\+::chunk@{eka2l1\+::kernel\+::chunk}!decommit@{decommit}}
+\index{decommit@{decommit}!eka2l1\+::kernel\+::chunk@{eka2l1\+::kernel\+::chunk}}
+\subsubsection{\texorpdfstring{decommit()}{decommit()}}
+{\footnotesize\ttfamily bool eka2l1\+::kernel\+::chunk\+::decommit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{offset,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Decommit to a disconnected chunk. 
+
+Offset and size S\+H\+O\+U\+LD be aligned with the page size. The reason is same as for commit. 
+\begin{DoxyParams}{Parameters}
+{\em offset} & The offset to decommit. \\
+\hline
+{\em size} & The size to decommit. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if failed to decommit. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+emu/core/include/core/kernel/chunk.\+h\item 
+emu/core/src/kernel/chunk.\+cpp\end{DoxyCompactItemize}

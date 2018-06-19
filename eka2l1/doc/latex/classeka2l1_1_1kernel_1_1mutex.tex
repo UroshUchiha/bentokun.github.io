@@ -1,0 +1,42 @@
+\hypertarget{classeka2l1_1_1kernel_1_1mutex}{}\section{eka2l1\+:\+:kernel\+:\+:mutex Class Reference}
+\label{classeka2l1_1_1kernel_1_1mutex}\index{eka2l1\+::kernel\+::mutex@{eka2l1\+::kernel\+::mutex}}
+Inheritance diagram for eka2l1\+:\+:kernel\+:\+:mutex\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classeka2l1_1_1kernel_1_1mutex}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1mutex_a2325908b5d7d2a828e3fbaca3a541eca}\label{classeka2l1_1_1kernel_1_1mutex_a2325908b5d7d2a828e3fbaca3a541eca}} 
+{\bfseries mutex} (\mbox{\hyperlink{classeka2l1_1_1kernel__system}{kernel\+\_\+system}} $\ast$kern, std\+::string name, bool init\+\_\+locked, kernel\+::owner\+\_\+type own, kernel\+::uid own\+\_\+id, kernel\+::access\+\_\+type access=kernel\+::access\+\_\+type\+::local\+\_\+access)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1mutex_aef5e7c457295d13cef55e918bbc7dac5}\label{classeka2l1_1_1kernel_1_1mutex_aef5e7c457295d13cef55e918bbc7dac5}} 
+void {\bfseries update\+\_\+priority} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1mutex_a2385e41d05185c951e4b4a0021fc0060}\label{classeka2l1_1_1kernel_1_1mutex_a2385e41d05185c951e4b4a0021fc0060}} 
+bool {\bfseries should\+\_\+wait} (kernel\+::uid thr\+\_\+id) override
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1mutex_a7a5bda39e8ad6adc11a875ccd35d3805}\label{classeka2l1_1_1kernel_1_1mutex_a7a5bda39e8ad6adc11a875ccd35d3805}} 
+void {\bfseries acquire} (kernel\+::uid thr\+\_\+id) override
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1mutex_ad5d6f8c26b7088d562bcf43b3d643741}\label{classeka2l1_1_1kernel_1_1mutex_ad5d6f8c26b7088d562bcf43b3d643741}} 
+bool {\bfseries release} (thread\+\_\+ptr thr)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1mutex_aee93d5140ac040325dbd0dfbecf2433e}\label{classeka2l1_1_1kernel_1_1mutex_aee93d5140ac040325dbd0dfbecf2433e}} 
+void {\bfseries add\+\_\+waiting\+\_\+thread} (thread\+\_\+ptr thr) override
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1mutex_a392ff128be46ab9e5977d32035fbe697}\label{classeka2l1_1_1kernel_1_1mutex_a392ff128be46ab9e5977d32035fbe697}} 
+void {\bfseries erase\+\_\+waiting\+\_\+thread} (kernel\+::uid thr) override
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1mutex_afbbd4660822ef94fab16330096f93112}\label{classeka2l1_1_1kernel_1_1mutex_afbbd4660822ef94fab16330096f93112}} 
+uint32\+\_\+t {\bfseries get\+\_\+priority} () const
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+emu/core/include/core/kernel/mutex.\+h\item 
+emu/core/src/kernel/mutex.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,69 @@
+\hypertarget{namespaceeka2l1_1_1flate}{}\section{eka2l1\+:\+:flate Namespace Reference}
+\label{namespaceeka2l1_1_1flate}\index{eka2l1\+::flate@{eka2l1\+::flate}}
+
+
+Namespace contains all function related to Deflate/\+Inflate.  
+
+
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceeka2l1_1_1flate_1_1huffman}{huffman}}
+\begin{DoxyCompactList}\small\item\em Contains Huffman decoding/encoding functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classeka2l1_1_1flate_1_1bit__input}{bit\+\_\+input}}
+\begin{DoxyCompactList}\small\item\em Represents a deflate bit input. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classeka2l1_1_1flate_1_1bit__output}{bit\+\_\+output}}
+\begin{DoxyCompactList}\small\item\em Represents a Deflate bit output. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structeka2l1_1_1flate_1_1encoding}{encoding}}
+\item 
+class \mbox{\hyperlink{classeka2l1_1_1flate_1_1inflater}{inflater}}
+\begin{DoxyCompactList}\small\item\em Inflate a deflated stream (non-\/standard gzip). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1flate_a0f9d064c5a1df98b8648bf2179261c23}\label{namespaceeka2l1_1_1flate_a0f9d064c5a1df98b8648bf2179261c23}} 
+enum \{ \newline
+{\bfseries D\+E\+F\+L\+A\+T\+E\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+M\+AG} = 8, 
+{\bfseries D\+E\+F\+L\+A\+T\+E\+\_\+\+D\+I\+S\+T\+\_\+\+M\+AG} = 12, 
+{\bfseries D\+E\+F\+L\+A\+T\+E\+\_\+\+M\+I\+N\+\_\+\+L\+E\+N\+G\+TH} = 3, 
+{\bfseries D\+E\+F\+L\+A\+T\+E\+\_\+\+M\+A\+X\+\_\+\+L\+E\+N\+G\+TH} = D\+E\+F\+L\+A\+T\+E\+\_\+\+M\+I\+N\+\_\+\+L\+E\+N\+G\+TH -\/ 1 + (1 $<$$<$ D\+E\+F\+L\+A\+T\+E\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+M\+AG), 
+\newline
+{\bfseries D\+E\+F\+L\+A\+T\+E\+\_\+\+M\+A\+X\+\_\+\+D\+I\+ST} = 1 $<$$<$ D\+E\+F\+L\+A\+T\+E\+\_\+\+D\+I\+S\+T\+\_\+\+M\+AG, 
+{\bfseries D\+E\+F\+L\+A\+T\+E\+\_\+\+D\+I\+S\+T\+\_\+\+C\+O\+D\+E\+\_\+\+B\+A\+SE} = 0x200, 
+{\bfseries D\+E\+F\+L\+A\+T\+E\+\_\+\+H\+A\+S\+H\+\_\+\+M\+UL} = 0x\+A\+C\+C4\+B9\+B19u, 
+{\bfseries D\+E\+F\+L\+A\+T\+E\+\_\+\+H\+A\+S\+H\+\_\+\+S\+H\+I\+FT} = 24, 
+\newline
+{\bfseries E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+L\+I\+T\+E\+R\+A\+LS} = 256, 
+{\bfseries E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+L\+E\+N\+G\+T\+HS} = (D\+E\+F\+L\+A\+T\+E\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+M\+AG -\/ 1) $\ast$ 4, 
+{\bfseries E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+S\+P\+E\+C\+I\+A\+LS} = 1, 
+{\bfseries E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+D\+I\+S\+TS} = (D\+E\+F\+L\+A\+T\+E\+\_\+\+D\+I\+S\+T\+\_\+\+M\+AG -\/ 1) $\ast$ 4, 
+\newline
+{\bfseries E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+L\+I\+T\+E\+R\+A\+L\+\_\+\+L\+EN} = E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+L\+I\+T\+E\+R\+A\+LS + E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+L\+E\+N\+G\+T\+HS + E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+S\+P\+E\+C\+I\+A\+LS, 
+{\bfseries E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+E\+OS} = E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+L\+I\+T\+E\+R\+A\+LS + E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+L\+E\+N\+G\+T\+HS, 
+{\bfseries D\+E\+F\+L\+A\+T\+E\+\_\+\+C\+O\+D\+ES} = E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+L\+I\+T\+E\+R\+A\+L\+\_\+\+L\+EN + E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+D\+I\+S\+TS
+ \}
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1flate_a67cd47e12cea3df5633f077a51bd5c4c}\label{namespaceeka2l1_1_1flate_a67cd47e12cea3df5633f077a51bd5c4c}} 
+enum \{ {\bfseries H\+U\+F\+F\+M\+A\+N\+\_\+\+M\+A\+X\+\_\+\+C\+O\+D\+E\+L\+E\+N\+G\+TH} = 27, 
+{\bfseries H\+U\+F\+F\+M\+A\+N\+\_\+\+M\+E\+T\+A\+C\+O\+DE} = H\+U\+F\+F\+M\+A\+N\+\_\+\+M\+A\+X\+\_\+\+C\+O\+D\+E\+L\+E\+N\+G\+TH + 1, 
+{\bfseries H\+U\+F\+F\+M\+A\+N\+\_\+\+M\+A\+X\+\_\+\+C\+O\+D\+ES} = 0x8000
+ \}
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1flate_a87f213a8cfec12c5a8737d5270ed43da}\label{namespaceeka2l1_1_1flate_a87f213a8cfec12c5a8737d5270ed43da}} 
+enum \{ {\bfseries I\+N\+F\+L\+A\+T\+E\+R\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE} = 0x800, 
+{\bfseries I\+N\+F\+L\+A\+T\+E\+R\+\_\+\+S\+A\+F\+E\+\_\+\+Z\+O\+NE} = 8
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1flate_aa8fc6614d2a440307bd747ba2173caa7}\label{namespaceeka2l1_1_1flate_aa8fc6614d2a440307bd747ba2173caa7}} 
+uint32\+\_\+t {\bfseries swap\+\_\+bo} (uint32\+\_\+t val)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Namespace contains all function related to Deflate/\+Inflate. 

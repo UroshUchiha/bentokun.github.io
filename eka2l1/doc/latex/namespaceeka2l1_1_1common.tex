@@ -1,0 +1,199 @@
+\hypertarget{namespaceeka2l1_1_1common}{}\section{eka2l1\+:\+:common Namespace Reference}
+\label{namespaceeka2l1_1_1common}\index{eka2l1\+::common@{eka2l1\+::common}}
+
+
+Contains functions that use frequently in the emulator.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classeka2l1_1_1common_1_1advstream}{advstream}}
+\item 
+class \mbox{\hyperlink{classeka2l1_1_1common_1_1advstringstream}{advstringstream}}
+\item 
+class \mbox{\hyperlink{classeka2l1_1_1common_1_1buffer__stream__base}{buffer\+\_\+stream\+\_\+base}}
+\begin{DoxyCompactList}\small\item\em Another buffer stream, base on L\+L\+VM\textquotesingle{}s Buffer. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classeka2l1_1_1common_1_1ibytepair__stream}{ibytepair\+\_\+stream}}
+\begin{DoxyCompactList}\small\item\em A read-\/only bytepair stream. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structeka2l1_1_1common_1_1icbuf}{icbuf}}
+\item 
+struct \mbox{\hyperlink{structeka2l1_1_1common_1_1istreambuf}{istreambuf}}
+\item 
+struct \mbox{\hyperlink{structeka2l1_1_1common_1_1resource}{resource}}
+\begin{DoxyCompactList}\small\item\em Represents a resource. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classeka2l1_1_1common_1_1ro__buf__stream}{ro\+\_\+buf\+\_\+stream}}
+\item 
+struct \mbox{\hyperlink{structeka2l1_1_1common_1_1target__equal}{target\+\_\+equal}}
+\item 
+struct \mbox{\hyperlink{structeka2l1_1_1common_1_1target__less}{target\+\_\+less}}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1common_a3e29e55a93b52960c1240e01f5c7cf8b}\label{namespaceeka2l1_1_1common_a3e29e55a93b52960c1240e01f5c7cf8b}} 
+enum {\bfseries seek\+\_\+where} \{ {\bfseries beg}, 
+{\bfseries cur}, 
+{\bfseries end}
+ \}
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1common_aa2dc2f971ac720c140dc795dfe2104fa}\label{namespaceeka2l1_1_1common_aa2dc2f971ac720c140dc795dfe2104fa}} 
+enum \{ {\bfseries B\+Y\+T\+E\+P\+A\+I\+R\+\_\+\+P\+A\+G\+E\+\_\+\+S\+I\+ZE} = 4096
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr T \mbox{\hyperlink{namespaceeka2l1_1_1common_a43af9f272265cfb2ecad3ec902d1ab4e}{max}} (T a, T b)
+\begin{DoxyCompactList}\small\item\em Choose the greater variable. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr T \mbox{\hyperlink{namespaceeka2l1_1_1common_a8da53deb444a8bd214227b4098564855}{min}} (T a, T b)
+\begin{DoxyCompactList}\small\item\em Choose the less variable. \end{DoxyCompactList}\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespaceeka2l1_1_1common_a1985e07bb15ce95c29ed2d4bc67361d8}{KB}} (size\+\_\+t kb)
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespaceeka2l1_1_1common_aeb726f22c3441e71f033bdc4114807f9}{MB}} (size\+\_\+t mb)
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1common_a22ec07e549b56c287ee9b7a357754f33}\label{namespaceeka2l1_1_1common_a22ec07e549b56c287ee9b7a357754f33}} 
+constexpr size\+\_\+t {\bfseries GB} (size\+\_\+t gb)
+\item 
+size\+\_\+t \mbox{\hyperlink{namespaceeka2l1_1_1common_a925009c74de9e04482d9dc2caca9f667}{find\+\_\+nth}} (std\+::string targ, std\+::string str, size\+\_\+t idx, size\+\_\+t pos=0)
+\begin{DoxyCompactList}\small\item\em Find the position of the Nth apperance of a string in another string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceeka2l1_1_1common_aa8ab48a3136a4a67a6b3eb78b25d4996}{remove}} (std\+::string \&inp, std\+::string to\+\_\+remove)
+\item 
+{\footnotesize template$<$class It $>$ }\\It \mbox{\hyperlink{namespaceeka2l1_1_1common_afbac38cd50b976880960c14f00cc61af}{uniquify}} (It begin, It const end)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{namespaceeka2l1_1_1common_a1e7ad36590bfb9a8891308b102cb5225}{next\+\_\+power\+\_\+of\+\_\+two}} (const T target)
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \mbox{\hyperlink{namespaceeka2l1_1_1common_a7825dab8c5ad388be0dc67236915e218}{is\+\_\+power\+\_\+of\+\_\+two}} (const T target)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{namespaceeka2l1_1_1common_a1c506a2ff45e6a4439e7f48884eebc81}{align}} (T target, uint32\+\_\+t alignment, int mode=1)
+\item 
+int \mbox{\hyperlink{namespaceeka2l1_1_1common_ac31c458babed53facf21069ec82d22e9}{nokia\+\_\+bytepair\+\_\+decompress}} (void $\ast$dest, unsigned int dest\+\_\+size, void $\ast$buffer, unsigned int buf\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Given a chunk of data compress by byte-\/pair compression as specified by Nokia, decompress the chunk. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1common_abf80c8456db5e771a845cb2b850c0c7a}\label{namespaceeka2l1_1_1common_abf80c8456db5e771a845cb2b850c0c7a}} 
+std\+::string \mbox{\hyperlink{namespaceeka2l1_1_1common_abf80c8456db5e771a845cb2b850c0c7a}{ucs2\+\_\+to\+\_\+utf8}} (std\+::u16string str)
+\begin{DoxyCompactList}\small\item\em Convert an U\+C\+S2 string to an U\+T\+F8 string. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1common_a683cd66063e14eae53540fcd671b3960}\label{namespaceeka2l1_1_1common_a683cd66063e14eae53540fcd671b3960}} 
+{\footnotesize template$<$class T $>$ }\\std\+::string \mbox{\hyperlink{namespaceeka2l1_1_1common_a683cd66063e14eae53540fcd671b3960}{to\+\_\+string}} (T t, std\+::ios\+\_\+base \&($\ast$f)(std\+::ios\+\_\+base \&))
+\begin{DoxyCompactList}\small\item\em Convert something to string. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1common_a90f0435776b930c3c275a2c5cc98da82}\label{namespaceeka2l1_1_1common_a90f0435776b930c3c275a2c5cc98da82}} 
+{\footnotesize template$<$class T $>$ }\\std\+::string \mbox{\hyperlink{namespaceeka2l1_1_1common_a90f0435776b930c3c275a2c5cc98da82}{to\+\_\+string}} (T t)
+\begin{DoxyCompactList}\small\item\em Convert something to string. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1common_a7b5961e453acd4e01bfc9f5e20aebc5f}\label{namespaceeka2l1_1_1common_a7b5961e453acd4e01bfc9f5e20aebc5f}} 
+uint32\+\_\+t {\bfseries hash} (std\+::string const \&s)
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1common_a46760a5e383a1c62da10a376bb5b4072}\label{namespaceeka2l1_1_1common_a46760a5e383a1c62da10a376bb5b4072}} 
+std\+::string {\bfseries normalize\+\_\+for\+\_\+hash} (std\+::string org)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains functions that use frequently in the emulator. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespaceeka2l1_1_1common_a1c506a2ff45e6a4439e7f48884eebc81}\label{namespaceeka2l1_1_1common_a1c506a2ff45e6a4439e7f48884eebc81}} 
+\index{eka2l1\+::common@{eka2l1\+::common}!align@{align}}
+\index{align@{align}!eka2l1\+::common@{eka2l1\+::common}}
+\subsubsection{\texorpdfstring{align()}{align()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T eka2l1\+::common\+::align (\begin{DoxyParamCaption}\item[{T}]{target,  }\item[{uint32\+\_\+t}]{alignment,  }\item[{int}]{mode = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+Do alignment \mbox{\Hypertarget{namespaceeka2l1_1_1common_a925009c74de9e04482d9dc2caca9f667}\label{namespaceeka2l1_1_1common_a925009c74de9e04482d9dc2caca9f667}} 
+\index{eka2l1\+::common@{eka2l1\+::common}!find\+\_\+nth@{find\+\_\+nth}}
+\index{find\+\_\+nth@{find\+\_\+nth}!eka2l1\+::common@{eka2l1\+::common}}
+\subsubsection{\texorpdfstring{find\+\_\+nth()}{find\_nth()}}
+{\footnotesize\ttfamily size\+\_\+t eka2l1\+::common\+::find\+\_\+nth (\begin{DoxyParamCaption}\item[{std\+::string}]{targ,  }\item[{std\+::string}]{str,  }\item[{size\+\_\+t}]{idx,  }\item[{size\+\_\+t}]{pos = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Find the position of the Nth apperance of a string in another string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & The Nth apperance \\
+\hline
+{\em pos} & The position to start looking for \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespaceeka2l1_1_1common_a7825dab8c5ad388be0dc67236915e218}\label{namespaceeka2l1_1_1common_a7825dab8c5ad388be0dc67236915e218}} 
+\index{eka2l1\+::common@{eka2l1\+::common}!is\+\_\+power\+\_\+of\+\_\+two@{is\+\_\+power\+\_\+of\+\_\+two}}
+\index{is\+\_\+power\+\_\+of\+\_\+two@{is\+\_\+power\+\_\+of\+\_\+two}!eka2l1\+::common@{eka2l1\+::common}}
+\subsubsection{\texorpdfstring{is\+\_\+power\+\_\+of\+\_\+two()}{is\_power\_of\_two()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool eka2l1\+::common\+::is\+\_\+power\+\_\+of\+\_\+two (\begin{DoxyParamCaption}\item[{const T}]{target }\end{DoxyParamCaption})}
+
+Check if the number is power of two. \mbox{\Hypertarget{namespaceeka2l1_1_1common_a1985e07bb15ce95c29ed2d4bc67361d8}\label{namespaceeka2l1_1_1common_a1985e07bb15ce95c29ed2d4bc67361d8}} 
+\index{eka2l1\+::common@{eka2l1\+::common}!KB@{KB}}
+\index{KB@{KB}!eka2l1\+::common@{eka2l1\+::common}}
+\subsubsection{\texorpdfstring{K\+B()}{KB()}}
+{\footnotesize\ttfamily constexpr size\+\_\+t eka2l1\+::common\+::\+KB (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{kb }\end{DoxyParamCaption})}
+
+Convert KB to bytes \mbox{\Hypertarget{namespaceeka2l1_1_1common_a43af9f272265cfb2ecad3ec902d1ab4e}\label{namespaceeka2l1_1_1common_a43af9f272265cfb2ecad3ec902d1ab4e}} 
+\index{eka2l1\+::common@{eka2l1\+::common}!max@{max}}
+\index{max@{max}!eka2l1\+::common@{eka2l1\+::common}}
+\subsubsection{\texorpdfstring{max()}{max()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr T eka2l1\+::common\+::max (\begin{DoxyParamCaption}\item[{T}]{a,  }\item[{T}]{b }\end{DoxyParamCaption})}
+
+
+
+Choose the greater variable. 
+
+Compare two objects and choose the greater object to return. \mbox{\Hypertarget{namespaceeka2l1_1_1common_aeb726f22c3441e71f033bdc4114807f9}\label{namespaceeka2l1_1_1common_aeb726f22c3441e71f033bdc4114807f9}} 
+\index{eka2l1\+::common@{eka2l1\+::common}!MB@{MB}}
+\index{MB@{MB}!eka2l1\+::common@{eka2l1\+::common}}
+\subsubsection{\texorpdfstring{M\+B()}{MB()}}
+{\footnotesize\ttfamily constexpr size\+\_\+t eka2l1\+::common\+::\+MB (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{mb }\end{DoxyParamCaption})}
+
+Convert MB to bytes \mbox{\Hypertarget{namespaceeka2l1_1_1common_a8da53deb444a8bd214227b4098564855}\label{namespaceeka2l1_1_1common_a8da53deb444a8bd214227b4098564855}} 
+\index{eka2l1\+::common@{eka2l1\+::common}!min@{min}}
+\index{min@{min}!eka2l1\+::common@{eka2l1\+::common}}
+\subsubsection{\texorpdfstring{min()}{min()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr T eka2l1\+::common\+::min (\begin{DoxyParamCaption}\item[{T}]{a,  }\item[{T}]{b }\end{DoxyParamCaption})}
+
+
+
+Choose the less variable. 
+
+Compare two objects, choose the less object to return. \mbox{\Hypertarget{namespaceeka2l1_1_1common_a1e7ad36590bfb9a8891308b102cb5225}\label{namespaceeka2l1_1_1common_a1e7ad36590bfb9a8891308b102cb5225}} 
+\index{eka2l1\+::common@{eka2l1\+::common}!next\+\_\+power\+\_\+of\+\_\+two@{next\+\_\+power\+\_\+of\+\_\+two}}
+\index{next\+\_\+power\+\_\+of\+\_\+two@{next\+\_\+power\+\_\+of\+\_\+two}!eka2l1\+::common@{eka2l1\+::common}}
+\subsubsection{\texorpdfstring{next\+\_\+power\+\_\+of\+\_\+two()}{next\_power\_of\_two()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T eka2l1\+::common\+::next\+\_\+power\+\_\+of\+\_\+two (\begin{DoxyParamCaption}\item[{const T}]{target }\end{DoxyParamCaption})}
+
+Get the next power of two of some number. \mbox{\Hypertarget{namespaceeka2l1_1_1common_ac31c458babed53facf21069ec82d22e9}\label{namespaceeka2l1_1_1common_ac31c458babed53facf21069ec82d22e9}} 
+\index{eka2l1\+::common@{eka2l1\+::common}!nokia\+\_\+bytepair\+\_\+decompress@{nokia\+\_\+bytepair\+\_\+decompress}}
+\index{nokia\+\_\+bytepair\+\_\+decompress@{nokia\+\_\+bytepair\+\_\+decompress}!eka2l1\+::common@{eka2l1\+::common}}
+\subsubsection{\texorpdfstring{nokia\+\_\+bytepair\+\_\+decompress()}{nokia\_bytepair\_decompress()}}
+{\footnotesize\ttfamily int eka2l1\+::common\+::nokia\+\_\+bytepair\+\_\+decompress (\begin{DoxyParamCaption}\item[{void $\ast$}]{dest,  }\item[{unsigned int}]{dest\+\_\+size,  }\item[{void $\ast$}]{buffer,  }\item[{unsigned int}]{buf\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Given a chunk of data compress by byte-\/pair compression as specified by Nokia, decompress the chunk. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dest} & The destination to write decompressed data to \\
+\hline
+{\em dest\+\_\+size} & The size of the destination buffer \\
+\hline
+{\em buffer} & The compressed data \\
+\hline
+{\em buf\+\_\+size} & The compressed data size \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespaceeka2l1_1_1common_aa8ab48a3136a4a67a6b3eb78b25d4996}\label{namespaceeka2l1_1_1common_aa8ab48a3136a4a67a6b3eb78b25d4996}} 
+\index{eka2l1\+::common@{eka2l1\+::common}!remove@{remove}}
+\index{remove@{remove}!eka2l1\+::common@{eka2l1\+::common}}
+\subsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily void eka2l1\+::common\+::remove (\begin{DoxyParamCaption}\item[{std\+::string \&}]{inp,  }\item[{std\+::string}]{to\+\_\+remove }\end{DoxyParamCaption})}
+
+Remove a string from another string if possible \mbox{\Hypertarget{namespaceeka2l1_1_1common_afbac38cd50b976880960c14f00cc61af}\label{namespaceeka2l1_1_1common_afbac38cd50b976880960c14f00cc61af}} 
+\index{eka2l1\+::common@{eka2l1\+::common}!uniquify@{uniquify}}
+\index{uniquify@{uniquify}!eka2l1\+::common@{eka2l1\+::common}}
+\subsubsection{\texorpdfstring{uniquify()}{uniquify()}}
+{\footnotesize\ttfamily template$<$class It $>$ \\
+It eka2l1\+::common\+::uniquify (\begin{DoxyParamCaption}\item[{It}]{begin,  }\item[{It const}]{end }\end{DoxyParamCaption})}
+
+Erase all repeated object, but kept things in order. 

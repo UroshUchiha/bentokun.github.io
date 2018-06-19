@@ -1,0 +1,62 @@
+\hypertarget{classeka2l1_1_1service_1_1session}{}\section{eka2l1\+:\+:service\+:\+:session Class Reference}
+\label{classeka2l1_1_1service_1_1session}\index{eka2l1\+::service\+::session@{eka2l1\+::service\+::session}}
+
+
+An I\+PC session.  
+
+
+
+
+{\ttfamily \#include $<$session.\+h$>$}
+
+Inheritance diagram for eka2l1\+:\+:service\+:\+:session\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classeka2l1_1_1service_1_1session}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1service_1_1session_a4ba9b64f89f3fba68f52a6f8febc601a}\label{classeka2l1_1_1service_1_1session_a4ba9b64f89f3fba68f52a6f8febc601a}} 
+{\bfseries session} (server\+\_\+ptr svr)
+\item 
+int \mbox{\hyperlink{classeka2l1_1_1service_1_1session_a54de54e7b2381b4a0780669d731cef4d}{send\+\_\+receive\+\_\+sync}} (ipc\+\_\+msg\+\_\+ptr \&msg)
+\item 
+int \mbox{\hyperlink{classeka2l1_1_1service_1_1session_ab1c2c7f662a47b7727935e29d4e3a7ba}{send\+\_\+receive}} (ipc\+\_\+msg\+\_\+ptr \&msg, int \&status)
+\item 
+int \mbox{\hyperlink{classeka2l1_1_1service_1_1session_a03c16b770ef9cfafec551263b3a9854b}{send}} (ipc\+\_\+msg\+\_\+ptr \&msg)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+An I\+PC session. 
+
+A session is a bridge between server and client. We can send message to the server and receive result. Server can be in different process and different thread. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classeka2l1_1_1service_1_1session_a03c16b770ef9cfafec551263b3a9854b}\label{classeka2l1_1_1service_1_1session_a03c16b770ef9cfafec551263b3a9854b}} 
+\index{eka2l1\+::service\+::session@{eka2l1\+::service\+::session}!send@{send}}
+\index{send@{send}!eka2l1\+::service\+::session@{eka2l1\+::service\+::session}}
+\subsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily int eka2l1\+::service\+::session\+::send (\begin{DoxyParamCaption}\item[{ipc\+\_\+msg\+\_\+ptr \&}]{msg }\end{DoxyParamCaption})}
+
+Send a message blind. Meaning that we don\textquotesingle{}t care about what it returns \mbox{\Hypertarget{classeka2l1_1_1service_1_1session_ab1c2c7f662a47b7727935e29d4e3a7ba}\label{classeka2l1_1_1service_1_1session_ab1c2c7f662a47b7727935e29d4e3a7ba}} 
+\index{eka2l1\+::service\+::session@{eka2l1\+::service\+::session}!send\+\_\+receive@{send\+\_\+receive}}
+\index{send\+\_\+receive@{send\+\_\+receive}!eka2l1\+::service\+::session@{eka2l1\+::service\+::session}}
+\subsubsection{\texorpdfstring{send\+\_\+receive()}{send\_receive()}}
+{\footnotesize\ttfamily int eka2l1\+::service\+::session\+::send\+\_\+receive (\begin{DoxyParamCaption}\item[{ipc\+\_\+msg\+\_\+ptr \&}]{msg,  }\item[{int \&}]{status }\end{DoxyParamCaption})}
+
+Send and receive an message asynchronously \mbox{\Hypertarget{classeka2l1_1_1service_1_1session_a54de54e7b2381b4a0780669d731cef4d}\label{classeka2l1_1_1service_1_1session_a54de54e7b2381b4a0780669d731cef4d}} 
+\index{eka2l1\+::service\+::session@{eka2l1\+::service\+::session}!send\+\_\+receive\+\_\+sync@{send\+\_\+receive\+\_\+sync}}
+\index{send\+\_\+receive\+\_\+sync@{send\+\_\+receive\+\_\+sync}!eka2l1\+::service\+::session@{eka2l1\+::service\+::session}}
+\subsubsection{\texorpdfstring{send\+\_\+receive\+\_\+sync()}{send\_receive\_sync()}}
+{\footnotesize\ttfamily int eka2l1\+::service\+::session\+::send\+\_\+receive\+\_\+sync (\begin{DoxyParamCaption}\item[{ipc\+\_\+msg\+\_\+ptr \&}]{msg }\end{DoxyParamCaption})}
+
+Send and receive an message synchronously 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+emu/core/include/core/services/session.\+h\item 
+emu/core/src/services/session.\+cpp\end{DoxyCompactItemize}

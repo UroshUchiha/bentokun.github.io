@@ -1,0 +1,98 @@
+\hypertarget{classeka2l1_1_1common_1_1ibytepair__stream}{}\section{eka2l1\+:\+:common\+:\+:ibytepair\+\_\+stream Class Reference}
+\label{classeka2l1_1_1common_1_1ibytepair__stream}\index{eka2l1\+::common\+::ibytepair\+\_\+stream@{eka2l1\+::common\+::ibytepair\+\_\+stream}}
+
+
+A read-\/only bytepair stream.  
+
+
+
+
+{\ttfamily \#include $<$bytepair.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structeka2l1_1_1common_1_1ibytepair__stream_1_1index__table}{index\+\_\+table}}
+\item 
+struct \mbox{\hyperlink{structeka2l1_1_1common_1_1ibytepair__stream_1_1index__table__header}{index\+\_\+table\+\_\+header}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1common_1_1ibytepair__stream_a006f99de4dc2811d84335a088cb88834}\label{classeka2l1_1_1common_1_1ibytepair__stream_a006f99de4dc2811d84335a088cb88834}} 
+{\bfseries ibytepair\+\_\+stream} (std\+::shared\+\_\+ptr$<$ std\+::istream $>$ stream)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1common_1_1ibytepair__stream_ad8990576d3dcd80caf8d59ab077c943e}\label{classeka2l1_1_1common_1_1ibytepair__stream_ad8990576d3dcd80caf8d59ab077c943e}} 
+{\bfseries ibytepair\+\_\+stream} (std\+::string path, uint32\+\_\+t start)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1common_1_1ibytepair__stream_a65b425df4510ac94c9917a6d578c1650}\label{classeka2l1_1_1common_1_1ibytepair__stream_a65b425df4510ac94c9917a6d578c1650}} 
+\mbox{\hyperlink{structeka2l1_1_1common_1_1ibytepair__stream_1_1index__table}{index\+\_\+table}} \mbox{\hyperlink{classeka2l1_1_1common_1_1ibytepair__stream_a65b425df4510ac94c9917a6d578c1650}{table}} () const
+\begin{DoxyCompactList}\small\item\em Get the index table. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeka2l1_1_1common_1_1ibytepair__stream_aa5065e13433aa088b17156165722687a}\label{classeka2l1_1_1common_1_1ibytepair__stream_aa5065e13433aa088b17156165722687a}} 
+void \mbox{\hyperlink{classeka2l1_1_1common_1_1ibytepair__stream_aa5065e13433aa088b17156165722687a}{seek\+\_\+fwd}} (size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Seek forward the stream. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classeka2l1_1_1common_1_1ibytepair__stream_a721832bf82c79afb26b572adc05c571b}{read\+\_\+table}} ()
+\begin{DoxyCompactList}\small\item\em Read the index table. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{classeka2l1_1_1common_1_1ibytepair__stream_ac6d986066799b2aece89b96cb5c00ce7}{read\+\_\+page}} (char $\ast$dest, uint32\+\_\+t \mbox{\hyperlink{structeka2l1_1_1page}{page}}, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Read a page. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{classeka2l1_1_1common_1_1ibytepair__stream_adab55d51034ac5e7b2c2ca4c363725de}{read\+\_\+pages}} (char $\ast$dest, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Read all available pages. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeka2l1_1_1common_1_1ibytepair__stream_ad34d0ded1f693722f386f5cc1b838d3d}\label{classeka2l1_1_1common_1_1ibytepair__stream_ad34d0ded1f693722f386f5cc1b838d3d}} 
+std\+::vector$<$ uint32\+\_\+t $>$ \mbox{\hyperlink{classeka2l1_1_1common_1_1ibytepair__stream_ad34d0ded1f693722f386f5cc1b838d3d}{page\+\_\+offsets}} (uint32\+\_\+t initial\+\_\+off)
+\begin{DoxyCompactList}\small\item\em Get all the pages\textquotesingle{}s offsets. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A read-\/only bytepair stream. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classeka2l1_1_1common_1_1ibytepair__stream_ac6d986066799b2aece89b96cb5c00ce7}\label{classeka2l1_1_1common_1_1ibytepair__stream_ac6d986066799b2aece89b96cb5c00ce7}} 
+\index{eka2l1\+::common\+::ibytepair\+\_\+stream@{eka2l1\+::common\+::ibytepair\+\_\+stream}!read\+\_\+page@{read\+\_\+page}}
+\index{read\+\_\+page@{read\+\_\+page}!eka2l1\+::common\+::ibytepair\+\_\+stream@{eka2l1\+::common\+::ibytepair\+\_\+stream}}
+\subsubsection{\texorpdfstring{read\+\_\+page()}{read\_page()}}
+{\footnotesize\ttfamily uint32\+\_\+t eka2l1\+::common\+::ibytepair\+\_\+stream\+::read\+\_\+page (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{uint32\+\_\+t}]{page,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Read a page. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em page} & The page index \\
+\hline
+{\em size} & The page size \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classeka2l1_1_1common_1_1ibytepair__stream_adab55d51034ac5e7b2c2ca4c363725de}\label{classeka2l1_1_1common_1_1ibytepair__stream_adab55d51034ac5e7b2c2ca4c363725de}} 
+\index{eka2l1\+::common\+::ibytepair\+\_\+stream@{eka2l1\+::common\+::ibytepair\+\_\+stream}!read\+\_\+pages@{read\+\_\+pages}}
+\index{read\+\_\+pages@{read\+\_\+pages}!eka2l1\+::common\+::ibytepair\+\_\+stream@{eka2l1\+::common\+::ibytepair\+\_\+stream}}
+\subsubsection{\texorpdfstring{read\+\_\+pages()}{read\_pages()}}
+{\footnotesize\ttfamily uint32\+\_\+t eka2l1\+::common\+::ibytepair\+\_\+stream\+::read\+\_\+pages (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Read all available pages. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dest} & The destination to write decompressed data to \\
+\hline
+{\em size} & The destination size \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classeka2l1_1_1common_1_1ibytepair__stream_a721832bf82c79afb26b572adc05c571b}\label{classeka2l1_1_1common_1_1ibytepair__stream_a721832bf82c79afb26b572adc05c571b}} 
+\index{eka2l1\+::common\+::ibytepair\+\_\+stream@{eka2l1\+::common\+::ibytepair\+\_\+stream}!read\+\_\+table@{read\+\_\+table}}
+\index{read\+\_\+table@{read\+\_\+table}!eka2l1\+::common\+::ibytepair\+\_\+stream@{eka2l1\+::common\+::ibytepair\+\_\+stream}}
+\subsubsection{\texorpdfstring{read\+\_\+table()}{read\_table()}}
+{\footnotesize\ttfamily void eka2l1\+::common\+::ibytepair\+\_\+stream\+::read\+\_\+table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Read the index table. 
+
+Bytepair compressed data always has a header (index table), that tells us the uncompressed size and each bytepair page\textquotesingle{}s size. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+emu/common/include/common/bytepair.\+h\item 
+emu/common/src/bytepair.\+cpp\end{DoxyCompactItemize}

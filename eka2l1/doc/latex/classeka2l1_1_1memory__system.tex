@@ -1,0 +1,47 @@
+\hypertarget{classeka2l1_1_1memory__system}{}\section{eka2l1\+:\+:memory\+\_\+system Class Reference}
+\label{classeka2l1_1_1memory__system}\index{eka2l1\+::memory\+\_\+system@{eka2l1\+::memory\+\_\+system}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1memory__system_a960fd7767db6ba7dc0cdeb8bf9c1f7b1}\label{classeka2l1_1_1memory__system_a960fd7767db6ba7dc0cdeb8bf9c1f7b1}} 
+void {\bfseries init} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1memory__system_a98b843641ab4d9167f3fff95e34de715}\label{classeka2l1_1_1memory__system_a98b843641ab4d9167f3fff95e34de715}} 
+void {\bfseries shutdown} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1memory__system_ac59cc9b87c63cc6e187642b19d4af22d}\label{classeka2l1_1_1memory__system_ac59cc9b87c63cc6e187642b19d4af22d}} 
+{\footnotesize template$<$typename T $>$ }\\T $\ast$ {\bfseries get\+\_\+addr} (address addr)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1memory__system_a3eb9703184a1b34c4f2005a6f12649a3}\label{classeka2l1_1_1memory__system_a3eb9703184a1b34c4f2005a6f12649a3}} 
+bool {\bfseries load\+\_\+rom} (address addr, const std\+::string \&rom\+\_\+path)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1memory__system_a757af7c3c8882ce654e962de582ad5ca}\label{classeka2l1_1_1memory__system_a757af7c3c8882ce654e962de582ad5ca}} 
+void $\ast$ {\bfseries get\+\_\+mem\+\_\+start} () const
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1memory__system_a63b4fba37b310170985e0ffc11b6e2fb}\label{classeka2l1_1_1memory__system_a63b4fba37b310170985e0ffc11b6e2fb}} 
+\mbox{\hyperlink{classeka2l1_1_1ptr}{ptr}}$<$ void $>$ {\bfseries chunk} (address addr, size\+\_\+t bottom, size\+\_\+t top, size\+\_\+t max\+\_\+grow, prot cprot)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1memory__system_a1a6eaa999e09654c27a808d2a669a4f2}\label{classeka2l1_1_1memory__system_a1a6eaa999e09654c27a808d2a669a4f2}} 
+\mbox{\hyperlink{classeka2l1_1_1ptr}{ptr}}$<$ void $>$ {\bfseries chunk\+\_\+range} (size\+\_\+t beg\+\_\+addr, size\+\_\+t end\+\_\+addr, size\+\_\+t bottom, size\+\_\+t top, size\+\_\+t max\+\_\+grow, prot cprot)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1memory__system_adaf5d80b70c3cf25e216047ed2b8170a}\label{classeka2l1_1_1memory__system_adaf5d80b70c3cf25e216047ed2b8170a}} 
+int {\bfseries change\+\_\+prot} (\mbox{\hyperlink{classeka2l1_1_1ptr}{ptr}}$<$ void $>$ addr, size\+\_\+t size, prot nprot)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1memory__system_a51ec643f96ac9763d31bd4b42b68beb2}\label{classeka2l1_1_1memory__system_a51ec643f96ac9763d31bd4b42b68beb2}} 
+int {\bfseries unchunk} (\mbox{\hyperlink{classeka2l1_1_1ptr}{ptr}}$<$ void $>$ addr, size\+\_\+t length)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1memory__system_a783e7412ecbfd5393040992175c6445c}\label{classeka2l1_1_1memory__system_a783e7412ecbfd5393040992175c6445c}} 
+int {\bfseries commit} (\mbox{\hyperlink{classeka2l1_1_1ptr}{ptr}}$<$ void $>$ addr, size\+\_\+t size)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1memory__system_a6fdb55f1ae37051c84b34f035658468e}\label{classeka2l1_1_1memory__system_a6fdb55f1ae37051c84b34f035658468e}} 
+int {\bfseries decommit} (\mbox{\hyperlink{classeka2l1_1_1ptr}{ptr}}$<$ void $>$ addr, size\+\_\+t size)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1memory__system_af7e38eae7be048563096449bb070c21e}\label{classeka2l1_1_1memory__system_af7e38eae7be048563096449bb070c21e}} 
+uint64\+\_\+t {\bfseries get\+\_\+page\+\_\+size} () const
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+emu/core/include/core/core\+\_\+mem.\+h\item 
+emu/core/src/core\+\_\+mem.\+cpp\end{DoxyCompactItemize}

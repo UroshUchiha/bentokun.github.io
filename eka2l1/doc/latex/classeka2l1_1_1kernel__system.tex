@@ -1,0 +1,119 @@
+\hypertarget{classeka2l1_1_1kernel__system}{}\section{eka2l1\+:\+:kernel\+\_\+system Class Reference}
+\label{classeka2l1_1_1kernel__system}\index{eka2l1\+::kernel\+\_\+system@{eka2l1\+::kernel\+\_\+system}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel__system_a3107f13c6cbdcffa88526902c39db633}\label{classeka2l1_1_1kernel__system_a3107f13c6cbdcffa88526902c39db633}} 
+void {\bfseries init} (\mbox{\hyperlink{classeka2l1_1_1system}{system}} $\ast$esys, \mbox{\hyperlink{classeka2l1_1_1timing__system}{timing\+\_\+system}} $\ast$sys, \mbox{\hyperlink{classeka2l1_1_1manager__system}{manager\+\_\+system}} $\ast$mngrsys, \mbox{\hyperlink{classeka2l1_1_1memory__system}{memory\+\_\+system}} $\ast$mem\+\_\+sys, \mbox{\hyperlink{classeka2l1_1_1io__system}{io\+\_\+system}} $\ast$io\+\_\+sys, \mbox{\hyperlink{classeka2l1_1_1hle_1_1lib__manager}{hle\+::lib\+\_\+manager}} $\ast$lib\+\_\+sys, \mbox{\hyperlink{classeka2l1_1_1arm_1_1jit__interface}{arm\+::jit\+\_\+interface}} $\ast$cpu)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel__system_abbceec287487d74585474ce6dd04d746}\label{classeka2l1_1_1kernel__system_abbceec287487d74585474ce6dd04d746}} 
+void {\bfseries shutdown} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel__system_abaeb2f43aadeddc8233ea25ae9d5ff6d}\label{classeka2l1_1_1kernel__system_abaeb2f43aadeddc8233ea25ae9d5ff6d}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classeka2l1_1_1kernel_1_1thread__scheduler}{kernel\+::thread\+\_\+scheduler}} $>$ {\bfseries get\+\_\+thread\+\_\+scheduler} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel__system_af6d246fa4d601f860ed90d44c77c2f55}\label{classeka2l1_1_1kernel__system_af6d246fa4d601f860ed90d44c77c2f55}} 
+process\+\_\+ptr {\bfseries get\+\_\+process} (uint32\+\_\+t uid)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel__system_a305b9bbb2b5adcfca46dcbc17dab6c66}\label{classeka2l1_1_1kernel__system_a305b9bbb2b5adcfca46dcbc17dab6c66}} 
+void {\bfseries reschedule} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel__system_aa7398638174fab943ce3ed2fa5d603a0}\label{classeka2l1_1_1kernel__system_aa7398638174fab943ce3ed2fa5d603a0}} 
+void {\bfseries unschedule\+\_\+wakeup} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel__system_af4631250187bda7d12dd0f77f4265469}\label{classeka2l1_1_1kernel__system_af4631250187bda7d12dd0f77f4265469}} 
+void {\bfseries unschedule} (kernel\+::uid thread\+\_\+id)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel__system_a9c4c3f51e186d1bf0ed96d76846b8971}\label{classeka2l1_1_1kernel__system_a9c4c3f51e186d1bf0ed96d76846b8971}} 
+epocver {\bfseries get\+\_\+epoc\+\_\+version} () const
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel__system_a1c34f1d2a43f6d8f6c331fc3020b7b93}\label{classeka2l1_1_1kernel__system_a1c34f1d2a43f6d8f6c331fc3020b7b93}} 
+void {\bfseries set\+\_\+epoc\+\_\+version} (const epocver ver)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel__system_a33ac52af32d08cfb42a4b8db2702aecf}\label{classeka2l1_1_1kernel__system_a33ac52af32d08cfb42a4b8db2702aecf}} 
+kernel\+::uid {\bfseries next\+\_\+uid} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel__system_a0ba1d26f07c209a32f9f5361fc1ed42b}\label{classeka2l1_1_1kernel__system_a0ba1d26f07c209a32f9f5361fc1ed42b}} 
+kernel\+::uid {\bfseries get\+\_\+id\+\_\+base\+\_\+owner} (kernel\+::owner\+\_\+type owner) const
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel__system_a19961f1ed8b11ab1b08d07bef8975da6}\label{classeka2l1_1_1kernel__system_a19961f1ed8b11ab1b08d07bef8975da6}} 
+chunk\+\_\+ptr {\bfseries create\+\_\+chunk} (std\+::string name, const address bottom, const address top, const size\+\_\+t size, prot protection, \mbox{\hyperlink{namespaceeka2l1_1_1kernel_aee9c57d72d8825de61cb11d4396438ed}{kernel\+::chunk\+\_\+type}} type, kernel\+::chunk\+\_\+access access, kernel\+::chunk\+\_\+attrib attrib, kernel\+::owner\+\_\+type owner, int64\+\_\+t owner\+\_\+id=-\/1)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel__system_a16169c6a0346ce7548baf4d8114a56e1}\label{classeka2l1_1_1kernel__system_a16169c6a0346ce7548baf4d8114a56e1}} 
+thread\+\_\+ptr {\bfseries add\+\_\+thread} (kernel\+::owner\+\_\+type owner, kernel\+::uid owner\+\_\+id, kernel\+::access\+\_\+type access, const std\+::string \&name, const address epa, const size\+\_\+t stack\+\_\+size, const size\+\_\+t min\+\_\+heap\+\_\+size, const size\+\_\+t max\+\_\+heap\+\_\+size, \mbox{\hyperlink{classeka2l1_1_1ptr}{ptr}}$<$ void $>$ usrdata=nullptr, kernel\+::thread\+\_\+priority pri=kernel\+::priority\+\_\+normal)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel__system_ab6a00e6a9e9a79b9ccb29b30a132fbaf}\label{classeka2l1_1_1kernel__system_ab6a00e6a9e9a79b9ccb29b30a132fbaf}} 
+mutex\+\_\+ptr {\bfseries create\+\_\+mutex} (std\+::string name, bool init\+\_\+locked, kernel\+::owner\+\_\+type own, kernel\+::uid own\+\_\+id=-\/1, kernel\+::access\+\_\+type access=kernel\+::access\+\_\+type\+::local\+\_\+access)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel__system_a7d9e32b8f55e47825e7b1bb52c431d2f}\label{classeka2l1_1_1kernel__system_a7d9e32b8f55e47825e7b1bb52c431d2f}} 
+sema\+\_\+ptr {\bfseries create\+\_\+sema} (std\+::string sema\+\_\+name, int32\+\_\+t init\+\_\+count, int32\+\_\+t max\+\_\+count, kernel\+::owner\+\_\+type own\+\_\+type, kernel\+::uid own\+\_\+id=-\/1, kernel\+::access\+\_\+type access=kernel\+::access\+\_\+type\+::local\+\_\+access)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel__system_a85662d4dd0150f3f5012b34cbb82ec3f}\label{classeka2l1_1_1kernel__system_a85662d4dd0150f3f5012b34cbb82ec3f}} 
+timer\+\_\+ptr {\bfseries create\+\_\+timer} (std\+::string name, kernel\+::reset\+\_\+type rt, kernel\+::owner\+\_\+type owner, kernel\+::uid own\+\_\+id=-\/1, kernel\+::access\+\_\+type access=kernel\+::access\+\_\+type\+::local\+\_\+access)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel__system_ab7e3f17267daa726b656633096f540d1}\label{classeka2l1_1_1kernel__system_ab7e3f17267daa726b656633096f540d1}} 
+bool {\bfseries close\+\_\+chunk} (kernel\+::uid id)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel__system_a57149bf38c415629b56a4466fdd90409}\label{classeka2l1_1_1kernel__system_a57149bf38c415629b56a4466fdd90409}} 
+bool {\bfseries close\+\_\+thread} (kernel\+::uid id)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel__system_a6c00c5ae360cfd86270d103dba82024c}\label{classeka2l1_1_1kernel__system_a6c00c5ae360cfd86270d103dba82024c}} 
+bool {\bfseries close\+\_\+timer} (kernel\+::uid id)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel__system_a573af658d315fe994d17c993f308cc19}\label{classeka2l1_1_1kernel__system_a573af658d315fe994d17c993f308cc19}} 
+bool {\bfseries close\+\_\+sema} (kernel\+::uid id)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel__system_a8ee700d14c5307fccb89b6de85d58327}\label{classeka2l1_1_1kernel__system_a8ee700d14c5307fccb89b6de85d58327}} 
+bool {\bfseries close\+\_\+mutex} (kernel\+::uid id)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel__system_a825444503373214d5a0a2895bc11be06}\label{classeka2l1_1_1kernel__system_a825444503373214d5a0a2895bc11be06}} 
+bool {\bfseries close} (kernel\+::uid id)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel__system_a3cd60052832051b32f5942ae865c76ad}\label{classeka2l1_1_1kernel__system_a3cd60052832051b32f5942ae865c76ad}} 
+void {\bfseries set\+\_\+closeable} (kernel\+::uid id, bool opt)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel__system_a5d317d55a1b39313fe01790352a26c21}\label{classeka2l1_1_1kernel__system_a5d317d55a1b39313fe01790352a26c21}} 
+bool {\bfseries get\+\_\+closeable} (kernel\+::uid id)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel__system_ae204befb453ce5a1d83051f1c24192fb}\label{classeka2l1_1_1kernel__system_ae204befb453ce5a1d83051f1c24192fb}} 
+kernel\+\_\+obj\+\_\+ptr {\bfseries get\+\_\+kernel\+\_\+obj} (kernel\+::uid id)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel__system_a373ece44b7a922c170acb9410db1b2cd}\label{classeka2l1_1_1kernel__system_a373ece44b7a922c170acb9410db1b2cd}} 
+thread\+\_\+ptr {\bfseries get\+\_\+thread\+\_\+by\+\_\+name} (const std\+::string \&name)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel__system_a91c8a0fe8759f6aaf67669518e87a196}\label{classeka2l1_1_1kernel__system_a91c8a0fe8759f6aaf67669518e87a196}} 
+bool {\bfseries run\+\_\+thread} (kernel\+::uid thr)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel__system_a343d1cee59f5e5d6a5a6898776304d22}\label{classeka2l1_1_1kernel__system_a343d1cee59f5e5d6a5a6898776304d22}} 
+\mbox{\hyperlink{classeka2l1_1_1process}{process}} $\ast$ {\bfseries spawn\+\_\+new\+\_\+process} (std\+::string \&path, std\+::string name, uint32\+\_\+t uid)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel__system_ac346f6887978c0a8777d4c8ecaba49c8}\label{classeka2l1_1_1kernel__system_ac346f6887978c0a8777d4c8ecaba49c8}} 
+\mbox{\hyperlink{classeka2l1_1_1process}{process}} $\ast$ {\bfseries spawn\+\_\+new\+\_\+process} (uint32\+\_\+t uid)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel__system_ad7c6d8a57c1bc13163729aa445168ccb}\label{classeka2l1_1_1kernel__system_ad7c6d8a57c1bc13163729aa445168ccb}} 
+bool {\bfseries close\+\_\+process} (\mbox{\hyperlink{classeka2l1_1_1process}{process}} $\ast$pr)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel__system_a030bc2facd31f78115862dc4b068e2bf}\label{classeka2l1_1_1kernel__system_a030bc2facd31f78115862dc4b068e2bf}} 
+bool {\bfseries close\+\_\+process} (const kernel\+::uid id)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel__system_ae1c26222d79ac1d38686648faaea506b}\label{classeka2l1_1_1kernel__system_ae1c26222d79ac1d38686648faaea506b}} 
+bool {\bfseries close\+\_\+all\+\_\+processes} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel__system_a94d4ffc0964adcb455b5cc786bb926cc}\label{classeka2l1_1_1kernel__system_a94d4ffc0964adcb455b5cc786bb926cc}} 
+kernel\+::uid {\bfseries crr\+\_\+process} () const
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel__system_af4244a6164c1111628a335efe4c046c3}\label{classeka2l1_1_1kernel__system_af4244a6164c1111628a335efe4c046c3}} 
+thread\+\_\+ptr {\bfseries crr\+\_\+thread} ()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel__system_a45826c4d3572efe010737f69d31d0a7c}\label{classeka2l1_1_1kernel__system_a45826c4d3572efe010737f69d31d0a7c}} 
+class {\bfseries process}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+emu/core/include/core/core\+\_\+kernel.\+h\item 
+emu/core/src/core\+\_\+kernel.\+cpp\end{DoxyCompactItemize}

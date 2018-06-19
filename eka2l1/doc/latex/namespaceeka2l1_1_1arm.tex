@@ -1,0 +1,48 @@
+\hypertarget{namespaceeka2l1_1_1arm}{}\section{eka2l1\+:\+:arm Namespace Reference}
+\label{namespaceeka2l1_1_1arm}\index{eka2l1\+::arm@{eka2l1\+::arm}}
+
+
+Contains A\+RM jitter and related things.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classeka2l1_1_1arm_1_1jit__interface}{jit\+\_\+interface}}
+\begin{DoxyCompactList}\small\item\em An interface to all J\+IT implementation. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classeka2l1_1_1arm_1_1jit__unicorn}{jit\+\_\+unicorn}}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1arm_a694f91827829601b595780059bcfcbdd}\label{namespaceeka2l1_1_1arm_a694f91827829601b595780059bcfcbdd}} 
+using {\bfseries jitter} = std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classeka2l1_1_1arm_1_1jit__interface}{jit\+\_\+interface}} $>$
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1arm_aeb32527b453554d35dd874c6195ed44b}\label{namespaceeka2l1_1_1arm_aeb32527b453554d35dd874c6195ed44b}} 
+enum {\bfseries jitter\+\_\+arm\+\_\+type} \{ {\bfseries unicorn} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+jitter \mbox{\hyperlink{namespaceeka2l1_1_1arm_a2624fec838c7341288465459694aa000}{create\+\_\+jitter}} (\mbox{\hyperlink{classeka2l1_1_1timing__system}{timing\+\_\+system}} $\ast$timing, \mbox{\hyperlink{classeka2l1_1_1memory__system}{memory\+\_\+system}} $\ast$mem, \mbox{\hyperlink{classeka2l1_1_1disasm}{disasm}} $\ast$asmdis, \mbox{\hyperlink{classeka2l1_1_1hle_1_1lib__manager}{hle\+::lib\+\_\+manager}} $\ast$mngr, jitter\+\_\+arm\+\_\+type arm\+\_\+type)
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1arm_a55751631fe990369687393dabf0185cd}\label{namespaceeka2l1_1_1arm_a55751631fe990369687393dabf0185cd}} 
+void {\bfseries enable\+\_\+vfp\+\_\+fp} (uc\+\_\+engine $\ast$en)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains A\+RM jitter and related things. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespaceeka2l1_1_1arm_a2624fec838c7341288465459694aa000}\label{namespaceeka2l1_1_1arm_a2624fec838c7341288465459694aa000}} 
+\index{eka2l1\+::arm@{eka2l1\+::arm}!create\+\_\+jitter@{create\+\_\+jitter}}
+\index{create\+\_\+jitter@{create\+\_\+jitter}!eka2l1\+::arm@{eka2l1\+::arm}}
+\subsubsection{\texorpdfstring{create\+\_\+jitter()}{create\_jitter()}}
+{\footnotesize\ttfamily jitter eka2l1\+::arm\+::create\+\_\+jitter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classeka2l1_1_1timing__system}{timing\+\_\+system}} $\ast$}]{timing,  }\item[{\mbox{\hyperlink{classeka2l1_1_1memory__system}{memory\+\_\+system}} $\ast$}]{mem,  }\item[{\mbox{\hyperlink{classeka2l1_1_1disasm}{disasm}} $\ast$}]{asmdis,  }\item[{\mbox{\hyperlink{classeka2l1_1_1hle_1_1lib__manager}{hle\+::lib\+\_\+manager}} $\ast$}]{mngr,  }\item[{jitter\+\_\+arm\+\_\+type}]{arm\+\_\+type }\end{DoxyParamCaption})}
+
+Create a jitter. A J\+I\+Tter is unique by itself. 

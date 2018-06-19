@@ -1,0 +1,77 @@
+\hypertarget{classeka2l1_1_1system}{}\section{eka2l1\+:\+:system Class Reference}
+\label{classeka2l1_1_1system}\index{eka2l1\+::system@{eka2l1\+::system}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1system_a5f76c43b2b6cf1ba252b285591eccd23}\label{classeka2l1_1_1system_a5f76c43b2b6cf1ba252b285591eccd23}} 
+{\bfseries system} (driver\+::window\+\_\+type emu\+\_\+win\+\_\+type=driver\+::window\+\_\+type\+::glfw, driver\+::driver\+\_\+type emu\+\_\+driver\+\_\+type=driver\+::driver\+\_\+type\+::opengl, arm\+::jitter\+\_\+arm\+\_\+type jit\+\_\+type=arm\+::jitter\+\_\+arm\+\_\+type\+::unicorn)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1system_ad1ecaf6db921e4a0fb2916ceb2274874}\label{classeka2l1_1_1system_ad1ecaf6db921e4a0fb2916ceb2274874}} 
+void {\bfseries set\+\_\+symbian\+\_\+version\+\_\+use} (const epocver ever)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1system_a4f7656dd0b85786c939ab5ca5f174099}\label{classeka2l1_1_1system_a4f7656dd0b85786c939ab5ca5f174099}} 
+epocver {\bfseries get\+\_\+symbian\+\_\+version\+\_\+use} () const
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1system_aee917e051b3664a87164ea3a5bdbb5f7}\label{classeka2l1_1_1system_aee917e051b3664a87164ea3a5bdbb5f7}} 
+void {\bfseries init} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1system_a37cbeee19a1376cbb0459f765205e3e1}\label{classeka2l1_1_1system_a37cbeee19a1376cbb0459f765205e3e1}} 
+\mbox{\hyperlink{classeka2l1_1_1process}{process}} $\ast$ {\bfseries load} (uint64\+\_\+t id)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1system_a1ba55b4eec5d542e48288f06d8f1652b}\label{classeka2l1_1_1system_a1ba55b4eec5d542e48288f06d8f1652b}} 
+int {\bfseries loop} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1system_adf6e867a2b6944efb75626882eea2ac5}\label{classeka2l1_1_1system_adf6e867a2b6944efb75626882eea2ac5}} 
+void {\bfseries shutdown} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1system_a8eeb07b16c52b0302d9c85a12fbb9f4b}\label{classeka2l1_1_1system_a8eeb07b16c52b0302d9c85a12fbb9f4b}} 
+\mbox{\hyperlink{classeka2l1_1_1memory__system}{memory\+\_\+system}} $\ast$ {\bfseries get\+\_\+memory\+\_\+system} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1system_aae5f75e5dabec4af26a706432fbe35bf}\label{classeka2l1_1_1system_aae5f75e5dabec4af26a706432fbe35bf}} 
+\mbox{\hyperlink{classeka2l1_1_1kernel__system}{kernel\+\_\+system}} $\ast$ {\bfseries get\+\_\+kernel\+\_\+system} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1system_a348bd82ffddbfd4570a98f79397f391a}\label{classeka2l1_1_1system_a348bd82ffddbfd4570a98f79397f391a}} 
+\mbox{\hyperlink{classeka2l1_1_1hle_1_1lib__manager}{hle\+::lib\+\_\+manager}} $\ast$ {\bfseries get\+\_\+lib\+\_\+manager} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1system_ab9ea8ae5cc6d67ad47201f4ccf353c43}\label{classeka2l1_1_1system_ab9ea8ae5cc6d67ad47201f4ccf353c43}} 
+\mbox{\hyperlink{classeka2l1_1_1disasm}{disasm}} $\ast$ {\bfseries get\+\_\+disasm} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1system_a8455730be0997fe0f80af593bd495425}\label{classeka2l1_1_1system_a8455730be0997fe0f80af593bd495425}} 
+driver\+::emu\+\_\+window\+\_\+ptr {\bfseries get\+\_\+emu\+\_\+window} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1system_add76d4bfcdf7726285a9c3347ead3254}\label{classeka2l1_1_1system_add76d4bfcdf7726285a9c3347ead3254}} 
+driver\+::screen\+\_\+driver\+\_\+ptr {\bfseries get\+\_\+screen\+\_\+driver} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1system_a898a3586360af36e89a17bd9e029962e}\label{classeka2l1_1_1system_a898a3586360af36e89a17bd9e029962e}} 
+arm\+::jitter \& {\bfseries get\+\_\+cpu} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1system_ade7987e740046c9e1b968e5cdfa89ab0}\label{classeka2l1_1_1system_ade7987e740046c9e1b968e5cdfa89ab0}} 
+void {\bfseries mount} (availdrive drv, std\+::string path)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1system_aa845965e71e572080fa9cdae82b61c73}\label{classeka2l1_1_1system_aa845965e71e572080fa9cdae82b61c73}} 
+void {\bfseries reset} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1system_ac4f1929a2406f237b20dca2d069508b8}\label{classeka2l1_1_1system_ac4f1929a2406f237b20dca2d069508b8}} 
+bool {\bfseries install\+\_\+package} (std\+::u16string path, uint8\+\_\+t drv)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1system_a637207347cd592e2efa7a1ede0802728}\label{classeka2l1_1_1system_a637207347cd592e2efa7a1ede0802728}} 
+bool {\bfseries load\+\_\+rom} (const std\+::string \&path)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1system_a7faf059f54f8fa82a9ea9fae7a65f528}\label{classeka2l1_1_1system_a7faf059f54f8fa82a9ea9fae7a65f528}} 
+void {\bfseries request\+\_\+exit} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1system_a0d7ef89a0cbb92918273d01ec89fa32d}\label{classeka2l1_1_1system_a0d7ef89a0cbb92918273d01ec89fa32d}} 
+bool {\bfseries should\+\_\+exit} () const
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1system_a11ae7d6ed1cd2a83337c475e599e2623}\label{classeka2l1_1_1system_a11ae7d6ed1cd2a83337c475e599e2623}} 
+uint32\+\_\+t {\bfseries total\+\_\+app} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1system_ada4b6bbf5bee3fd2c6cf1084c5a5e70c}\label{classeka2l1_1_1system_ada4b6bbf5bee3fd2c6cf1084c5a5e70c}} 
+std\+::vector$<$ \mbox{\hyperlink{structeka2l1_1_1manager_1_1app__info}{manager\+::app\+\_\+info}} $>$ {\bfseries app\+\_\+infos} ()
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+emu/core/include/core/core.\+h\item 
+emu/core/src/core.\+cpp\end{DoxyCompactItemize}

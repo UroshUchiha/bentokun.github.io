@@ -1,0 +1,38 @@
+\hypertarget{classeka2l1_1_1io__system}{}\section{eka2l1\+:\+:io\+\_\+system Class Reference}
+\label{classeka2l1_1_1io__system}\index{eka2l1\+::io\+\_\+system@{eka2l1\+::io\+\_\+system}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1io__system_a5d3fd0594bcebc7c3a5372530bc653b0}\label{classeka2l1_1_1io__system_a5d3fd0594bcebc7c3a5372530bc653b0}} 
+void {\bfseries init} (\mbox{\hyperlink{classeka2l1_1_1memory__system}{memory\+\_\+system}} $\ast$smem)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1io__system_ae3a6b69e0a9b76b6558a1a750378f830}\label{classeka2l1_1_1io__system_ae3a6b69e0a9b76b6558a1a750378f830}} 
+void {\bfseries shutdown} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1io__system_a6bd29eb1a81606e5bc174c287dedaa11}\label{classeka2l1_1_1io__system_a6bd29eb1a81606e5bc174c287dedaa11}} 
+std\+::string {\bfseries current\+\_\+dir} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1io__system_a95ca2d8addf384142082ce59a1eddb20}\label{classeka2l1_1_1io__system_a95ca2d8addf384142082ce59a1eddb20}} 
+void {\bfseries current\+\_\+dir} (const std\+::string \&new\+\_\+dir)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1io__system_a2de19384ccc6f0087e57656d950e4204}\label{classeka2l1_1_1io__system_a2de19384ccc6f0087e57656d950e4204}} 
+void {\bfseries mount} (const std\+::string \&dvc, const std\+::string \&real\+\_\+path)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1io__system_a5da23bc762d2558ec09c251c6a5719d1}\label{classeka2l1_1_1io__system_a5da23bc762d2558ec09c251c6a5719d1}} 
+void {\bfseries mount\+\_\+rom} (const std\+::string \&dvc, \mbox{\hyperlink{structeka2l1_1_1loader_1_1rom}{loader\+::rom}} $\ast$rom)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1io__system_aea342e6467267496c23befc6262e8081}\label{classeka2l1_1_1io__system_aea342e6467267496c23befc6262e8081}} 
+void {\bfseries unmount} (const std\+::string \&dvc)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1io__system_a72a595c69936d7630fa030c524490493}\label{classeka2l1_1_1io__system_a72a595c69936d7630fa030c524490493}} 
+std\+::string {\bfseries get} (std\+::string vir\+\_\+path)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1io__system_a6b87ab47a1ee43bfd57a47fa16821526}\label{classeka2l1_1_1io__system_a6b87ab47a1ee43bfd57a47fa16821526}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structeka2l1_1_1file}{file}} $>$ {\bfseries open\+\_\+file} (std\+::u16string vir\+\_\+path, int mode)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+emu/core/include/core/vfs.\+h\item 
+emu/core/src/vfs.\+cpp\end{DoxyCompactItemize}

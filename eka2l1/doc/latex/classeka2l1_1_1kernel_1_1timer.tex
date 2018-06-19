@@ -1,0 +1,54 @@
+\hypertarget{classeka2l1_1_1kernel_1_1timer}{}\section{eka2l1\+:\+:kernel\+:\+:timer Class Reference}
+\label{classeka2l1_1_1kernel_1_1timer}\index{eka2l1\+::kernel\+::timer@{eka2l1\+::kernel\+::timer}}
+Inheritance diagram for eka2l1\+:\+:kernel\+:\+:timer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classeka2l1_1_1kernel_1_1timer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1timer_a623211dbba8a11f437ecbaf0cfc9df4c}\label{classeka2l1_1_1kernel_1_1timer_a623211dbba8a11f437ecbaf0cfc9df4c}} 
+{\bfseries timer} (\mbox{\hyperlink{classeka2l1_1_1kernel__system}{kernel\+\_\+system}} $\ast$kern, \mbox{\hyperlink{classeka2l1_1_1timing__system}{timing\+\_\+system}} $\ast$timing, std\+::string name, reset\+\_\+type rt, kernel\+::owner\+\_\+type owner, kernel\+::uid own\+\_\+id, kernel\+::access\+\_\+type access=access\+\_\+type\+::local\+\_\+access)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1timer_a2c7618aae365ea5ef89d09d9457636f7}\label{classeka2l1_1_1kernel_1_1timer_a2c7618aae365ea5ef89d09d9457636f7}} 
+bool {\bfseries should\+\_\+wait} (kernel\+::uid thr\+\_\+id) override
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1timer_a52d413a10c16095c976d11a83440cd12}\label{classeka2l1_1_1kernel_1_1timer_a52d413a10c16095c976d11a83440cd12}} 
+void {\bfseries acquire} (kernel\+::uid thr\+\_\+id) override
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1timer_a5aec6e6c8e5e895f49a1c0cd7dad7991}\label{classeka2l1_1_1kernel_1_1timer_a5aec6e6c8e5e895f49a1c0cd7dad7991}} 
+void {\bfseries wake\+\_\+up\+\_\+waiting\+\_\+threads} () override
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1timer_a699b5310095663cccdbeb84973bf12c9}\label{classeka2l1_1_1kernel_1_1timer_a699b5310095663cccdbeb84973bf12c9}} 
+void {\bfseries set} (int64\+\_\+t init, int64\+\_\+t interval)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1timer_a72c2673a5621f473787df042b2de217a}\label{classeka2l1_1_1kernel_1_1timer_a72c2673a5621f473787df042b2de217a}} 
+void {\bfseries cancel} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1timer_adfbc186d3d2d15c37690f8192a9f9ed0}\label{classeka2l1_1_1kernel_1_1timer_adfbc186d3d2d15c37690f8192a9f9ed0}} 
+void {\bfseries clear} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1timer_ace25c232db5b2860b18e3ff36bfa8441}\label{classeka2l1_1_1kernel_1_1timer_ace25c232db5b2860b18e3ff36bfa8441}} 
+void {\bfseries signal} (int cycles\+\_\+late)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1timer_a7d63d1fe1f2dbc5ca9bf117f663aa127}\label{classeka2l1_1_1kernel_1_1timer_a7d63d1fe1f2dbc5ca9bf117f663aa127}} 
+bool {\bfseries signaled}
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1timer_ac1acc8fff2a810520eb7b880765688a5}\label{classeka2l1_1_1kernel_1_1timer_ac1acc8fff2a810520eb7b880765688a5}} 
+uint64\+\_\+t {\bfseries init\+\_\+delay}
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1timer_ae2c76748ffa7bc5646754e797e05a667}\label{classeka2l1_1_1kernel_1_1timer_ae2c76748ffa7bc5646754e797e05a667}} 
+uint64\+\_\+t {\bfseries interval\+\_\+delay}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+emu/core/include/core/kernel/timer.\+h\item 
+emu/core/src/kernel/timer.\+cpp\end{DoxyCompactItemize}

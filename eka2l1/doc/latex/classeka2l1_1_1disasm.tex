@@ -1,0 +1,81 @@
+\hypertarget{classeka2l1_1_1disasm}{}\section{eka2l1\+:\+:disasm Class Reference}
+\label{classeka2l1_1_1disasm}\index{eka2l1\+::disasm@{eka2l1\+::disasm}}
+
+
+An A\+RM disassembler.  
+
+
+
+
+{\ttfamily \#include $<$disasm.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classeka2l1_1_1disasm_a0911b390a5f620597b6a2c4ed6ca0a2f}{init}} (\mbox{\hyperlink{classeka2l1_1_1memory__system}{memory\+\_\+system}} $\ast$smem)
+\begin{DoxyCompactList}\small\item\em Initialize the disassembler. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeka2l1_1_1disasm_a60f3b06876f186ac994372f0afe693b6}\label{classeka2l1_1_1disasm_a60f3b06876f186ac994372f0afe693b6}} 
+void \mbox{\hyperlink{classeka2l1_1_1disasm_a60f3b06876f186ac994372f0afe693b6}{shutdown}} ()
+\begin{DoxyCompactList}\small\item\em Shutdown the disassembler. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structeka2l1_1_1subroutine}{subroutine}} \mbox{\hyperlink{classeka2l1_1_1disasm_ab845c7a9933b477e94bc4be29498c0a1}{get\+\_\+subroutine}} (\mbox{\hyperlink{classeka2l1_1_1ptr}{ptr}}$<$ uint8\+\_\+t $>$ beg)
+\begin{DoxyCompactList}\small\item\em Get a subroutine. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classeka2l1_1_1disasm_a7c2a3e456387d014cf38ab05db5340b0}{disassemble}} (const uint8\+\_\+t $\ast$code, size\+\_\+t size, uint64\+\_\+t address, bool thumb)
+\begin{DoxyCompactList}\small\item\em Disassemble binary code. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An A\+RM disassembler. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classeka2l1_1_1disasm_a7c2a3e456387d014cf38ab05db5340b0}\label{classeka2l1_1_1disasm_a7c2a3e456387d014cf38ab05db5340b0}} 
+\index{eka2l1\+::disasm@{eka2l1\+::disasm}!disassemble@{disassemble}}
+\index{disassemble@{disassemble}!eka2l1\+::disasm@{eka2l1\+::disasm}}
+\subsubsection{\texorpdfstring{disassemble()}{disassemble()}}
+{\footnotesize\ttfamily std\+::string eka2l1\+::disasm\+::disassemble (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{code,  }\item[{size\+\_\+t}]{size,  }\item[{uint64\+\_\+t}]{address,  }\item[{bool}]{thumb }\end{DoxyParamCaption})}
+
+
+
+Disassemble binary code. 
+
+\begin{DoxyReturn}{Returns}
+The description of the instruction. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classeka2l1_1_1disasm_ab845c7a9933b477e94bc4be29498c0a1}\label{classeka2l1_1_1disasm_ab845c7a9933b477e94bc4be29498c0a1}} 
+\index{eka2l1\+::disasm@{eka2l1\+::disasm}!get\+\_\+subroutine@{get\+\_\+subroutine}}
+\index{get\+\_\+subroutine@{get\+\_\+subroutine}!eka2l1\+::disasm@{eka2l1\+::disasm}}
+\subsubsection{\texorpdfstring{get\+\_\+subroutine()}{get\_subroutine()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structeka2l1_1_1subroutine}{subroutine}} eka2l1\+::disasm\+::get\+\_\+subroutine (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classeka2l1_1_1ptr}{ptr}}$<$ uint8\+\_\+t $>$}]{beg }\end{DoxyParamCaption})}
+
+
+
+Get a subroutine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em beg} & H\+LE pointer to the start of a subroutine. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The subroutine 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classeka2l1_1_1disasm_a0911b390a5f620597b6a2c4ed6ca0a2f}\label{classeka2l1_1_1disasm_a0911b390a5f620597b6a2c4ed6ca0a2f}} 
+\index{eka2l1\+::disasm@{eka2l1\+::disasm}!init@{init}}
+\index{init@{init}!eka2l1\+::disasm@{eka2l1\+::disasm}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void eka2l1\+::disasm\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classeka2l1_1_1memory__system}{memory\+\_\+system}} $\ast$}]{smem }\end{DoxyParamCaption})}
+
+
+
+Initialize the disassembler. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em smem} & The memory system. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+emu/core/include/core/disasm/disasm.\+h\item 
+emu/core/src/disasm/disasm.\+cpp\end{DoxyCompactItemize}

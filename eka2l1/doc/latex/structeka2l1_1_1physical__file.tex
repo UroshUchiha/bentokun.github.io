@@ -1,0 +1,67 @@
+\hypertarget{structeka2l1_1_1physical__file}{}\section{eka2l1\+:\+:physical\+\_\+file Struct Reference}
+\label{structeka2l1_1_1physical__file}\index{eka2l1\+::physical\+\_\+file@{eka2l1\+::physical\+\_\+file}}
+Inheritance diagram for eka2l1\+:\+:physical\+\_\+file\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structeka2l1_1_1physical__file}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structeka2l1_1_1physical__file_a09fdad055fdd36cfea064b5fcc2656c0}\label{structeka2l1_1_1physical__file_a09fdad055fdd36cfea064b5fcc2656c0}} 
+const char $\ast$ {\bfseries translate\+\_\+mode} (int mode)
+\item 
+\mbox{\Hypertarget{structeka2l1_1_1physical__file_aeaaf519a02aee0a5edb9675a48241599}\label{structeka2l1_1_1physical__file_aeaaf519a02aee0a5edb9675a48241599}} 
+{\bfseries physical\+\_\+file} (utf16\+\_\+str path, int mode)
+\item 
+\mbox{\Hypertarget{structeka2l1_1_1physical__file_a2e6568a263caa270212ce38ef8377997}\label{structeka2l1_1_1physical__file_a2e6568a263caa270212ce38ef8377997}} 
+int {\bfseries file\+\_\+mode} () const override
+\item 
+\mbox{\Hypertarget{structeka2l1_1_1physical__file_ad836c39d98df557f6c1c1fce768718a1}\label{structeka2l1_1_1physical__file_ad836c39d98df557f6c1c1fce768718a1}} 
+void {\bfseries init} (utf16\+\_\+str inp\+\_\+name, int mode)
+\item 
+\mbox{\Hypertarget{structeka2l1_1_1physical__file_aa04e2ac89140ff6a431e190cc102f8fa}\label{structeka2l1_1_1physical__file_aa04e2ac89140ff6a431e190cc102f8fa}} 
+void {\bfseries shutdown} ()
+\item 
+\mbox{\Hypertarget{structeka2l1_1_1physical__file_aa416267d0da80371273db3b47f87cb71}\label{structeka2l1_1_1physical__file_aa416267d0da80371273db3b47f87cb71}} 
+int {\bfseries write\+\_\+file} (void $\ast$data, uint32\+\_\+t size, uint32\+\_\+t count) override
+\item 
+\mbox{\Hypertarget{structeka2l1_1_1physical__file_a6e01a1ec4ad45771d87a2da8c69bb27b}\label{structeka2l1_1_1physical__file_a6e01a1ec4ad45771d87a2da8c69bb27b}} 
+int {\bfseries read\+\_\+file} (void $\ast$data, uint32\+\_\+t size, uint32\+\_\+t count) override
+\item 
+\mbox{\Hypertarget{structeka2l1_1_1physical__file_a6c7939ce580de658967c50a70538d5ed}\label{structeka2l1_1_1physical__file_a6c7939ce580de658967c50a70538d5ed}} 
+uint64\+\_\+t {\bfseries size} () const override
+\item 
+\mbox{\Hypertarget{structeka2l1_1_1physical__file_ad4d027f025d449e16c25340e8a73bd1e}\label{structeka2l1_1_1physical__file_ad4d027f025d449e16c25340e8a73bd1e}} 
+bool {\bfseries close} () override
+\item 
+\mbox{\Hypertarget{structeka2l1_1_1physical__file_ac9a77901389fe77031f0661981bb1fde}\label{structeka2l1_1_1physical__file_ac9a77901389fe77031f0661981bb1fde}} 
+uint64\+\_\+t {\bfseries tell} () override
+\item 
+\mbox{\Hypertarget{structeka2l1_1_1physical__file_ad2f3368378b60b63c0f42ceff6036d9e}\label{structeka2l1_1_1physical__file_ad2f3368378b60b63c0f42ceff6036d9e}} 
+void {\bfseries seek} (uint32\+\_\+t seek\+\_\+off, file\+\_\+seek\+\_\+mode where) override
+\item 
+\mbox{\Hypertarget{structeka2l1_1_1physical__file_a5b13ae4f634bf2aaedd0e47e6bd7b69f}\label{structeka2l1_1_1physical__file_a5b13ae4f634bf2aaedd0e47e6bd7b69f}} 
+std\+::u16string {\bfseries file\+\_\+name} () const override
+\item 
+\mbox{\Hypertarget{structeka2l1_1_1physical__file_a6d43b15e47961c11d02e18af31325314}\label{structeka2l1_1_1physical__file_a6d43b15e47961c11d02e18af31325314}} 
+std\+::string {\bfseries get\+\_\+error\+\_\+descriptor} () override
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structeka2l1_1_1physical__file_ae621cf0ab5f09c8ecbd57df08eff4e53}\label{structeka2l1_1_1physical__file_ae621cf0ab5f09c8ecbd57df08eff4e53}} 
+F\+I\+LE $\ast$ {\bfseries file}
+\item 
+\mbox{\Hypertarget{structeka2l1_1_1physical__file_adac6f70ec872c7dc920b3386cd2d061a}\label{structeka2l1_1_1physical__file_adac6f70ec872c7dc920b3386cd2d061a}} 
+std\+::u16string {\bfseries input\+\_\+name}
+\item 
+\mbox{\Hypertarget{structeka2l1_1_1physical__file_a550c444506d4a0dd8539de88b4bcc132}\label{structeka2l1_1_1physical__file_a550c444506d4a0dd8539de88b4bcc132}} 
+int {\bfseries fmode}
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+emu/core/src/vfs.\+cpp\end{DoxyCompactItemize}

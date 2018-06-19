@@ -1,0 +1,139 @@
+\hypertarget{classeka2l1_1_1driver_1_1emu__window}{}\section{eka2l1\+:\+:driver\+:\+:emu\+\_\+window Class Reference}
+\label{classeka2l1_1_1driver_1_1emu__window}\index{eka2l1\+::driver\+::emu\+\_\+window@{eka2l1\+::driver\+::emu\+\_\+window}}
+
+
+An abstract class to implement the emulator window.  
+
+
+
+
+{\ttfamily \#include $<$emu\+\_\+window.\+h$>$}
+
+Inheritance diagram for eka2l1\+:\+:driver\+:\+:emu\+\_\+window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classeka2l1_1_1driver_1_1emu__window}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classeka2l1_1_1driver_1_1emu__window_a5cc29dfd4fd4de6b760bb33442a9a654}{init}} (std\+::string title, \mbox{\hyperlink{structeka2l1_1_1vec2}{vec2}} size)=0
+\begin{DoxyCompactList}\small\item\em Intialize the emulator window. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeka2l1_1_1driver_1_1emu__window_acd8fffd8710531560bb156c5b4a63d19}\label{classeka2l1_1_1driver_1_1emu__window_acd8fffd8710531560bb156c5b4a63d19}} 
+virtual void {\bfseries make\+\_\+current} ()=0
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1driver_1_1emu__window_a5afb0d68b5181ed5da0e561c9e1ee586}\label{classeka2l1_1_1driver_1_1emu__window_a5afb0d68b5181ed5da0e561c9e1ee586}} 
+virtual void {\bfseries done\+\_\+current} ()=0
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1driver_1_1emu__window_aa71c803e97a576d342c1c0d2657ca1bd}\label{classeka2l1_1_1driver_1_1emu__window_aa71c803e97a576d342c1c0d2657ca1bd}} 
+virtual void {\bfseries swap\+\_\+buffer} ()=0
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1driver_1_1emu__window_ab7eff68d58d14467dfaa67f44be036da}\label{classeka2l1_1_1driver_1_1emu__window_ab7eff68d58d14467dfaa67f44be036da}} 
+virtual void {\bfseries poll\+\_\+events} ()=0
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1driver_1_1emu__window_a93feb29a725d6760b3f0803a4181c2ee}\label{classeka2l1_1_1driver_1_1emu__window_a93feb29a725d6760b3f0803a4181c2ee}} 
+virtual void {\bfseries shutdown} ()=0
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1driver_1_1emu__window_a308cb841d7f6c9f6a6df03736466438a}\label{classeka2l1_1_1driver_1_1emu__window_a308cb841d7f6c9f6a6df03736466438a}} 
+virtual void \mbox{\hyperlink{classeka2l1_1_1driver_1_1emu__window_a308cb841d7f6c9f6a6df03736466438a}{change\+\_\+title}} (std\+::string)=0
+\begin{DoxyCompactList}\small\item\em Change the window title. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1driver_1_1emu__window_a40fbd4a9fa68d018a3adc5ccb9b1686a}\label{classeka2l1_1_1driver_1_1emu__window_a40fbd4a9fa68d018a3adc5ccb9b1686a}} 
+std\+::function$<$ void(\mbox{\hyperlink{structeka2l1_1_1vec2}{vec2}})$>$ {\bfseries resize\+\_\+hook}
+\item 
+std\+::function$<$ void(\mbox{\hyperlink{structeka2l1_1_1vec2}{point}})$>$ \mbox{\hyperlink{classeka2l1_1_1driver_1_1emu__window_aeb86b282270d6337f1287fc2b3165ffa}{touch\+\_\+pressed}}
+\item 
+std\+::function$<$ void(\mbox{\hyperlink{structeka2l1_1_1vec2}{point}})$>$ \mbox{\hyperlink{classeka2l1_1_1driver_1_1emu__window_a31c90ce3da4e00b413d711de299e258d}{touch\+\_\+move}}
+\item 
+std\+::function$<$ void()$>$ \mbox{\hyperlink{classeka2l1_1_1driver_1_1emu__window_a5a4842a02ac34fd4f9ca960399c2d30b}{touch\+\_\+released}}
+\item 
+std\+::function$<$ void(uint16\+\_\+t)$>$ \mbox{\hyperlink{classeka2l1_1_1driver_1_1emu__window_aeda1056d81f9d4e309725b09fd97e365}{button\+\_\+pressed}}
+\item 
+std\+::function$<$ void()$>$ \mbox{\hyperlink{classeka2l1_1_1driver_1_1emu__window_a2f0a1fbaadf267530b0daaeb4984a5a4}{button\+\_\+released}}
+\item 
+std\+::function$<$ void(uint16\+\_\+t)$>$ \mbox{\hyperlink{classeka2l1_1_1driver_1_1emu__window_a87a730c6540ff96939c25b2ba2912e4c}{button\+\_\+hold}}
+\item 
+std\+::function$<$ void()$>$ \mbox{\hyperlink{classeka2l1_1_1driver_1_1emu__window_a01b6281126b6b85411db2195722fe27b}{close\+\_\+hook}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An abstract class to implement the emulator window. 
+
+Class can override methods to implement the emulator window. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classeka2l1_1_1driver_1_1emu__window_a5cc29dfd4fd4de6b760bb33442a9a654}\label{classeka2l1_1_1driver_1_1emu__window_a5cc29dfd4fd4de6b760bb33442a9a654}} 
+\index{eka2l1\+::driver\+::emu\+\_\+window@{eka2l1\+::driver\+::emu\+\_\+window}!init@{init}}
+\index{init@{init}!eka2l1\+::driver\+::emu\+\_\+window@{eka2l1\+::driver\+::emu\+\_\+window}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily virtual void eka2l1\+::driver\+::emu\+\_\+window\+::init (\begin{DoxyParamCaption}\item[{std\+::string}]{title,  }\item[{\mbox{\hyperlink{structeka2l1_1_1vec2}{vec2}}}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Intialize the emulator window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em title} & The initial window title. \\
+\hline
+{\em size} & The initial window size. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classeka2l1_1_1driver_1_1emu__window__glfw3_af2bfbaf8879c5ccb627c08aea9135073}{eka2l1\+::driver\+::emu\+\_\+window\+\_\+glfw3}}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classeka2l1_1_1driver_1_1emu__window_a87a730c6540ff96939c25b2ba2912e4c}\label{classeka2l1_1_1driver_1_1emu__window_a87a730c6540ff96939c25b2ba2912e4c}} 
+\index{eka2l1\+::driver\+::emu\+\_\+window@{eka2l1\+::driver\+::emu\+\_\+window}!button\+\_\+hold@{button\+\_\+hold}}
+\index{button\+\_\+hold@{button\+\_\+hold}!eka2l1\+::driver\+::emu\+\_\+window@{eka2l1\+::driver\+::emu\+\_\+window}}
+\subsubsection{\texorpdfstring{button\+\_\+hold}{button\_hold}}
+{\footnotesize\ttfamily std\+::function$<$void(uint16\+\_\+t)$>$ eka2l1\+::driver\+::emu\+\_\+window\+::button\+\_\+hold}
+
+Call when a button is held \mbox{\Hypertarget{classeka2l1_1_1driver_1_1emu__window_aeda1056d81f9d4e309725b09fd97e365}\label{classeka2l1_1_1driver_1_1emu__window_aeda1056d81f9d4e309725b09fd97e365}} 
+\index{eka2l1\+::driver\+::emu\+\_\+window@{eka2l1\+::driver\+::emu\+\_\+window}!button\+\_\+pressed@{button\+\_\+pressed}}
+\index{button\+\_\+pressed@{button\+\_\+pressed}!eka2l1\+::driver\+::emu\+\_\+window@{eka2l1\+::driver\+::emu\+\_\+window}}
+\subsubsection{\texorpdfstring{button\+\_\+pressed}{button\_pressed}}
+{\footnotesize\ttfamily std\+::function$<$void(uint16\+\_\+t)$>$ eka2l1\+::driver\+::emu\+\_\+window\+::button\+\_\+pressed}
+
+Call when a button is pressed. User sets their own call, shutdown and center button \mbox{\Hypertarget{classeka2l1_1_1driver_1_1emu__window_a2f0a1fbaadf267530b0daaeb4984a5a4}\label{classeka2l1_1_1driver_1_1emu__window_a2f0a1fbaadf267530b0daaeb4984a5a4}} 
+\index{eka2l1\+::driver\+::emu\+\_\+window@{eka2l1\+::driver\+::emu\+\_\+window}!button\+\_\+released@{button\+\_\+released}}
+\index{button\+\_\+released@{button\+\_\+released}!eka2l1\+::driver\+::emu\+\_\+window@{eka2l1\+::driver\+::emu\+\_\+window}}
+\subsubsection{\texorpdfstring{button\+\_\+released}{button\_released}}
+{\footnotesize\ttfamily std\+::function$<$void()$>$ eka2l1\+::driver\+::emu\+\_\+window\+::button\+\_\+released}
+
+Call when a button is released \mbox{\Hypertarget{classeka2l1_1_1driver_1_1emu__window_a01b6281126b6b85411db2195722fe27b}\label{classeka2l1_1_1driver_1_1emu__window_a01b6281126b6b85411db2195722fe27b}} 
+\index{eka2l1\+::driver\+::emu\+\_\+window@{eka2l1\+::driver\+::emu\+\_\+window}!close\+\_\+hook@{close\+\_\+hook}}
+\index{close\+\_\+hook@{close\+\_\+hook}!eka2l1\+::driver\+::emu\+\_\+window@{eka2l1\+::driver\+::emu\+\_\+window}}
+\subsubsection{\texorpdfstring{close\+\_\+hook}{close\_hook}}
+{\footnotesize\ttfamily std\+::function$<$void()$>$ eka2l1\+::driver\+::emu\+\_\+window\+::close\+\_\+hook}
+
+Call when the window is closed \mbox{\Hypertarget{classeka2l1_1_1driver_1_1emu__window_a31c90ce3da4e00b413d711de299e258d}\label{classeka2l1_1_1driver_1_1emu__window_a31c90ce3da4e00b413d711de299e258d}} 
+\index{eka2l1\+::driver\+::emu\+\_\+window@{eka2l1\+::driver\+::emu\+\_\+window}!touch\+\_\+move@{touch\+\_\+move}}
+\index{touch\+\_\+move@{touch\+\_\+move}!eka2l1\+::driver\+::emu\+\_\+window@{eka2l1\+::driver\+::emu\+\_\+window}}
+\subsubsection{\texorpdfstring{touch\+\_\+move}{touch\_move}}
+{\footnotesize\ttfamily std\+::function$<$void(\mbox{\hyperlink{structeka2l1_1_1vec2}{point}})$>$ eka2l1\+::driver\+::emu\+\_\+window\+::touch\+\_\+move}
+
+Call when a touch movement is detected \mbox{\Hypertarget{classeka2l1_1_1driver_1_1emu__window_aeb86b282270d6337f1287fc2b3165ffa}\label{classeka2l1_1_1driver_1_1emu__window_aeb86b282270d6337f1287fc2b3165ffa}} 
+\index{eka2l1\+::driver\+::emu\+\_\+window@{eka2l1\+::driver\+::emu\+\_\+window}!touch\+\_\+pressed@{touch\+\_\+pressed}}
+\index{touch\+\_\+pressed@{touch\+\_\+pressed}!eka2l1\+::driver\+::emu\+\_\+window@{eka2l1\+::driver\+::emu\+\_\+window}}
+\subsubsection{\texorpdfstring{touch\+\_\+pressed}{touch\_pressed}}
+{\footnotesize\ttfamily std\+::function$<$void(\mbox{\hyperlink{structeka2l1_1_1vec2}{point}})$>$ eka2l1\+::driver\+::emu\+\_\+window\+::touch\+\_\+pressed}
+
+Call when a touch input is triggered \mbox{\Hypertarget{classeka2l1_1_1driver_1_1emu__window_a5a4842a02ac34fd4f9ca960399c2d30b}\label{classeka2l1_1_1driver_1_1emu__window_a5a4842a02ac34fd4f9ca960399c2d30b}} 
+\index{eka2l1\+::driver\+::emu\+\_\+window@{eka2l1\+::driver\+::emu\+\_\+window}!touch\+\_\+released@{touch\+\_\+released}}
+\index{touch\+\_\+released@{touch\+\_\+released}!eka2l1\+::driver\+::emu\+\_\+window@{eka2l1\+::driver\+::emu\+\_\+window}}
+\subsubsection{\texorpdfstring{touch\+\_\+released}{touch\_released}}
+{\footnotesize\ttfamily std\+::function$<$void()$>$ eka2l1\+::driver\+::emu\+\_\+window\+::touch\+\_\+released}
+
+Call when touch is released 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+emu/core/include/core/drivers/emu\+\_\+window.\+h\end{DoxyCompactItemize}

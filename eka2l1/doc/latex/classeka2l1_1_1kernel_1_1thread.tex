@@ -1,0 +1,93 @@
+\hypertarget{classeka2l1_1_1kernel_1_1thread}{}\section{eka2l1\+:\+:kernel\+:\+:thread Class Reference}
+\label{classeka2l1_1_1kernel_1_1thread}\index{eka2l1\+::kernel\+::thread@{eka2l1\+::kernel\+::thread}}
+Inheritance diagram for eka2l1\+:\+:kernel\+:\+:thread\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classeka2l1_1_1kernel_1_1thread}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1thread_a9a4405fb373bffdb46ce05fca0762a62}\label{classeka2l1_1_1kernel_1_1thread_a9a4405fb373bffdb46ce05fca0762a62}} 
+{\bfseries thread} (\mbox{\hyperlink{classeka2l1_1_1kernel__system}{kernel\+\_\+system}} $\ast$kern, \mbox{\hyperlink{classeka2l1_1_1memory__system}{memory\+\_\+system}} $\ast$mem, kernel\+::owner\+\_\+type owner, kernel\+::uid owner\+\_\+id, kernel\+::access\+\_\+type access, const std\+::string \&name, const address epa, const size\+\_\+t stack\+\_\+size, const size\+\_\+t min\+\_\+heap\+\_\+size, const size\+\_\+t max\+\_\+heap\+\_\+size, \mbox{\hyperlink{classeka2l1_1_1ptr}{ptr}}$<$ void $>$ usrdata=nullptr, thread\+\_\+priority pri=priority\+\_\+normal)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1thread_a15b81c2aabe2ee1670deb5aa00cca70c}\label{classeka2l1_1_1kernel_1_1thread_a15b81c2aabe2ee1670deb5aa00cca70c}} 
+thread\+\_\+state {\bfseries current\+\_\+state} () const
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1thread_a5260b4d31be4dbd573e937ebe5c01bdc}\label{classeka2l1_1_1kernel_1_1thread_a5260b4d31be4dbd573e937ebe5c01bdc}} 
+int {\bfseries current\+\_\+priority} () const
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1thread_a691b3b51ffd22bc9046343c75f4cb82f}\label{classeka2l1_1_1kernel_1_1thread_a691b3b51ffd22bc9046343c75f4cb82f}} 
+void {\bfseries current\+\_\+state} (thread\+\_\+state st)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1thread_a72026c1a11581888189b02651324c2d2}\label{classeka2l1_1_1kernel_1_1thread_a72026c1a11581888189b02651324c2d2}} 
+bool {\bfseries run} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1thread_af273a63620af44da7beb27270e0155bb}\label{classeka2l1_1_1kernel_1_1thread_af273a63620af44da7beb27270e0155bb}} 
+bool {\bfseries stop} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1thread_a27effe04a23d30cc465bcfc0b7200dea}\label{classeka2l1_1_1kernel_1_1thread_a27effe04a23d30cc465bcfc0b7200dea}} 
+bool {\bfseries sleep} (int64\+\_\+t ns)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1thread_a23a04b0734ab2a86d8c2ba6095e39c4a}\label{classeka2l1_1_1kernel_1_1thread_a23a04b0734ab2a86d8c2ba6095e39c4a}} 
+bool {\bfseries resume} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1thread_a1c74ed794226e135a93db7110e49d222}\label{classeka2l1_1_1kernel_1_1thread_a1c74ed794226e135a93db7110e49d222}} 
+bool {\bfseries should\+\_\+wait} (const kernel\+::uid id) override
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1thread_aabbd6a0b12eaf91c6a0e38ede00bb191}\label{classeka2l1_1_1kernel_1_1thread_aabbd6a0b12eaf91c6a0e38ede00bb191}} 
+void {\bfseries acquire} (const kernel\+::uid id) override
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1thread_a34ed18811f2320c73b2d0a0e87d02b44}\label{classeka2l1_1_1kernel_1_1thread_a34ed18811f2320c73b2d0a0e87d02b44}} 
+bool {\bfseries operator$>$} (const \mbox{\hyperlink{classeka2l1_1_1kernel_1_1thread}{thread}} \&rhs)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1thread_aa49553087b97f98ad402db1eb31c55d2}\label{classeka2l1_1_1kernel_1_1thread_aa49553087b97f98ad402db1eb31c55d2}} 
+bool {\bfseries operator$<$} (const \mbox{\hyperlink{classeka2l1_1_1kernel_1_1thread}{thread}} \&rhs)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1thread_a03c1ffe37b44210b5dd221031c8adae9}\label{classeka2l1_1_1kernel_1_1thread_a03c1ffe37b44210b5dd221031c8adae9}} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{classeka2l1_1_1kernel_1_1thread}{thread}} \&rhs)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1thread_a90f4489f2ec2fe16dc06a7ffe3d5c5fb}\label{classeka2l1_1_1kernel_1_1thread_a90f4489f2ec2fe16dc06a7ffe3d5c5fb}} 
+bool {\bfseries operator$>$=} (const \mbox{\hyperlink{classeka2l1_1_1kernel_1_1thread}{thread}} \&rhs)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1thread_a7e3ef90a5dfb6dbb861964ff460a3453}\label{classeka2l1_1_1kernel_1_1thread_a7e3ef90a5dfb6dbb861964ff460a3453}} 
+bool {\bfseries operator$<$=} (const \mbox{\hyperlink{classeka2l1_1_1kernel_1_1thread}{thread}} \&rhs)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1thread_a4715b46f3009b23107c1ddbbb701a6bc}\label{classeka2l1_1_1kernel_1_1thread_a4715b46f3009b23107c1ddbbb701a6bc}} 
+std\+::optional$<$ \mbox{\hyperlink{structeka2l1_1_1kernel_1_1tls__slot}{tls\+\_\+slot}} $>$ {\bfseries get\+\_\+free\+\_\+tls\+\_\+slot} (uint32\+\_\+t dll\+\_\+uid)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1thread_a4bc20af8a9f6f34b78edbe70bf63ab54}\label{classeka2l1_1_1kernel_1_1thread_a4bc20af8a9f6f34b78edbe70bf63ab54}} 
+void {\bfseries close\+\_\+tls\+\_\+slot} (\mbox{\hyperlink{structeka2l1_1_1kernel_1_1tls__slot}{tls\+\_\+slot}} \&slot)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1thread_a35cdea4840dc75ffeb07b75788fc2c1d}\label{classeka2l1_1_1kernel_1_1thread_a35cdea4840dc75ffeb07b75788fc2c1d}} 
+\mbox{\hyperlink{structeka2l1_1_1kernel_1_1thread__local__data}{thread\+\_\+local\+\_\+data}} \& {\bfseries get\+\_\+local\+\_\+data} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1thread_a59fe8b77d5f109a261078f77d6b5ae7c}\label{classeka2l1_1_1kernel_1_1thread_a59fe8b77d5f109a261078f77d6b5ae7c}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classeka2l1_1_1kernel_1_1thread__scheduler}{thread\+\_\+scheduler}} $>$ {\bfseries get\+\_\+scheduler} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1thread_a9c1ffa54fb1efafcf7f9fc2821010cf4}\label{classeka2l1_1_1kernel_1_1thread_a9c1ffa54fb1efafcf7f9fc2821010cf4}} 
+void {\bfseries update\+\_\+priority} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1thread_a2a0988d6fa5b735e0eeb04dbb063c6a1}\label{classeka2l1_1_1kernel_1_1thread_a2a0988d6fa5b735e0eeb04dbb063c6a1}} 
+void {\bfseries wait\+\_\+for\+\_\+any\+\_\+request} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1thread_af731ba6aa6edcaf8c47d86c6b1385f41}\label{classeka2l1_1_1kernel_1_1thread_af731ba6aa6edcaf8c47d86c6b1385f41}} 
+void {\bfseries signal\+\_\+request} ()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1thread_a2e32b71e1716c0c74d4e56026f4d0a35}\label{classeka2l1_1_1kernel_1_1thread_a2e32b71e1716c0c74d4e56026f4d0a35}} 
+class {\bfseries thread\+\_\+scheduler}
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1thread_a6f4535025b9df015e1a7d35f4e2bbee7}\label{classeka2l1_1_1kernel_1_1thread_a6f4535025b9df015e1a7d35f4e2bbee7}} 
+class {\bfseries mutex}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+emu/core/include/core/kernel/thread.\+h\item 
+emu/core/src/kernel/thread.\+cpp\end{DoxyCompactItemize}

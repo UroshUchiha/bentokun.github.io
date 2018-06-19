@@ -1,0 +1,98 @@
+\hypertarget{classeka2l1_1_1kernel_1_1kernel__obj}{}\section{eka2l1\+:\+:kernel\+:\+:kernel\+\_\+obj Class Reference}
+\label{classeka2l1_1_1kernel_1_1kernel__obj}\index{eka2l1\+::kernel\+::kernel\+\_\+obj@{eka2l1\+::kernel\+::kernel\+\_\+obj}}
+
+
+Base class for all kernel object.  
+
+
+
+
+{\ttfamily \#include $<$kernel\+\_\+obj.\+h$>$}
+
+Inheritance diagram for eka2l1\+:\+:kernel\+:\+:kernel\+\_\+obj\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.024096cm]{classeka2l1_1_1kernel_1_1kernel__obj}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1kernel__obj_a864a8657aee16039e7f1c46b7e4bd566}\label{classeka2l1_1_1kernel_1_1kernel__obj_a864a8657aee16039e7f1c46b7e4bd566}} 
+std\+::string {\bfseries name} () const
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1kernel__obj_abe5ece2649ae927706f18779c674f0b7}\label{classeka2l1_1_1kernel_1_1kernel__obj_abe5ece2649ae927706f18779c674f0b7}} 
+uid {\bfseries unique\+\_\+id} () const
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1kernel__obj_a68dc750833e3a1fb93ccb470563e6e40}\label{classeka2l1_1_1kernel_1_1kernel__obj_a68dc750833e3a1fb93ccb470563e6e40}} 
+\mbox{\hyperlink{classeka2l1_1_1kernel__system}{kernel\+\_\+system}} $\ast$ {\bfseries get\+\_\+kernel\+\_\+object\+\_\+owner} () const
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1kernel__obj_a8333d00c87854de0ebeff0559f8a5526}\label{classeka2l1_1_1kernel_1_1kernel__obj_a8333d00c87854de0ebeff0559f8a5526}} 
+bool {\bfseries user\+\_\+closeable} () const
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1kernel__obj_acd64568b9c566ac3612f78fb5491e7b0}\label{classeka2l1_1_1kernel_1_1kernel__obj_acd64568b9c566ac3612f78fb5491e7b0}} 
+void {\bfseries user\+\_\+closeable} (bool opt)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1kernel__obj_a8cec5100723668bfd4a7e405c98b0ebc}\label{classeka2l1_1_1kernel_1_1kernel__obj_a8cec5100723668bfd4a7e405c98b0ebc}} 
+kernel\+::uid {\bfseries obj\+\_\+owner} () const
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1kernel__obj_a8562213e06f0f325a0f5b4167622a39b}\label{classeka2l1_1_1kernel_1_1kernel__obj_a8562213e06f0f325a0f5b4167622a39b}} 
+kernel\+::owner\+\_\+type {\bfseries get\+\_\+owner\+\_\+type} () const
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1kernel__obj_a612b46734af9d7ec1fd268b52a07f8be}\label{classeka2l1_1_1kernel_1_1kernel__obj_a612b46734af9d7ec1fd268b52a07f8be}} 
+kernel\+::access\+\_\+type {\bfseries get\+\_\+access\+\_\+type} () const
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1kernel__obj_a309fdecf373e587d29b1bf7826377fdb}\label{classeka2l1_1_1kernel_1_1kernel__obj_a309fdecf373e587d29b1bf7826377fdb}} 
+object\+\_\+type {\bfseries get\+\_\+object\+\_\+type} () const
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1kernel__obj_a21ea9ea2f1dc49871886bfe577af6fd9}\label{classeka2l1_1_1kernel_1_1kernel__obj_a21ea9ea2f1dc49871886bfe577af6fd9}} 
+void {\bfseries set\+\_\+owner\+\_\+type} (kernel\+::owner\+\_\+type new\+\_\+owner)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1kernel__obj_a9edd7f20130b40e82dca0ecbb2485cce}\label{classeka2l1_1_1kernel_1_1kernel__obj_a9edd7f20130b40e82dca0ecbb2485cce}} 
+void {\bfseries rename} (const std\+::string \&new\+\_\+name)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1kernel__obj_a221f80ef5222db0f6567db3937c54bd7}\label{classeka2l1_1_1kernel_1_1kernel__obj_a221f80ef5222db0f6567db3937c54bd7}} 
+{\bfseries kernel\+\_\+obj} (\mbox{\hyperlink{classeka2l1_1_1kernel__system}{kernel\+\_\+system}} $\ast$kern, const std\+::string \&obj\+\_\+name, kernel\+::owner\+\_\+type owner\+\_\+type, kernel\+::uid owner, kernel\+::access\+\_\+type access=access\+\_\+type\+::local\+\_\+access)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1kernel__obj_a5b1e6d7933d97fe485ed0c2d0348b4e4}\label{classeka2l1_1_1kernel_1_1kernel__obj_a5b1e6d7933d97fe485ed0c2d0348b4e4}} 
+{\bfseries kernel\+\_\+obj} (\mbox{\hyperlink{classeka2l1_1_1kernel__system}{kernel\+\_\+system}} $\ast$kern, const uid obj\+\_\+id, const std\+::string \&obj\+\_\+name, kernel\+::owner\+\_\+type owner\+\_\+type, kernel\+::uid owner, kernel\+::access\+\_\+type access=access\+\_\+type\+::local\+\_\+access)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1kernel__obj_a70f7506bf05c41ea29c3d9ed3cd731ae}\label{classeka2l1_1_1kernel_1_1kernel__obj_a70f7506bf05c41ea29c3d9ed3cd731ae}} 
+std\+::string {\bfseries obj\+\_\+name}
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1kernel__obj_abc2bb7538d1da72b10c2abe36e709ad7}\label{classeka2l1_1_1kernel_1_1kernel__obj_abc2bb7538d1da72b10c2abe36e709ad7}} 
+uid {\bfseries obj\+\_\+id}
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1kernel__obj_a9f80b810c5a7f133d68174e28b71bf90}\label{classeka2l1_1_1kernel_1_1kernel__obj_a9f80b810c5a7f133d68174e28b71bf90}} 
+bool {\bfseries obj\+\_\+user\+\_\+closeable} = true
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1kernel__obj_aaea65366f001ad0722eeffbcdf459833}\label{classeka2l1_1_1kernel_1_1kernel__obj_aaea65366f001ad0722eeffbcdf459833}} 
+\mbox{\hyperlink{classeka2l1_1_1kernel__system}{kernel\+\_\+system}} $\ast$ {\bfseries kern}
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1kernel__obj_ab8943d185cc84790c4f76dde4706104d}\label{classeka2l1_1_1kernel_1_1kernel__obj_ab8943d185cc84790c4f76dde4706104d}} 
+kernel\+::uid {\bfseries owner}
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1kernel__obj_a774b6aea079021d37fdff3dcba68c9bf}\label{classeka2l1_1_1kernel_1_1kernel__obj_a774b6aea079021d37fdff3dcba68c9bf}} 
+kernel\+::owner\+\_\+type {\bfseries owner\+\_\+type}
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1kernel__obj_abd097dcd098e6620052c438d8732d875}\label{classeka2l1_1_1kernel_1_1kernel__obj_abd097dcd098e6620052c438d8732d875}} 
+access\+\_\+type {\bfseries access}
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1kernel_1_1kernel__obj_a7eb655727117372165f99800b41eb7cc}\label{classeka2l1_1_1kernel_1_1kernel__obj_a7eb655727117372165f99800b41eb7cc}} 
+object\+\_\+type {\bfseries obj\+\_\+type}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class for all kernel object. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+emu/core/include/core/kernel/kernel\+\_\+obj.\+h\item 
+emu/core/src/kernel/kernel\+\_\+obj.\+cpp\end{DoxyCompactItemize}

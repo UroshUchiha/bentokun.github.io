@@ -1,0 +1,44 @@
+\hypertarget{classeka2l1_1_1process}{}\section{eka2l1\+:\+:process Class Reference}
+\label{classeka2l1_1_1process}\index{eka2l1\+::process@{eka2l1\+::process}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1process_a84093e7f336abaec65065502674b246a}\label{classeka2l1_1_1process_a84093e7f336abaec65065502674b246a}} 
+{\bfseries process} (\mbox{\hyperlink{classeka2l1_1_1kernel__system}{kernel\+\_\+system}} $\ast$kern, \mbox{\hyperlink{classeka2l1_1_1memory__system}{memory\+\_\+system}} $\ast$mem, uint32\+\_\+t uid, const std\+::string \&process\+\_\+name, const std\+::u16string \&exe\+\_\+path, const std\+::u16string \&cmd\+\_\+args, loader\+::e32img\+\_\+ptr \&img)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1process_a65b3ca3a58e733b5af6158a9a019de12}\label{classeka2l1_1_1process_a65b3ca3a58e733b5af6158a9a019de12}} 
+std\+::u16string {\bfseries get\+\_\+cmd\+\_\+args} () const
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1process_aa32a3d626672ba40226f63682ace5419}\label{classeka2l1_1_1process_aa32a3d626672ba40226f63682ace5419}} 
+std\+::u16string {\bfseries get\+\_\+exe\+\_\+path} () const
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1process_a4394568f5fcdc49fd8c0dced88957e33}\label{classeka2l1_1_1process_a4394568f5fcdc49fd8c0dced88957e33}} 
+uint32\+\_\+t {\bfseries get\+\_\+uid} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1process_aba1a81a92b41bed87fc83ad8bc186776}\label{classeka2l1_1_1process_aba1a81a92b41bed87fc83ad8bc186776}} 
+loader\+::e32img\+\_\+ptr {\bfseries get\+\_\+e32img} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1process_ad150f4afef9becebd91ed5f75331a25d}\label{classeka2l1_1_1process_ad150f4afef9becebd91ed5f75331a25d}} 
+void {\bfseries set\+\_\+arg\+\_\+slot} (uint8\+\_\+t slot, uint32\+\_\+t data, size\+\_\+t data\+\_\+size)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1process_a3e5a24d9ebc09bec3e94f1aced362b4b}\label{classeka2l1_1_1process_a3e5a24d9ebc09bec3e94f1aced362b4b}} 
+std\+::optional$<$ \mbox{\hyperlink{structeka2l1_1_1pass__arg}{pass\+\_\+arg}} $>$ {\bfseries get\+\_\+arg\+\_\+slot} (uint8\+\_\+t slot)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1process_a540316b08bab49d8a89c9a1218ee891d}\label{classeka2l1_1_1process_a540316b08bab49d8a89c9a1218ee891d}} 
+bool {\bfseries run} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1process_a8cb35055648c54f25c3ebf39c2c7955d}\label{classeka2l1_1_1process_a8cb35055648c54f25c3ebf39c2c7955d}} 
+bool {\bfseries step} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1process_a1795486664499467dee470a79ad5bfab}\label{classeka2l1_1_1process_a1795486664499467dee470a79ad5bfab}} 
+bool {\bfseries suspend} ()
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1process_a88d6a07cf5372fdc4d624ce64051a4f6}\label{classeka2l1_1_1process_a88d6a07cf5372fdc4d624ce64051a4f6}} 
+bool {\bfseries stop} ()
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+emu/core/include/core/process.\+h\item 
+emu/core/src/process.\+cpp\end{DoxyCompactItemize}

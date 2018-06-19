@@ -1,0 +1,59 @@
+\hypertarget{namespaceeka2l1_1_1eabi}{}\section{eka2l1\+:\+:eabi Namespace Reference}
+\label{namespaceeka2l1_1_1eabi}\index{eka2l1\+::eabi@{eka2l1\+::eabi}}
+
+
+E\+A\+BI emulation. General uses for mangling name and pure virtual function.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structeka2l1_1_1eabi_1_1leave__handler}{leave\+\_\+handler}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{namespaceeka2l1_1_1eabi_a9ea6f662d297f015cb4b8df3e823f299}{demangle}} (std\+::string target)
+\item 
+std\+::string \mbox{\hyperlink{namespaceeka2l1_1_1eabi_a3d9fe6975adcc46f333e96086cdf86f9}{mangle}} (std\+::string target)
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1eabi_aab1331c10b033962cefce18086a93bf4}\label{namespaceeka2l1_1_1eabi_aab1331c10b033962cefce18086a93bf4}} 
+void {\bfseries pure\+\_\+virtual\+\_\+call} ()
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1eabi_a581eb41c5242df5d35e4817784559ac9}\label{namespaceeka2l1_1_1eabi_a581eb41c5242df5d35e4817784559ac9}} 
+void {\bfseries deleted\+\_\+virtual\+\_\+call} ()
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1eabi_a42c92994aa3e99f44e74db2603e5fcf2}\label{namespaceeka2l1_1_1eabi_a42c92994aa3e99f44e74db2603e5fcf2}} 
+void {\bfseries leave} (uint32\+\_\+t id, const std\+::string \&msg)
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1eabi_af9bb7a19272913d79d7211c808eb9cd0}\label{namespaceeka2l1_1_1eabi_af9bb7a19272913d79d7211c808eb9cd0}} 
+void {\bfseries trap\+\_\+leave} (uint32\+\_\+t id)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1eabi_a8b6e0ce475bbdd0ee4574dc010d4a12b}\label{namespaceeka2l1_1_1eabi_a8b6e0ce475bbdd0ee4574dc010d4a12b}} 
+std\+::vector$<$ \mbox{\hyperlink{structeka2l1_1_1eabi_1_1leave__handler}{leave\+\_\+handler}} $>$ {\bfseries leaves}
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1eabi_a19a537583195597f22832fa071fe401c}\label{namespaceeka2l1_1_1eabi_a19a537583195597f22832fa071fe401c}} 
+std\+::mutex {\bfseries mut}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+E\+A\+BI emulation. General uses for mangling name and pure virtual function. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespaceeka2l1_1_1eabi_a9ea6f662d297f015cb4b8df3e823f299}\label{namespaceeka2l1_1_1eabi_a9ea6f662d297f015cb4b8df3e823f299}} 
+\index{eka2l1\+::eabi@{eka2l1\+::eabi}!demangle@{demangle}}
+\index{demangle@{demangle}!eka2l1\+::eabi@{eka2l1\+::eabi}}
+\subsubsection{\texorpdfstring{demangle()}{demangle()}}
+{\footnotesize\ttfamily std\+::string eka2l1\+::eabi\+::demangle (\begin{DoxyParamCaption}\item[{std\+::string}]{target }\end{DoxyParamCaption})}
+
+Demangle an Itanium A\+BI name. \mbox{\Hypertarget{namespaceeka2l1_1_1eabi_a3d9fe6975adcc46f333e96086cdf86f9}\label{namespaceeka2l1_1_1eabi_a3d9fe6975adcc46f333e96086cdf86f9}} 
+\index{eka2l1\+::eabi@{eka2l1\+::eabi}!mangle@{mangle}}
+\index{mangle@{mangle}!eka2l1\+::eabi@{eka2l1\+::eabi}}
+\subsubsection{\texorpdfstring{mangle()}{mangle()}}
+{\footnotesize\ttfamily std\+::string eka2l1\+::eabi\+::mangle (\begin{DoxyParamCaption}\item[{std\+::string}]{target }\end{DoxyParamCaption})}
+
+Mangle a function name, should not use. 

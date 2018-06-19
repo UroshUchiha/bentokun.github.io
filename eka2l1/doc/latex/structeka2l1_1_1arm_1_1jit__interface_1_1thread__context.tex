@@ -1,0 +1,40 @@
+\hypertarget{structeka2l1_1_1arm_1_1jit__interface_1_1thread__context}{}\section{eka2l1\+:\+:arm\+:\+:jit\+\_\+interface\+:\+:thread\+\_\+context Struct Reference}
+\label{structeka2l1_1_1arm_1_1jit__interface_1_1thread__context}\index{eka2l1\+::arm\+::jit\+\_\+interface\+::thread\+\_\+context@{eka2l1\+::arm\+::jit\+\_\+interface\+::thread\+\_\+context}}
+
+
+The thread context Stores register value and some pointer of the C\+PU.  
+
+
+
+
+{\ttfamily \#include $<$jit\+\_\+interface.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structeka2l1_1_1arm_1_1jit__interface_1_1thread__context_af9934c239afc7920b21af29d07491390}\label{structeka2l1_1_1arm_1_1jit__interface_1_1thread__context_af9934c239afc7920b21af29d07491390}} 
+std\+::array$<$ uint32\+\_\+t, 31 $>$ {\bfseries cpu\+\_\+registers}
+\item 
+\mbox{\Hypertarget{structeka2l1_1_1arm_1_1jit__interface_1_1thread__context_a21b7dd7c6cad45034910e9a3f8eac742}\label{structeka2l1_1_1arm_1_1jit__interface_1_1thread__context_a21b7dd7c6cad45034910e9a3f8eac742}} 
+uint64\+\_\+t {\bfseries sp}
+\item 
+\mbox{\Hypertarget{structeka2l1_1_1arm_1_1jit__interface_1_1thread__context_ae05ace3d091e4a9eddc2081313666956}\label{structeka2l1_1_1arm_1_1jit__interface_1_1thread__context_ae05ace3d091e4a9eddc2081313666956}} 
+uint64\+\_\+t {\bfseries pc}
+\item 
+\mbox{\Hypertarget{structeka2l1_1_1arm_1_1jit__interface_1_1thread__context_a760ee30d079dafcb8ac538fb3e482f2e}\label{structeka2l1_1_1arm_1_1jit__interface_1_1thread__context_a760ee30d079dafcb8ac538fb3e482f2e}} 
+uint64\+\_\+t {\bfseries cpsr}
+\item 
+\mbox{\Hypertarget{structeka2l1_1_1arm_1_1jit__interface_1_1thread__context_a585cc0a7cf5f6792bfb9f062c1c6d0b8}\label{structeka2l1_1_1arm_1_1jit__interface_1_1thread__context_a585cc0a7cf5f6792bfb9f062c1c6d0b8}} 
+std\+::array$<$ uint64\+\_\+t, 32 $>$ {\bfseries fpu\+\_\+registers}
+\item 
+\mbox{\Hypertarget{structeka2l1_1_1arm_1_1jit__interface_1_1thread__context_aa911dd74aeeec45661a3d540a5e58b9a}\label{structeka2l1_1_1arm_1_1jit__interface_1_1thread__context_aa911dd74aeeec45661a3d540a5e58b9a}} 
+uint64\+\_\+t {\bfseries fpscr}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The thread context Stores register value and some pointer of the C\+PU. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+emu/core/include/core/arm/jit\+\_\+interface.\+h\end{DoxyCompactItemize}

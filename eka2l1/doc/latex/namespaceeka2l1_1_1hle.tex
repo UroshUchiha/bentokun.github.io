@@ -1,0 +1,395 @@
+\hypertarget{namespaceeka2l1_1_1hle}{}\section{eka2l1\+:\+:hle Namespace Reference}
+\label{namespaceeka2l1_1_1hle}\index{eka2l1\+::hle@{eka2l1\+::hle}}
+
+
+Contains function and class that help connecting between the host and guest (Symbian).  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structeka2l1_1_1hle_1_1arg__layout}{arg\+\_\+layout}}
+\begin{DoxyCompactList}\small\item\em The layout of the argument in E\+A\+BI. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structeka2l1_1_1hle_1_1bridge__type}{bridge\+\_\+type}}
+\item 
+struct \mbox{\hyperlink{structeka2l1_1_1hle_1_1bridge__type_3_01pointee_01_5_01_4}{bridge\+\_\+type$<$ pointee $\ast$ $>$}}
+\item 
+struct \mbox{\hyperlink{structeka2l1_1_1hle_1_1layout__args__state}{layout\+\_\+args\+\_\+state}}
+\item 
+class \mbox{\hyperlink{classeka2l1_1_1hle_1_1lib__manager}{lib\+\_\+manager}}
+\begin{DoxyCompactList}\small\item\em Manage libraries and H\+LE functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_ac5c18795c4eb73b642308964bfe773dd}\label{namespaceeka2l1_1_1hle_ac5c18795c4eb73b642308964bfe773dd}} 
+{\footnotesize template$<$typename... args$>$ }\\using {\bfseries args\+\_\+layout} = std\+::array$<$ \mbox{\hyperlink{structeka2l1_1_1hle_1_1arg__layout}{arg\+\_\+layout}}, sizeof...(args)$>$
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_afd78e8dda0e1cfe5871165e658f14b8e}\label{namespaceeka2l1_1_1hle_afd78e8dda0e1cfe5871165e658f14b8e}} 
+using {\bfseries import\+\_\+func} = std\+::function$<$ void(\mbox{\hyperlink{classeka2l1_1_1system}{system}} $\ast$)$>$
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_ae5bf6e9df6f6c67080b951f166aa4eae}\label{namespaceeka2l1_1_1hle_ae5bf6e9df6f6c67080b951f166aa4eae}} 
+using {\bfseries func\+\_\+map} = std\+::unordered\+\_\+map$<$ uint32\+\_\+t, import\+\_\+func $>$
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_a2bef3a6f353264dce61f6d6a981f424d}\label{namespaceeka2l1_1_1hle_a2bef3a6f353264dce61f6d6a981f424d}} 
+using {\bfseries epoc\+\_\+import\+\_\+func} = std\+::function$<$ void(\mbox{\hyperlink{classeka2l1_1_1system}{system}} $\ast$)$>$
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_a4b57225b8d2741a5b0e9c0a5a594efb4}\label{namespaceeka2l1_1_1hle_a4b57225b8d2741a5b0e9c0a5a594efb4}} 
+enum \mbox{\hyperlink{namespaceeka2l1_1_1hle_a4b57225b8d2741a5b0e9c0a5a594efb4}{arg\+\_\+where}} \{ {\bfseries gpr}, 
+{\bfseries fpr}, 
+{\bfseries stack}
+ \}
+\begin{DoxyCompactList}\small\item\em The location of the argument in E\+A\+BI. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_a7db2075403bf249023cade130e01bb7b}\label{namespaceeka2l1_1_1hle_a7db2075403bf249023cade130e01bb7b}} 
+{\footnotesize template$<$typename ret , typename... args, size\+\_\+t... indices$>$ }\\void \mbox{\hyperlink{namespaceeka2l1_1_1hle_a7db2075403bf249023cade130e01bb7b}{call}} (ret($\ast$export\+\_\+fn)(\mbox{\hyperlink{classeka2l1_1_1system}{system}} $\ast$, args...), const args\+\_\+layout$<$ args... $>$ \&layout, std\+::index\+\_\+sequence$<$ indices... $>$, arm\+::jitter \&cpu, \mbox{\hyperlink{classeka2l1_1_1system}{system}} $\ast$symsys)
+\begin{DoxyCompactList}\small\item\em Call a H\+LE function without return value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_af3f6dd5c791aea6b219bac8ab1cd1379}\label{namespaceeka2l1_1_1hle_af3f6dd5c791aea6b219bac8ab1cd1379}} 
+{\footnotesize template$<$typename... args, size\+\_\+t... indices$>$ }\\void \mbox{\hyperlink{namespaceeka2l1_1_1hle_af3f6dd5c791aea6b219bac8ab1cd1379}{call}} (void($\ast$export\+\_\+fn)(\mbox{\hyperlink{classeka2l1_1_1system}{system}} $\ast$, args...), const args\+\_\+layout$<$ args... $>$ \&layout, std\+::index\+\_\+sequence$<$ indices... $>$, arm\+::jitter \&cpu, \mbox{\hyperlink{classeka2l1_1_1system}{system}} $\ast$symsys)
+\begin{DoxyCompactList}\small\item\em Call a H\+LE function with return value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_a2dc5f180b308b1fe7e164ef49c738983}\label{namespaceeka2l1_1_1hle_a2dc5f180b308b1fe7e164ef49c738983}} 
+{\footnotesize template$<$typename ret , typename... args$>$ }\\import\+\_\+func \mbox{\hyperlink{namespaceeka2l1_1_1hle_a2dc5f180b308b1fe7e164ef49c738983}{bridge}} (ret($\ast$export\+\_\+fn)(\mbox{\hyperlink{classeka2l1_1_1system}{system}} $\ast$, args...))
+\begin{DoxyCompactList}\small\item\em Bridge a H\+LE function to guest (A\+RM -\/ Symbian). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_ac61f147a648cc749728ffc4e25f6df26}\label{namespaceeka2l1_1_1hle_ac61f147a648cc749728ffc4e25f6df26}} 
+{\footnotesize template$<$typename... args, size\+\_\+t... indices$>$ }\\void \mbox{\hyperlink{namespaceeka2l1_1_1hle_ac61f147a648cc749728ffc4e25f6df26}{write\+\_\+args}} (arm\+::jitter \&cpu, const std\+::array$<$ \mbox{\hyperlink{structeka2l1_1_1hle_1_1arg__layout}{arg\+\_\+layout}}, sizeof...(indices)$>$ \&layouts, std\+::index\+\_\+sequence$<$ indices... $>$, \mbox{\hyperlink{classeka2l1_1_1memory__system}{memory\+\_\+system}} $\ast$mem, args... lle\+\_\+args)
+\begin{DoxyCompactList}\small\item\em Write function arguments to guest. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_ae085df31d47d9c53907b6a7cf4cc2360}\label{namespaceeka2l1_1_1hle_ae085df31d47d9c53907b6a7cf4cc2360}} 
+{\footnotesize template$<$typename ret , typename... args$>$ }\\ret \mbox{\hyperlink{namespaceeka2l1_1_1hle_ae085df31d47d9c53907b6a7cf4cc2360}{call\+\_\+lle}} (\mbox{\hyperlink{classeka2l1_1_1hle_1_1lib__manager}{hle\+::lib\+\_\+manager}} $\ast$mngr, arm\+::jitter \&mcpu, \mbox{\hyperlink{classeka2l1_1_1disasm}{disasm}} $\ast$asmdis, \mbox{\hyperlink{classeka2l1_1_1memory__system}{memory\+\_\+system}} $\ast$mem, const address addr, args... lle\+\_\+args)
+\begin{DoxyCompactList}\small\item\em Call a L\+LE function with return value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_a922a3d814ecfe988bd58569c99a44cb3}\label{namespaceeka2l1_1_1hle_a922a3d814ecfe988bd58569c99a44cb3}} 
+{\footnotesize template$<$typename... args$>$ }\\void \mbox{\hyperlink{namespaceeka2l1_1_1hle_a922a3d814ecfe988bd58569c99a44cb3}{call\+\_\+lle\+\_\+void}} (\mbox{\hyperlink{classeka2l1_1_1hle_1_1lib__manager}{hle\+::lib\+\_\+manager}} $\ast$mngr, arm\+::jitter \&mcpu, \mbox{\hyperlink{classeka2l1_1_1disasm}{disasm}} $\ast$asmdis, \mbox{\hyperlink{classeka2l1_1_1memory__system}{memory\+\_\+system}} $\ast$mem, const address addr, args... lle\+\_\+args)
+\begin{DoxyCompactList}\small\item\em Call L\+LE function without return value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_a9ffefa7d4e790908867f1b4d348bfcc3}\label{namespaceeka2l1_1_1hle_a9ffefa7d4e790908867f1b4d348bfcc3}} 
+{\footnotesize template$<$typename... args$>$ }\\void {\bfseries call\+\_\+lle\+\_\+void} (\mbox{\hyperlink{classeka2l1_1_1system}{eka2l1\+::system}} $\ast$sys, const address addr, args... lle\+\_\+args)
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_a8f8474e8d36469f1222cbe821dd2ac93}\label{namespaceeka2l1_1_1hle_a8f8474e8d36469f1222cbe821dd2ac93}} 
+{\footnotesize template$<$typename ret , typename... args$>$ }\\ret {\bfseries call\+\_\+lle} (\mbox{\hyperlink{classeka2l1_1_1system}{eka2l1\+::system}} $\ast$sys, const address addr, args... lle\+\_\+args)
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_a2017fb111614f3ddf19b2eb4d0e18507}\label{namespaceeka2l1_1_1hle_a2017fb111614f3ddf19b2eb4d0e18507}} 
+constexpr size\+\_\+t {\bfseries align} (size\+\_\+t current, size\+\_\+t alignment)
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_aac341a24269a4c195bba639f4d2d57d2}\label{namespaceeka2l1_1_1hle_aac341a24269a4c195bba639f4d2d57d2}} 
+{\footnotesize template$<$typename arg $>$ }\\constexpr std\+::tuple$<$ \mbox{\hyperlink{structeka2l1_1_1hle_1_1arg__layout}{arg\+\_\+layout}}, \mbox{\hyperlink{structeka2l1_1_1hle_1_1layout__args__state}{layout\+\_\+args\+\_\+state}} $>$ {\bfseries add\+\_\+to\+\_\+stack} (const \mbox{\hyperlink{structeka2l1_1_1hle_1_1layout__args__state}{layout\+\_\+args\+\_\+state}} \&state)
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_a7bd99b11b409b54a6a877ad5c7dcced9}\label{namespaceeka2l1_1_1hle_a7bd99b11b409b54a6a877ad5c7dcced9}} 
+{\footnotesize template$<$typename arg $>$ }\\constexpr std\+::tuple$<$ \mbox{\hyperlink{structeka2l1_1_1hle_1_1arg__layout}{arg\+\_\+layout}}, \mbox{\hyperlink{structeka2l1_1_1hle_1_1layout__args__state}{layout\+\_\+args\+\_\+state}} $>$ {\bfseries add\+\_\+to\+\_\+gpr\+\_\+or\+\_\+stack} (const \mbox{\hyperlink{structeka2l1_1_1hle_1_1layout__args__state}{layout\+\_\+args\+\_\+state}} \&state)
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_a6528b86ec78e945ea6e0ea4f5f7ea62e}\label{namespaceeka2l1_1_1hle_a6528b86ec78e945ea6e0ea4f5f7ea62e}} 
+{\footnotesize template$<$typename arg $>$ }\\constexpr std\+::tuple$<$ \mbox{\hyperlink{structeka2l1_1_1hle_1_1arg__layout}{arg\+\_\+layout}}, \mbox{\hyperlink{structeka2l1_1_1hle_1_1layout__args__state}{layout\+\_\+args\+\_\+state}} $>$ {\bfseries add\+\_\+to\+\_\+fpr} (const \mbox{\hyperlink{structeka2l1_1_1hle_1_1layout__args__state}{layout\+\_\+args\+\_\+state}} \&state)
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_a06185d833847528778be55e53d903e7a}\label{namespaceeka2l1_1_1hle_a06185d833847528778be55e53d903e7a}} 
+{\footnotesize template$<$typename arg $>$ }\\constexpr std\+::tuple$<$ \mbox{\hyperlink{structeka2l1_1_1hle_1_1arg__layout}{arg\+\_\+layout}}, \mbox{\hyperlink{structeka2l1_1_1hle_1_1layout__args__state}{layout\+\_\+args\+\_\+state}} $>$ {\bfseries add\+\_\+arg\+\_\+to\+\_\+layout} (const \mbox{\hyperlink{structeka2l1_1_1hle_1_1layout__args__state}{layout\+\_\+args\+\_\+state}} \&state)
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_a611c15aef48cf624fa5c4c60066f52e2}\label{namespaceeka2l1_1_1hle_a611c15aef48cf624fa5c4c60066f52e2}} 
+{\footnotesize template$<$typename... args$>$ }\\constexpr std\+::enable\+\_\+if\+\_\+t$<$ sizeof...(args)==0 $>$ {\bfseries add\+\_\+args\+\_\+to\+\_\+layout} (\mbox{\hyperlink{structeka2l1_1_1hle_1_1arg__layout}{arg\+\_\+layout}} \&head, \mbox{\hyperlink{structeka2l1_1_1hle_1_1layout__args__state}{layout\+\_\+args\+\_\+state}} \&state)
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_aff410ec1cd04cd8b6f3a1e1e24e7a9c1}\label{namespaceeka2l1_1_1hle_aff410ec1cd04cd8b6f3a1e1e24e7a9c1}} 
+{\footnotesize template$<$typename head , typename... tail$>$ }\\constexpr void {\bfseries add\+\_\+args\+\_\+to\+\_\+layout} (\mbox{\hyperlink{structeka2l1_1_1hle_1_1arg__layout}{arg\+\_\+layout}} \&mhead, \mbox{\hyperlink{structeka2l1_1_1hle_1_1layout__args__state}{layout\+\_\+args\+\_\+state}} \&state)
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_afd67044557902225d8870565309b7cb6}\label{namespaceeka2l1_1_1hle_afd67044557902225d8870565309b7cb6}} 
+{\footnotesize template$<$typename... args$>$ }\\constexpr args\+\_\+layout$<$ args... $>$ \mbox{\hyperlink{namespaceeka2l1_1_1hle_afd67044557902225d8870565309b7cb6}{lay\+\_\+out}} ()
+\begin{DoxyCompactList}\small\item\em Given arguments and its types, make layout of those arguments in E\+A\+BI. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_a6e45a35e535e733df6cb8322a76f66ef}\label{namespaceeka2l1_1_1hle_a6e45a35e535e733df6cb8322a76f66ef}} 
+return $\ast$ {\bfseries reinterpret\+\_\+cast$<$ const T $\ast$ $>$} (\&reg)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::enable\+\_\+if\+\_\+t$<$ sizeof(T)==8, T $>$ \mbox{\hyperlink{namespaceeka2l1_1_1hle_a968725b7666c3d213e81ac7265711168}{read\+\_\+from\+\_\+gpr}} (arm\+::jitter \&cpu, const \mbox{\hyperlink{structeka2l1_1_1hle_1_1arg__layout}{arg\+\_\+layout}} \&arg)
+\begin{DoxyCompactList}\small\item\em Reading an argument from the registers. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{namespaceeka2l1_1_1hle_a06dcf3812cb3b4a4da72776119725804}{read\+\_\+from\+\_\+fpr}} (arm\+::jitter \&cpu, const \mbox{\hyperlink{structeka2l1_1_1hle_1_1arg__layout}{arg\+\_\+layout}} \&arg)
+\begin{DoxyCompactList}\small\item\em Reading an argument from the float registers. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{namespaceeka2l1_1_1hle_a03511f857172408b7e75dfef5c97b7d5}{read\+\_\+from\+\_\+stack}} (arm\+::jitter \&cpu, const \mbox{\hyperlink{structeka2l1_1_1hle_1_1arg__layout}{arg\+\_\+layout}} \&layout, \mbox{\hyperlink{classeka2l1_1_1memory__system}{memory\+\_\+system}} $\ast$mem)
+\begin{DoxyCompactList}\small\item\em Reading an argument from stack. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{namespaceeka2l1_1_1hle_af2d821b701c6bea2502bce0082bf559f}{read}} (arm\+::jitter \&cpu, const \mbox{\hyperlink{structeka2l1_1_1hle_1_1arg__layout}{arg\+\_\+layout}} \&layout, \mbox{\hyperlink{classeka2l1_1_1memory__system}{memory\+\_\+system}} $\ast$mem)
+\begin{DoxyCompactList}\small\item\em Reading an argument. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename arg , size\+\_\+t idx, typename... args$>$ }\\arg \mbox{\hyperlink{namespaceeka2l1_1_1hle_a64973765adfec41cb53c96858b46cd22}{read}} (arm\+::jitter \&cpu, const args\+\_\+layout$<$ args... $>$ \&margs, \mbox{\hyperlink{classeka2l1_1_1memory__system}{memory\+\_\+system}} $\ast$mem)
+\begin{DoxyCompactList}\small\item\em Reading an argument. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename ret $>$ }\\void \mbox{\hyperlink{namespaceeka2l1_1_1hle_ae6e670dc04b65bf275586cd1e5183d2b}{write\+\_\+return\+\_\+value}} (arm\+::jitter \&cpu, ret ret)
+\begin{DoxyCompactList}\small\item\em Writing the return value to r0. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename pointee $>$ }\\void \mbox{\hyperlink{namespaceeka2l1_1_1hle_a4459527ec360342d62e8cb01de2634f4}{write\+\_\+return\+\_\+value}} (arm\+::jitter \&cpu, \mbox{\hyperlink{classeka2l1_1_1ptr}{ptr}}$<$ pointee $>$ ret)
+\begin{DoxyCompactList}\small\item\em Writing the return value to r0. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename ret $>$ }\\ret \mbox{\hyperlink{namespaceeka2l1_1_1hle_a8ef613fd50bfcf8c9f12277fab20005b}{read\+\_\+return\+\_\+value}} (arm\+::jitter \&cpu)
+\begin{DoxyCompactList}\small\item\em Reading the return value in r0. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_ac65c3d07be4c03479e5daf5a67f6a43f}\label{namespaceeka2l1_1_1hle_ac65c3d07be4c03479e5daf5a67f6a43f}} 
+{\footnotesize template$<$typename... args$>$ }\\void {\bfseries set\+\_\+vptr\+\_\+cpu} (\mbox{\hyperlink{classeka2l1_1_1memory__system}{memory\+\_\+system}} $\ast$mem, arm\+::jitter \&jitter, uint32\+\_\+t $\ast$vtab, uint32\+\_\+t idx, args... func\+\_\+args)
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_a0b325c11bead99365d57fae586d47cf8}\label{namespaceeka2l1_1_1hle_a0b325c11bead99365d57fae586d47cf8}} 
+{\footnotesize template$<$typename T $>$ }\\std\+::enable\+\_\+if\+\_\+t$<$ sizeof(T)==8 $>$ {\bfseries read\+\_\+from\+\_\+gpr} (arm\+::jitter \&cpu, const \mbox{\hyperlink{structeka2l1_1_1hle_1_1arg__layout}{arg\+\_\+layout}} \&arg, const T \&data)
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_a1c6ecd94770048f1183f6d46da136ebb}\label{namespaceeka2l1_1_1hle_a1c6ecd94770048f1183f6d46da136ebb}} 
+{\footnotesize template$<$typename T $>$ }\\void {\bfseries write\+\_\+to\+\_\+fpr} (arm\+::jitter \&cpu, const \mbox{\hyperlink{structeka2l1_1_1hle_1_1arg__layout}{arg\+\_\+layout}} \&arg)
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_a18301438eaf413cdb8f99d19d9e384ba}\label{namespaceeka2l1_1_1hle_a18301438eaf413cdb8f99d19d9e384ba}} 
+{\footnotesize template$<$typename T $>$ }\\void {\bfseries write\+\_\+to\+\_\+stack} (arm\+::jitter \&cpu, const \mbox{\hyperlink{structeka2l1_1_1hle_1_1arg__layout}{arg\+\_\+layout}} \&layout, \mbox{\hyperlink{classeka2l1_1_1memory__system}{memory\+\_\+system}} $\ast$mem, const T \&data)
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_ad93869b90ae689e9a864034429279bb6}\label{namespaceeka2l1_1_1hle_ad93869b90ae689e9a864034429279bb6}} 
+{\footnotesize template$<$typename T $>$ }\\void {\bfseries write} (arm\+::jitter \&cpu, const \mbox{\hyperlink{structeka2l1_1_1hle_1_1arg__layout}{arg\+\_\+layout}} \&layout, \mbox{\hyperlink{classeka2l1_1_1memory__system}{memory\+\_\+system}} $\ast$mem, const T \&val)
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_ae30d055617b11dff5be32ca7db4b414c}\label{namespaceeka2l1_1_1hle_ae30d055617b11dff5be32ca7db4b414c}} 
+{\footnotesize template$<$typename arg , size\+\_\+t idx, typename... args$>$ }\\void {\bfseries write} (arm\+::jitter \&cpu, const args\+\_\+layout$<$ args... $>$ \&margs, \mbox{\hyperlink{classeka2l1_1_1memory__system}{memory\+\_\+system}} $\ast$mem, arg val)
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_acacf05da69d71c973729f47a74fd5dd4}\label{namespaceeka2l1_1_1hle_acacf05da69d71c973729f47a74fd5dd4}} 
+{\footnotesize template$<$$>$ }\\void {\bfseries write\+\_\+return\+\_\+value} (arm\+::jitter \&cpu, uint16\+\_\+t ret)
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_a50660051503c6dc8bff0f5e6cc060c64}\label{namespaceeka2l1_1_1hle_a50660051503c6dc8bff0f5e6cc060c64}} 
+{\footnotesize template$<$$>$ }\\void {\bfseries write\+\_\+return\+\_\+value} (arm\+::jitter \&cpu, int32\+\_\+t ret)
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_a97c59e0201e87ad3f152aec275e70c22}\label{namespaceeka2l1_1_1hle_a97c59e0201e87ad3f152aec275e70c22}} 
+{\footnotesize template$<$$>$ }\\void {\bfseries write\+\_\+return\+\_\+value} (arm\+::jitter \&cpu, uint32\+\_\+t ret)
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_a57a148c71c147dd3e7a148852b161d1b}\label{namespaceeka2l1_1_1hle_a57a148c71c147dd3e7a148852b161d1b}} 
+{\footnotesize template$<$$>$ }\\void {\bfseries write\+\_\+return\+\_\+value} (arm\+::jitter \&cpu, bool ret)
+\item 
+{\footnotesize template$<$$>$ }\\uint16\+\_\+t \mbox{\hyperlink{namespaceeka2l1_1_1hle_a780d6d557ea10ebdc69e3e6cee88901b}{read\+\_\+return\+\_\+value}} (arm\+::jitter \&cpu)
+\begin{DoxyCompactList}\small\item\em Reading the return value in r0. \end{DoxyCompactList}\item 
+{\footnotesize template$<$$>$ }\\uint32\+\_\+t \mbox{\hyperlink{namespaceeka2l1_1_1hle_abddacbce52d394bce6e0b07d40fea31c}{read\+\_\+return\+\_\+value}} (arm\+::jitter \&cpu)
+\begin{DoxyCompactList}\small\item\em Reading the return value in r0. \end{DoxyCompactList}\item 
+{\footnotesize template$<$$>$ }\\int32\+\_\+t \mbox{\hyperlink{namespaceeka2l1_1_1hle_aa6a9bac062ed454de970279a2e54df31}{read\+\_\+return\+\_\+value}} (arm\+::jitter \&cpu)
+\begin{DoxyCompactList}\small\item\em Reading the return value in r0. \end{DoxyCompactList}\item 
+{\footnotesize template$<$$>$ }\\bool \mbox{\hyperlink{namespaceeka2l1_1_1hle_a1828abc8545af2551c544efc26c2a817}{read\+\_\+return\+\_\+value}} (arm\+::jitter \&cpu)
+\begin{DoxyCompactList}\small\item\em Reading the return value in r0. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::enable\+\_\+if\+\_\+t$<$ sizeof(T)$<$=4, T $>$ \mbox{\hyperlink{namespaceeka2l1_1_1hle_a968725b7666c3d213e81ac7265711168}{read\+\_\+from\+\_\+gpr}}(arm\+::jitter \&cpu, const \mbox{\hyperlink{structeka2l1_1_1hle_1_1arg__layout}{arg\+\_\+layout}} \&arg) \{ const uint32\+\_\+t reg=cpu-\/$>$ \mbox{\hyperlink{namespaceeka2l1_1_1hle_ae2b6a20800f71c68b2eb69e136b73b39}{get\+\_\+reg}} (arg.\+offset)
+\begin{DoxyCompactList}\small\item\em Reading an argument from the registers. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_af2807f14c730afa46c189647e1359daa}\label{namespaceeka2l1_1_1hle_af2807f14c730afa46c189647e1359daa}} 
+{\footnotesize template$<$typename T $>$ }\\std\+::enable\+\_\+if\+\_\+t$<$ sizeof(T)$<$=4 $>$ write\+\_\+to\+\_\+gpr(arm\+::jitter \&cpu, const \mbox{\hyperlink{structeka2l1_1_1hle_1_1arg__layout}{arg\+\_\+layout}} \&arg, const T \&data) \{ cpu-\/$>$ {\bfseries set\+\_\+reg} (arg.\+offset, $\ast$reinterpret\+\_\+cast$<$ const uint32\+\_\+t $\ast$$>$(\&data))
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains function and class that help connecting between the host and guest (Symbian). 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_af2d821b701c6bea2502bce0082bf559f}\label{namespaceeka2l1_1_1hle_af2d821b701c6bea2502bce0082bf559f}} 
+\index{eka2l1\+::hle@{eka2l1\+::hle}!read@{read}}
+\index{read@{read}!eka2l1\+::hle@{eka2l1\+::hle}}
+\subsubsection{\texorpdfstring{read()}{read()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T eka2l1\+::hle\+::read (\begin{DoxyParamCaption}\item[{arm\+::jitter \&}]{cpu,  }\item[{const \mbox{\hyperlink{structeka2l1_1_1hle_1_1arg__layout}{arg\+\_\+layout}} \&}]{layout,  }\item[{\mbox{\hyperlink{classeka2l1_1_1memory__system}{memory\+\_\+system}} $\ast$}]{mem }\end{DoxyParamCaption})}
+
+
+
+Reading an argument. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cpu} & The C\+PU. \\
+\hline
+{\em arg} & The layout of that argument. \\
+\hline
+{\em mem} & The memory system. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_a64973765adfec41cb53c96858b46cd22}\label{namespaceeka2l1_1_1hle_a64973765adfec41cb53c96858b46cd22}} 
+\index{eka2l1\+::hle@{eka2l1\+::hle}!read@{read}}
+\index{read@{read}!eka2l1\+::hle@{eka2l1\+::hle}}
+\subsubsection{\texorpdfstring{read()}{read()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename arg , size\+\_\+t idx, typename... args$>$ \\
+arg eka2l1\+::hle\+::read (\begin{DoxyParamCaption}\item[{arm\+::jitter \&}]{cpu,  }\item[{const args\+\_\+layout$<$ args... $>$ \&}]{margs,  }\item[{\mbox{\hyperlink{classeka2l1_1_1memory__system}{memory\+\_\+system}} $\ast$}]{mem }\end{DoxyParamCaption})}
+
+
+
+Reading an argument. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cpu} & The C\+PU. \\
+\hline
+{\em arg} & The layout of that argument. \\
+\hline
+{\em mem} & The memory system. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_a06dcf3812cb3b4a4da72776119725804}\label{namespaceeka2l1_1_1hle_a06dcf3812cb3b4a4da72776119725804}} 
+\index{eka2l1\+::hle@{eka2l1\+::hle}!read\+\_\+from\+\_\+fpr@{read\+\_\+from\+\_\+fpr}}
+\index{read\+\_\+from\+\_\+fpr@{read\+\_\+from\+\_\+fpr}!eka2l1\+::hle@{eka2l1\+::hle}}
+\subsubsection{\texorpdfstring{read\+\_\+from\+\_\+fpr()}{read\_from\_fpr()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T eka2l1\+::hle\+::read\+\_\+from\+\_\+fpr (\begin{DoxyParamCaption}\item[{arm\+::jitter \&}]{cpu,  }\item[{const \mbox{\hyperlink{structeka2l1_1_1hle_1_1arg__layout}{arg\+\_\+layout}} \&}]{arg }\end{DoxyParamCaption})}
+
+
+
+Reading an argument from the float registers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cpu} & The C\+PU. \\
+\hline
+{\em arg} & The layout of that argument. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_a968725b7666c3d213e81ac7265711168}\label{namespaceeka2l1_1_1hle_a968725b7666c3d213e81ac7265711168}} 
+\index{eka2l1\+::hle@{eka2l1\+::hle}!read\+\_\+from\+\_\+gpr@{read\+\_\+from\+\_\+gpr}}
+\index{read\+\_\+from\+\_\+gpr@{read\+\_\+from\+\_\+gpr}!eka2l1\+::hle@{eka2l1\+::hle}}
+\subsubsection{\texorpdfstring{read\+\_\+from\+\_\+gpr()}{read\_from\_gpr()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::enable\+\_\+if\+\_\+t$<$sizeof(T) == 8, T$>$ eka2l1\+::hle\+::read\+\_\+from\+\_\+gpr (\begin{DoxyParamCaption}\item[{arm\+::jitter \&}]{cpu,  }\item[{const \mbox{\hyperlink{structeka2l1_1_1hle_1_1arg__layout}{arg\+\_\+layout}} \&}]{arg }\end{DoxyParamCaption})}
+
+
+
+Reading an argument from the registers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cpu} & The C\+PU. \\
+\hline
+{\em arg} & The layout of that argument. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_a03511f857172408b7e75dfef5c97b7d5}\label{namespaceeka2l1_1_1hle_a03511f857172408b7e75dfef5c97b7d5}} 
+\index{eka2l1\+::hle@{eka2l1\+::hle}!read\+\_\+from\+\_\+stack@{read\+\_\+from\+\_\+stack}}
+\index{read\+\_\+from\+\_\+stack@{read\+\_\+from\+\_\+stack}!eka2l1\+::hle@{eka2l1\+::hle}}
+\subsubsection{\texorpdfstring{read\+\_\+from\+\_\+stack()}{read\_from\_stack()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T eka2l1\+::hle\+::read\+\_\+from\+\_\+stack (\begin{DoxyParamCaption}\item[{arm\+::jitter \&}]{cpu,  }\item[{const \mbox{\hyperlink{structeka2l1_1_1hle_1_1arg__layout}{arg\+\_\+layout}} \&}]{layout,  }\item[{\mbox{\hyperlink{classeka2l1_1_1memory__system}{memory\+\_\+system}} $\ast$}]{mem }\end{DoxyParamCaption})}
+
+
+
+Reading an argument from stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cpu} & The C\+PU. \\
+\hline
+{\em arg} & The layout of that argument. \\
+\hline
+{\em mem} & The memory system. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_a780d6d557ea10ebdc69e3e6cee88901b}\label{namespaceeka2l1_1_1hle_a780d6d557ea10ebdc69e3e6cee88901b}} 
+\index{eka2l1\+::hle@{eka2l1\+::hle}!read\+\_\+return\+\_\+value@{read\+\_\+return\+\_\+value}}
+\index{read\+\_\+return\+\_\+value@{read\+\_\+return\+\_\+value}!eka2l1\+::hle@{eka2l1\+::hle}}
+\subsubsection{\texorpdfstring{read\+\_\+return\+\_\+value()}{read\_return\_value()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+uint16\+\_\+t eka2l1\+::hle\+::read\+\_\+return\+\_\+value (\begin{DoxyParamCaption}\item[{arm\+::jitter \&}]{cpu }\end{DoxyParamCaption})}
+
+
+
+Reading the return value in r0. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cpu} & The C\+PU. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_abddacbce52d394bce6e0b07d40fea31c}\label{namespaceeka2l1_1_1hle_abddacbce52d394bce6e0b07d40fea31c}} 
+\index{eka2l1\+::hle@{eka2l1\+::hle}!read\+\_\+return\+\_\+value@{read\+\_\+return\+\_\+value}}
+\index{read\+\_\+return\+\_\+value@{read\+\_\+return\+\_\+value}!eka2l1\+::hle@{eka2l1\+::hle}}
+\subsubsection{\texorpdfstring{read\+\_\+return\+\_\+value()}{read\_return\_value()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+uint32\+\_\+t eka2l1\+::hle\+::read\+\_\+return\+\_\+value (\begin{DoxyParamCaption}\item[{arm\+::jitter \&}]{cpu }\end{DoxyParamCaption})}
+
+
+
+Reading the return value in r0. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cpu} & The C\+PU. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_aa6a9bac062ed454de970279a2e54df31}\label{namespaceeka2l1_1_1hle_aa6a9bac062ed454de970279a2e54df31}} 
+\index{eka2l1\+::hle@{eka2l1\+::hle}!read\+\_\+return\+\_\+value@{read\+\_\+return\+\_\+value}}
+\index{read\+\_\+return\+\_\+value@{read\+\_\+return\+\_\+value}!eka2l1\+::hle@{eka2l1\+::hle}}
+\subsubsection{\texorpdfstring{read\+\_\+return\+\_\+value()}{read\_return\_value()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+int32\+\_\+t eka2l1\+::hle\+::read\+\_\+return\+\_\+value (\begin{DoxyParamCaption}\item[{arm\+::jitter \&}]{cpu }\end{DoxyParamCaption})}
+
+
+
+Reading the return value in r0. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cpu} & The C\+PU. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_a1828abc8545af2551c544efc26c2a817}\label{namespaceeka2l1_1_1hle_a1828abc8545af2551c544efc26c2a817}} 
+\index{eka2l1\+::hle@{eka2l1\+::hle}!read\+\_\+return\+\_\+value@{read\+\_\+return\+\_\+value}}
+\index{read\+\_\+return\+\_\+value@{read\+\_\+return\+\_\+value}!eka2l1\+::hle@{eka2l1\+::hle}}
+\subsubsection{\texorpdfstring{read\+\_\+return\+\_\+value()}{read\_return\_value()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+bool eka2l1\+::hle\+::read\+\_\+return\+\_\+value (\begin{DoxyParamCaption}\item[{arm\+::jitter \&}]{cpu }\end{DoxyParamCaption})}
+
+
+
+Reading the return value in r0. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cpu} & The C\+PU. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_a8ef613fd50bfcf8c9f12277fab20005b}\label{namespaceeka2l1_1_1hle_a8ef613fd50bfcf8c9f12277fab20005b}} 
+\index{eka2l1\+::hle@{eka2l1\+::hle}!read\+\_\+return\+\_\+value@{read\+\_\+return\+\_\+value}}
+\index{read\+\_\+return\+\_\+value@{read\+\_\+return\+\_\+value}!eka2l1\+::hle@{eka2l1\+::hle}}
+\subsubsection{\texorpdfstring{read\+\_\+return\+\_\+value()}{read\_return\_value()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily template$<$typename ret $>$ \\
+ret eka2l1\+::hle\+::read\+\_\+return\+\_\+value (\begin{DoxyParamCaption}\item[{arm\+::jitter \&}]{cpu }\end{DoxyParamCaption})}
+
+
+
+Reading the return value in r0. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cpu} & The C\+PU. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_ae6e670dc04b65bf275586cd1e5183d2b}\label{namespaceeka2l1_1_1hle_ae6e670dc04b65bf275586cd1e5183d2b}} 
+\index{eka2l1\+::hle@{eka2l1\+::hle}!write\+\_\+return\+\_\+value@{write\+\_\+return\+\_\+value}}
+\index{write\+\_\+return\+\_\+value@{write\+\_\+return\+\_\+value}!eka2l1\+::hle@{eka2l1\+::hle}}
+\subsubsection{\texorpdfstring{write\+\_\+return\+\_\+value()}{write\_return\_value()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename ret $>$ \\
+void eka2l1\+::hle\+::write\+\_\+return\+\_\+value (\begin{DoxyParamCaption}\item[{arm\+::jitter \&}]{cpu,  }\item[{ret}]{ret }\end{DoxyParamCaption})}
+
+
+
+Writing the return value to r0. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cpu} & The C\+PU. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_a4459527ec360342d62e8cb01de2634f4}\label{namespaceeka2l1_1_1hle_a4459527ec360342d62e8cb01de2634f4}} 
+\index{eka2l1\+::hle@{eka2l1\+::hle}!write\+\_\+return\+\_\+value@{write\+\_\+return\+\_\+value}}
+\index{write\+\_\+return\+\_\+value@{write\+\_\+return\+\_\+value}!eka2l1\+::hle@{eka2l1\+::hle}}
+\subsubsection{\texorpdfstring{write\+\_\+return\+\_\+value()}{write\_return\_value()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename pointee $>$ \\
+void eka2l1\+::hle\+::write\+\_\+return\+\_\+value (\begin{DoxyParamCaption}\item[{arm\+::jitter \&}]{cpu,  }\item[{\mbox{\hyperlink{classeka2l1_1_1ptr}{ptr}}$<$ pointee $>$}]{ret }\end{DoxyParamCaption})}
+
+
+
+Writing the return value to r0. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cpu} & The C\+PU. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespaceeka2l1_1_1hle_ae2b6a20800f71c68b2eb69e136b73b39}\label{namespaceeka2l1_1_1hle_ae2b6a20800f71c68b2eb69e136b73b39}} 
+\index{eka2l1\+::hle@{eka2l1\+::hle}!get\+\_\+reg@{get\+\_\+reg}}
+\index{get\+\_\+reg@{get\+\_\+reg}!eka2l1\+::hle@{eka2l1\+::hle}}
+\subsubsection{\texorpdfstring{get\+\_\+reg}{get\_reg}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::enable\+\_\+if\+\_\+t$<$sizeof(T) $<$= 4, T$>$ \mbox{\hyperlink{namespaceeka2l1_1_1hle_a968725b7666c3d213e81ac7265711168}{read\+\_\+from\+\_\+gpr}}(arm\+::jitter \&cpu, const \mbox{\hyperlink{structeka2l1_1_1hle_1_1arg__layout}{arg\+\_\+layout}} \&arg) \{ const uint32\+\_\+t reg = cpu-\/$>$ eka2l1\+::hle\+::get\+\_\+reg(arg.\+offset)}
+
+
+
+Reading an argument from the registers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cpu} & The C\+PU. \\
+\hline
+{\em arg} & The layout of that argument. \\
+\hline
+\end{DoxyParams}

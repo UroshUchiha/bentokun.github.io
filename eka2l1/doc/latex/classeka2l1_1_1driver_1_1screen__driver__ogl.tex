@@ -1,0 +1,121 @@
+\hypertarget{classeka2l1_1_1driver_1_1screen__driver__ogl}{}\section{eka2l1\+:\+:driver\+:\+:screen\+\_\+driver\+\_\+ogl Class Reference}
+\label{classeka2l1_1_1driver_1_1screen__driver__ogl}\index{eka2l1\+::driver\+::screen\+\_\+driver\+\_\+ogl@{eka2l1\+::driver\+::screen\+\_\+driver\+\_\+ogl}}
+Inheritance diagram for eka2l1\+:\+:driver\+:\+:screen\+\_\+driver\+\_\+ogl\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classeka2l1_1_1driver_1_1screen__driver__ogl}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1driver_1_1screen__driver__ogl_ad597786c0c026e8b2a2cc877ff0b1b56}\label{classeka2l1_1_1driver_1_1screen__driver__ogl_ad597786c0c026e8b2a2cc877ff0b1b56}} 
+\mbox{\hyperlink{structeka2l1_1_1vec2}{eka2l1\+::vec2}} {\bfseries get\+\_\+window\+\_\+size} () override
+\item 
+void \mbox{\hyperlink{classeka2l1_1_1driver_1_1screen__driver__ogl_a51a7f69eb40e7ca2272c627061e010ba}{init}} (emu\+\_\+window\+\_\+ptr win, \mbox{\hyperlink{structeka2l1_1_1object__size}{object\+\_\+size}} \&screen\+\_\+size, \mbox{\hyperlink{structeka2l1_1_1object__size}{object\+\_\+size}} \&font\+\_\+size) override
+\begin{DoxyCompactList}\small\item\em Intialize the screen driver. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeka2l1_1_1driver_1_1screen__driver__ogl_a3a3c73745387678ace793a56524b79f7}\label{classeka2l1_1_1driver_1_1screen__driver__ogl_a3a3c73745387678ace793a56524b79f7}} 
+void \mbox{\hyperlink{classeka2l1_1_1driver_1_1screen__driver__ogl_a3a3c73745387678ace793a56524b79f7}{shutdown}} () override
+\begin{DoxyCompactList}\small\item\em Shutdown the screen driver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classeka2l1_1_1driver_1_1screen__driver__ogl_ad1516779373ac8f97c42cc3dddf6cab1}{blit}} (const std\+::string \&text, \mbox{\hyperlink{structeka2l1_1_1vec2}{point}} \&where) override
+\begin{DoxyCompactList}\small\item\em Blit text to the screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeka2l1_1_1driver_1_1screen__driver__ogl_a175ff4bfe5ce2a4200657caaa512e0a2}\label{classeka2l1_1_1driver_1_1screen__driver__ogl_a175ff4bfe5ce2a4200657caaa512e0a2}} 
+bool {\bfseries scroll\+\_\+up} (\mbox{\hyperlink{structeka2l1_1_1rect}{rect}} \&trect) override
+\item 
+void \mbox{\hyperlink{classeka2l1_1_1driver_1_1screen__driver__ogl_a876d4f6acd98260c192c5b5a1f39d5f8}{clear}} (\mbox{\hyperlink{structeka2l1_1_1rect}{rect}} \&trect) override
+\begin{DoxyCompactList}\small\item\em Clear the screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeka2l1_1_1driver_1_1screen__driver__ogl_a543b6b749f7d34c3af1b3914b249c21f}\label{classeka2l1_1_1driver_1_1screen__driver__ogl_a543b6b749f7d34c3af1b3914b249c21f}} 
+void {\bfseries set\+\_\+pixel} (const \mbox{\hyperlink{structeka2l1_1_1vec2}{point}} \&pos, uint8\+\_\+t color) override
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1driver_1_1screen__driver__ogl_ad3891957287aa4b521b3889bdb176181}\label{classeka2l1_1_1driver_1_1screen__driver__ogl_ad3891957287aa4b521b3889bdb176181}} 
+int {\bfseries get\+\_\+pixel} (const \mbox{\hyperlink{structeka2l1_1_1vec2}{point}} \&pos) override
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1driver_1_1screen__driver__ogl_a7855d854bede1c629d93143d2bf00047}\label{classeka2l1_1_1driver_1_1screen__driver__ogl_a7855d854bede1c629d93143d2bf00047}} 
+void {\bfseries set\+\_\+word} (const \mbox{\hyperlink{structeka2l1_1_1vec2}{point}} \&pos, int word) override
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1driver_1_1screen__driver__ogl_ac75fb6a1ffc175333bfd77243b895666}\label{classeka2l1_1_1driver_1_1screen__driver__ogl_ac75fb6a1ffc175333bfd77243b895666}} 
+int {\bfseries get\+\_\+word} (const \mbox{\hyperlink{structeka2l1_1_1vec2}{point}} \&pos) override
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1driver_1_1screen__driver__ogl_a2ac0b8719a2d67e46713999c1fdbe7b1}\label{classeka2l1_1_1driver_1_1screen__driver__ogl_a2ac0b8719a2d67e46713999c1fdbe7b1}} 
+void {\bfseries set\+\_\+line} (const \mbox{\hyperlink{structeka2l1_1_1vec2}{point}} \&pos, const pixel\+\_\+line \&pl) override
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1driver_1_1screen__driver__ogl_a61f0d6219ef909bb695b4f5f793ffe1b}\label{classeka2l1_1_1driver_1_1screen__driver__ogl_a61f0d6219ef909bb695b4f5f793ffe1b}} 
+void {\bfseries get\+\_\+line} (const \mbox{\hyperlink{structeka2l1_1_1vec2}{point}} \&pos, pixel\+\_\+line \&pl) override
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1driver_1_1screen__driver__ogl_ab0e9ae8e39717fde7655c4793e65245a}\label{classeka2l1_1_1driver_1_1screen__driver__ogl_ab0e9ae8e39717fde7655c4793e65245a}} 
+void {\bfseries begin\+\_\+render} () override
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1driver_1_1screen__driver__ogl_aaa9f21889a74f241016fbc0352954d8f}\label{classeka2l1_1_1driver_1_1screen__driver__ogl_aaa9f21889a74f241016fbc0352954d8f}} 
+void {\bfseries end\+\_\+render} () override
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classeka2l1_1_1driver_1_1screen__driver__ogl_ad1516779373ac8f97c42cc3dddf6cab1}\label{classeka2l1_1_1driver_1_1screen__driver__ogl_ad1516779373ac8f97c42cc3dddf6cab1}} 
+\index{eka2l1\+::driver\+::screen\+\_\+driver\+\_\+ogl@{eka2l1\+::driver\+::screen\+\_\+driver\+\_\+ogl}!blit@{blit}}
+\index{blit@{blit}!eka2l1\+::driver\+::screen\+\_\+driver\+\_\+ogl@{eka2l1\+::driver\+::screen\+\_\+driver\+\_\+ogl}}
+\subsubsection{\texorpdfstring{blit()}{blit()}}
+{\footnotesize\ttfamily void eka2l1\+::driver\+::screen\+\_\+driver\+\_\+ogl\+::blit (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text,  }\item[{\mbox{\hyperlink{structeka2l1_1_1vec2}{point}} \&}]{where }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Blit text to the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em where} & Position to draw the text. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classeka2l1_1_1driver_1_1screen__driver_a8517ad66ef54e263f3ce38ac5fb34347}{eka2l1\+::driver\+::screen\+\_\+driver}}.
+
+\mbox{\Hypertarget{classeka2l1_1_1driver_1_1screen__driver__ogl_a876d4f6acd98260c192c5b5a1f39d5f8}\label{classeka2l1_1_1driver_1_1screen__driver__ogl_a876d4f6acd98260c192c5b5a1f39d5f8}} 
+\index{eka2l1\+::driver\+::screen\+\_\+driver\+\_\+ogl@{eka2l1\+::driver\+::screen\+\_\+driver\+\_\+ogl}!clear@{clear}}
+\index{clear@{clear}!eka2l1\+::driver\+::screen\+\_\+driver\+\_\+ogl@{eka2l1\+::driver\+::screen\+\_\+driver\+\_\+ogl}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void eka2l1\+::driver\+::screen\+\_\+driver\+\_\+ogl\+::clear (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structeka2l1_1_1rect}{rect}} \&}]{trect }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Clear the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em trect} & The area to clear. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classeka2l1_1_1driver_1_1screen__driver_a9b963b43dc70b16781121238f713acb3}{eka2l1\+::driver\+::screen\+\_\+driver}}.
+
+\mbox{\Hypertarget{classeka2l1_1_1driver_1_1screen__driver__ogl_a51a7f69eb40e7ca2272c627061e010ba}\label{classeka2l1_1_1driver_1_1screen__driver__ogl_a51a7f69eb40e7ca2272c627061e010ba}} 
+\index{eka2l1\+::driver\+::screen\+\_\+driver\+\_\+ogl@{eka2l1\+::driver\+::screen\+\_\+driver\+\_\+ogl}!init@{init}}
+\index{init@{init}!eka2l1\+::driver\+::screen\+\_\+driver\+\_\+ogl@{eka2l1\+::driver\+::screen\+\_\+driver\+\_\+ogl}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void eka2l1\+::driver\+::screen\+\_\+driver\+\_\+ogl\+::init (\begin{DoxyParamCaption}\item[{emu\+\_\+window\+\_\+ptr}]{win,  }\item[{\mbox{\hyperlink{structeka2l1_1_1object__size}{object\+\_\+size}} \&}]{screen\+\_\+size,  }\item[{\mbox{\hyperlink{structeka2l1_1_1object__size}{object\+\_\+size}} \&}]{font\+\_\+size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Intialize the screen driver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em win} & The emulator window. \\
+\hline
+{\em screen\+\_\+size} & The screen size. \\
+\hline
+{\em font\+\_\+size} & The font size. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classeka2l1_1_1driver_1_1screen__driver_a3005e77e403bc233112e7b9f32873b72}{eka2l1\+::driver\+::screen\+\_\+driver}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+emu/core/include/core/drivers/backend/screen\+\_\+driver\+\_\+gl.\+h\item 
+emu/core/src/drivers/backend/ogl/screen\+\_\+driver\+\_\+ogl.\+cpp\end{DoxyCompactItemize}

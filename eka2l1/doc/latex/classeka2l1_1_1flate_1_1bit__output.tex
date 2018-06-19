@@ -1,0 +1,44 @@
+\hypertarget{classeka2l1_1_1flate_1_1bit__output}{}\section{eka2l1\+:\+:flate\+:\+:bit\+\_\+output Class Reference}
+\label{classeka2l1_1_1flate_1_1bit__output}\index{eka2l1\+::flate\+::bit\+\_\+output@{eka2l1\+::flate\+::bit\+\_\+output}}
+
+
+Represents a Deflate bit output.  
+
+
+
+
+{\ttfamily \#include $<$flate.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1flate_1_1bit__output_a7b0c39cfea8a08af50ba57f2f58db444}\label{classeka2l1_1_1flate_1_1bit__output_a7b0c39cfea8a08af50ba57f2f58db444}} 
+{\bfseries bit\+\_\+output} (uint8\+\_\+t $\ast$buf, size\+\_\+t size)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1flate_1_1bit__output_aba54a721ba259a238a0dc98963f5037c}\label{classeka2l1_1_1flate_1_1bit__output_aba54a721ba259a238a0dc98963f5037c}} 
+void \mbox{\hyperlink{classeka2l1_1_1flate_1_1bit__output_aba54a721ba259a238a0dc98963f5037c}{set}} (uint8\+\_\+t $\ast$buf, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Set the buffer to output. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeka2l1_1_1flate_1_1bit__output_a05e851f45aec2e6dedd0f842760ce0da}\label{classeka2l1_1_1flate_1_1bit__output_a05e851f45aec2e6dedd0f842760ce0da}} 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{classeka2l1_1_1flate_1_1bit__output_a05e851f45aec2e6dedd0f842760ce0da}{data}} () const
+\begin{DoxyCompactList}\small\item\em Get the pointer to the data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeka2l1_1_1flate_1_1bit__output_a500617477ef9811de8374806952b8291}\label{classeka2l1_1_1flate_1_1bit__output_a500617477ef9811de8374806952b8291}} 
+uint32\+\_\+t {\bfseries buffered\+\_\+bits} () const
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1flate_1_1bit__output_aa84d3f76ea892678dbde158067dc4f8e}\label{classeka2l1_1_1flate_1_1bit__output_aa84d3f76ea892678dbde158067dc4f8e}} 
+void \mbox{\hyperlink{classeka2l1_1_1flate_1_1bit__output_aa84d3f76ea892678dbde158067dc4f8e}{write}} (uint32\+\_\+t val, uint32\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Encode a value and write it to the Deflate stream. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeka2l1_1_1flate_1_1bit__output_a513427262b61a06f524bf58ed7c6fa68}\label{classeka2l1_1_1flate_1_1bit__output_a513427262b61a06f524bf58ed7c6fa68}} 
+void {\bfseries huffman} (uint32\+\_\+t huff\+\_\+code)
+\item 
+\mbox{\Hypertarget{classeka2l1_1_1flate_1_1bit__output_aff3f9fa5cb3bee3944ddbe48acd55db9}\label{classeka2l1_1_1flate_1_1bit__output_aff3f9fa5cb3bee3944ddbe48acd55db9}} 
+void {\bfseries pad} (uint32\+\_\+t pad\+\_\+size)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents a Deflate bit output. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+emu/common/include/common/flate.\+h\item 
+emu/common/src/flate.\+cpp\end{DoxyCompactItemize}

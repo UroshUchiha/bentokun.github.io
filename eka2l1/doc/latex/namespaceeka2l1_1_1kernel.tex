@@ -1,0 +1,142 @@
+\hypertarget{namespaceeka2l1_1_1kernel}{}\section{eka2l1\+:\+:kernel Namespace Reference}
+\label{namespaceeka2l1_1_1kernel}\index{eka2l1\+::kernel@{eka2l1\+::kernel}}
+
+
+Contains kernel objects implementation.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classeka2l1_1_1kernel_1_1chunk}{chunk}}
+\begin{DoxyCompactList}\small\item\em A chunk. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structeka2l1_1_1kernel_1_1epoc9__std__epoc__thread__create__info}{epoc9\+\_\+std\+\_\+epoc\+\_\+thread\+\_\+create\+\_\+info}}
+\item 
+struct \mbox{\hyperlink{structeka2l1_1_1kernel_1_1epoc9__thread__create__info}{epoc9\+\_\+thread\+\_\+create\+\_\+info}}
+\item 
+class \mbox{\hyperlink{classeka2l1_1_1kernel_1_1kernel__obj}{kernel\+\_\+obj}}
+\begin{DoxyCompactList}\small\item\em Base class for all kernel object. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classeka2l1_1_1kernel_1_1mutex}{mutex}}
+\item 
+struct \mbox{\hyperlink{structeka2l1_1_1kernel_1_1_s_block}{S\+Block}}
+\item 
+class \mbox{\hyperlink{classeka2l1_1_1kernel_1_1semaphore}{semaphore}}
+\item 
+class \mbox{\hyperlink{classeka2l1_1_1kernel_1_1thread}{thread}}
+\item 
+struct \mbox{\hyperlink{structeka2l1_1_1kernel_1_1thread__local__data}{thread\+\_\+local\+\_\+data}}
+\item 
+class \mbox{\hyperlink{classeka2l1_1_1kernel_1_1thread__scheduler}{thread\+\_\+scheduler}}
+\item 
+class \mbox{\hyperlink{classeka2l1_1_1kernel_1_1timer}{timer}}
+\item 
+struct \mbox{\hyperlink{structeka2l1_1_1kernel_1_1tls__slot}{tls\+\_\+slot}}
+\item 
+class \mbox{\hyperlink{classeka2l1_1_1kernel_1_1wait__obj}{wait\+\_\+obj}}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1kernel_a9d01f2027a07b451ba76db5714e11fc9}\label{namespaceeka2l1_1_1kernel_a9d01f2027a07b451ba76db5714e11fc9}} 
+using {\bfseries uid} = uint64\+\_\+t
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1kernel_a855b5cad18b09d1729b5e78ffa178e05}\label{namespaceeka2l1_1_1kernel_a855b5cad18b09d1729b5e78ffa178e05}} 
+using {\bfseries address} = uint32\+\_\+t
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1kernel_a7d72cd43c301d611906a46ececd7f18a}\label{namespaceeka2l1_1_1kernel_a7d72cd43c301d611906a46ececd7f18a}} 
+using {\bfseries thread\+\_\+stack} = \mbox{\hyperlink{structeka2l1_1_1common_1_1resource}{common\+::resource}}$<$ address $>$
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1kernel_a3e79355bbb1d6c9afd331e433627f7ee}\label{namespaceeka2l1_1_1kernel_a3e79355bbb1d6c9afd331e433627f7ee}} 
+using {\bfseries thread\+\_\+stack\+\_\+ptr} = std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{structeka2l1_1_1common_1_1resource}{thread\+\_\+stack}} $>$
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1kernel_a3177756d27751a6ed6d80008148bc1de}\label{namespaceeka2l1_1_1kernel_a3177756d27751a6ed6d80008148bc1de}} 
+using {\bfseries thread\+\_\+ptr} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classeka2l1_1_1kernel_1_1thread}{kernel\+::thread}} $>$
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1kernel_aee9c57d72d8825de61cb11d4396438ed}\label{namespaceeka2l1_1_1kernel_aee9c57d72d8825de61cb11d4396438ed}} 
+enum \mbox{\hyperlink{namespaceeka2l1_1_1kernel_aee9c57d72d8825de61cb11d4396438ed}{chunk\+\_\+type}} \{ {\bfseries disconnected}, 
+{\bfseries double\+\_\+ended}, 
+{\bfseries normal}
+ \}
+\begin{DoxyCompactList}\small\item\em The chunk type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1kernel_ad9cda4b7f935e4f86e1bb9c0fc10f4f1}\label{namespaceeka2l1_1_1kernel_ad9cda4b7f935e4f86e1bb9c0fc10f4f1}} 
+enum {\bfseries chunk\+\_\+access} \{ {\bfseries global}, 
+{\bfseries local}, 
+{\bfseries code}
+ \}
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1kernel_afb3129621b41f6abd9c9fd540f8019cc}\label{namespaceeka2l1_1_1kernel_afb3129621b41f6abd9c9fd540f8019cc}} 
+enum {\bfseries chunk\+\_\+attrib} \{ {\bfseries none}, 
+{\bfseries anonymous}
+ \}
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1kernel_a73d7ed5a51f8fd3b766252ddcac1c84d}\label{namespaceeka2l1_1_1kernel_a73d7ed5a51f8fd3b766252ddcac1c84d}} 
+enum {\bfseries owner\+\_\+type} \{ {\bfseries process}, 
+{\bfseries thread}
+ \}
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1kernel_a75b23233cf475e247f5b66632ea72ab6}\label{namespaceeka2l1_1_1kernel_a75b23233cf475e247f5b66632ea72ab6}} 
+enum {\bfseries access\+\_\+type} \{ {\bfseries global\+\_\+access}, 
+{\bfseries local\+\_\+access}
+ \}
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1kernel_aa5a6cbdd9c35706691360d2879d2406a}\label{namespaceeka2l1_1_1kernel_aa5a6cbdd9c35706691360d2879d2406a}} 
+enum {\bfseries object\+\_\+type} \{ \newline
+{\bfseries thread}, 
+{\bfseries sema}, 
+{\bfseries mutex}, 
+{\bfseries timer}, 
+\newline
+{\bfseries chunk}
+ \}
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1kernel_a8226b7d7cca7969d43e792fff451a90e}\label{namespaceeka2l1_1_1kernel_a8226b7d7cca7969d43e792fff451a90e}} 
+enum {\bfseries thread\+\_\+state} \{ \newline
+{\bfseries run}, 
+{\bfseries wait}, 
+{\bfseries ready}, 
+{\bfseries stop}, 
+\newline
+{\bfseries wait\+\_\+fast\+\_\+sema}, 
+{\bfseries wait\+\_\+dfc}, 
+{\bfseries wait\+\_\+hle}
+ \}
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1kernel_a2eace89f7110e838a1260c2d9cb41ac4}\label{namespaceeka2l1_1_1kernel_a2eace89f7110e838a1260c2d9cb41ac4}} 
+enum {\bfseries thread\+\_\+priority} \{ \newline
+{\bfseries priority\+\_\+null} = -\/30, 
+{\bfseries priority\+\_\+much\+\_\+less} = -\/20, 
+{\bfseries priority\+\_\+less} = -\/10, 
+{\bfseries priority\+\_\+normal} = 0, 
+\newline
+{\bfseries priority\+\_\+more} = 10, 
+{\bfseries priority\+\_\+much\+\_\+more} = 20, 
+{\bfseries priority\+\_\+real\+\_\+time} = 30, 
+{\bfseries priority\+\_\+absolute\+\_\+very\+\_\+low} = 100, 
+\newline
+{\bfseries priority\+\_\+absolute\+\_\+low} = 200, 
+{\bfseries priority\+\_\+absolute\+\_\+background} = 300, 
+{\bfseries priorty\+\_\+absolute\+\_\+forground} = 400, 
+{\bfseries priority\+\_\+absolute\+\_\+high} = 500
+ \}
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1kernel_a67e2a6c2c23b5f98212166d57d0dca1c}\label{namespaceeka2l1_1_1kernel_a67e2a6c2c23b5f98212166d57d0dca1c}} 
+enum {\bfseries reset\+\_\+type} \{ {\bfseries oneshot}, 
+{\bfseries again}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1kernel_a476693d75fe4803f493e0d030b4bcb84}\label{namespaceeka2l1_1_1kernel_a476693d75fe4803f493e0d030b4bcb84}} 
+int {\bfseries caculate\+\_\+thread\+\_\+priority} (thread\+\_\+priority pri)
+\item 
+\mbox{\Hypertarget{namespaceeka2l1_1_1kernel_aead77f60bcf0c0e47c356347701e2d46}\label{namespaceeka2l1_1_1kernel_aead77f60bcf0c0e47c356347701e2d46}} 
+void {\bfseries timer\+\_\+callback} (uint64\+\_\+t user, int cycles\+\_\+late)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains kernel objects implementation. 
