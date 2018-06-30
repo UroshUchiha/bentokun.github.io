@@ -1,6 +1,7 @@
 --- 
-layout: default
+layout: post
 comments: enable
+preview: server2.png
 ---
 
 Hi, I'm not lazy xD. Cut it off, just want to share with you what I have done in June with EKA2L1. I have a lot of free time in summer, as I
