@@ -9,21 +9,21 @@ Hi, I want to share with you what I have contributed to EKA2L1 in June. I have a
 ## 1. Console implementation
 - This makes the example console app work. Basically, I sped things up, ignored Console IPC calls and overwrote them with my own implementation. 
 - Fortunately, it runs, but the pipeline right now is really messed up. It calls for rendering every 2048 ticks, after down count (20 000 ticks) will reschedule thread. I don't expect it to manually do rendering, but I do it for the sake of displaying the console text.
-- As you see, it renders a console. The real console works by opening another DLL (image in Symbian calling), calling a function in the DLL. **CConsole** communicates with hardware to print terminal text through IPC calls. However, I was so unpatient to get it working, so instead, I overwritted the vtable, replace the sixth entry (CConsoleBase::Write), with my own implementation, that put the text into OpenGL rendering list, and renders all the console text each 2048 ticks. This behavior will be changed in the feature, because the VTable entry of CConsoleBase::Write change in various version of Symbian.
+- As you can see, it renders a console. The real console works by opening another DLL (image in Symbian calling), calling a function in the DLL. **CConsole** communicates with hardware to print terminal text through IPC calls. However, I was so unpatient to get it working, so instead, I overwrote the vtable, replaced the sixth entry (CConsoleBase::Write), with my own implementation, that put the text into OpenGL rendering list, and render all the console text each 2048 ticks. This behavior will be changed in the future, because the VTable entry of CConsoleBase::Write changes in various versions of Symbian.
 - IPC, though, are implemented, and you can see details of implementation below.
 - Here is the image of it running my console test. 
 - ![Console](https://media.discordapp.net/attachments/431430141319708692/455664435717996544/Symbian.png?width=255&height=473)
 
 ## 2. Appveyor CI
-- I integrated a CI to EKA2L1. It allow users (mostly on Discord), to download builds and test for me. And yeah, I fix many dumb things reported by testers (not many contributors right now) :D, shoutout to them <3.
+- I integrated a CI to EKA2L1. It allows users (mostly on Discord), to download builds and test for me. And yeah, I fix many dumb things reported by testers (not many contributors right now) :D, shoutout to them <3.
 - The hardest thing when implementing this CI is, I uses Lazarus UI. I will talk about GUI later, but there's no Lazarus Pascal provided. And the NewPascal supports only 32 bit. So I have to upload my own ver. However, the saddest thing is Lazarus will crash randomly (probably because of the memory on Appveyor).
 - You can download artifacts from [here](https://ci.appveyor.com/project/bentokun/eka2l1-mjiuq).
 
 ## 3. The UI
-- I don't have much experience in QT, and don't bother downloading 6GB just to make the GUI for now. When someone experienced with QT work with the GUI, I will switch to it. It has big advantages, considering I'm using C++ to write the core. 
+- I don't have much experience in QT, and don't bother downloading 6GB just to make the GUI for now. When someone experienced with QT works with the GUI, I will switch to it. It has big advantages, considering I'm using C++ to write the core. 
 - Here is the thin layer in Pascal. It's really easy to import :D, Pascal is actually useful sometimes.
 - <script src="https://gist.github.com/bentokun/7d55361402977c987132d61fd60a5a92.js"></script>
-- For now, I just make a thin DLL layer for it. I wrote a Pascal unit import those core functions from the DLL.
+- For now, I just made a thin DLL layer for it. I wrote a Pascal unit to import those core functions from the DLL.
 - As now, the GUI is pretty usable. You can install, run things asynchronously. Here is a picture of it:
 - ![GUI Picture](https://media.discordapp.net/attachments/431430141319708692/455663094807658497/Symbian.JPG?width=645&height=474)
 
@@ -33,7 +33,7 @@ Hi, I want to share with you what I have contributed to EKA2L1 in June. I have a
 
 - ### A. IPC
    * IPC (Inter-process communication), is the way two processes communicate with each other. A process gives some specific request (call it client), through 
-   IPC, that request is transfered to another process for processing (server).
+   IPC, that request is transferred to another process for processing (server).
    * In Symbian, it allows a user to send the function opcode with IPC args (TIpcArgs) through the *SendReceive / Send* functions. IPC arguments are either
    binary, text or integer (handle). The function opcode along with args are packed into a message, transfer to the correspond kernel server, which puts it
    in a waiting queue. When a process wants to get a message to dispatch and processing, it calls *Receive*. The message is taken from the waiting queue (accepted)
@@ -63,26 +63,26 @@ Hi, I want to share with you what I have contributed to EKA2L1 in June. I have a
 - ### A. Window server 
    * Some window server sub-IPC calls are implemented. These includes: CreateScreenDevice and CreateWindowGroup. 
    * The window server is an example of an extremely nested design.
-   * The window server has a root window. From that root window, you can create window group or top client window, etc..
+   * The window server has a root window. From that root window, you can create window group or top client window, etc...
    * A window group, as its name, is a class that contains a bunch of windows. Inside, there can be a top client window, which is
  window that can be drawed into the screen when there is a request to flush and draw the framebuffer.
    * A request to the window server will be redirected to the specified object in the request header. When the window server receives an IPC message that calls **EWservMessSyncMsgBuf** or **EWservMessCommandBuffer**, the first IPC argument will contains another tiny request header, which specified the tiny-op function number and the handle of the specified object to transfer this tiny request to. That object may be the screen device or group window. There will be a function in each object (CommandL), that handles these tiny ops.
    
 - ### B. FS server
    * Implemented FS::Entry. It gets the info of entry (file, or directory).
-   * RFile is a sub-session (Edit this as of July). A sub-session is a smaller version of a session, that is created by the session, and contains the actual session handle and the subsession handle. 
-   * The FS server manages it owns file handles. When a **RFile::Open** or **RFile::Create** is called, the third IPC argument will contains a pointer to the descriptor, which should contain the file handle (aka subsession handle). So when the call is finished, the third IPC argument should contains the file handle. From that moment, whenever it call a RFile function, it will send an IPC message. The third IPC argument will contain the file handle. The fileserver (efsvr.exe) should be abled to get the file node from the file handle and do its thing.
+   * RFile is a sub-session (Edit this as of July). A sub-session is a smaller version of a session, that is created by the session, and contains the actual session handle and the sub-session handle. 
+   * The FS server manages its own file handles. When a **RFile::Open** or **RFile::Create** is called, the third IPC argument will contains a pointer to the descriptor, which should contain the file handle (aka sub-session handle). So when the call is finished, the third IPC argument should contain the file handle. From that moment, whenever it calls a RFile function, it will send an IPC message. The third IPC argument will contain the file handle. The fileserver (efsvr.exe) should be able to get the file node from the file handle and do its thing.
    * The 2 following picture should explain this easily:
    * ![ipc1](/assets/ipc1.png)
    * ![ipc2](/assets/ipc2.png)
 
 ## So now ..............
    
-- There is nothing much to talk now of these, maybe in July. With this PR, it is now requested to get the file size (RFile::Size). It is getting closer everyday. The biggest advantage for me is that parts of Symbian Source are open-sourced, so I don't have much things to reverse engineering. 
-It's just reading Symbian's code everyday to have illusion 100 in order to read what they actually write without hurting your head.
+- There is nothing more to talk about, maybe in July. With this PR, it is now requested to get the file size (RFile::Size). It is getting closer everyday. The biggest advantage for me is that parts of Symbian Source are open-sourced, so I don't have many things to reverse engineer. 
+It's just reading Symbian's code everyday to have illusion 100 in order to read what they actually wrote without hurting your head.
 
 - Here is my [PaypalMe](https://paypal.me/Thi573) and my [Patreon](https://patreon.com/fewdspuck). Feel free to donate to this project if you like the progress so far and want to support me, every dollar is appreciated :D.
 
-- I really love doing this. Even though things are hard, but you figure it out and implement it, you feel happy! While waiting for my next post, you should watch Todd Howard ASMR (my religion 🙏).
+- I really love doing this. Even though things can get difficult, but eventually you figure it out step by step and implement it. While you wait for my next post, you should watch Todd Howard ASMR (my religion 🙏).
 
 - <iframe width="560" height="315" src="https://www.youtube.com/embed/3uOPGkEJ56Q" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
